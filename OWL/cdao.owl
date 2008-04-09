@@ -3,6 +3,7 @@ Namespace(Ontology1206463179=<http://www.owl-ontologies.com/Ontology1206463179.o
 Namespace(owl11=<http://www.w3.org/2006/12/owl11#>)
 Namespace(owl11xml=<http://www.w3.org/2006/12/owl11-xml#>)
 Namespace(xsd=<http://www.w3.org/2001/XMLSchema#>)
+Namespace(dc=<http://purl.org/dc/elements/1.1/>)
 Namespace(rdfs=<http://www.w3.org/2000/01/rdf-schema#>)
 Namespace(rdf=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Namespace(owl=<http://www.w3.org/2002/07/owl#>)
@@ -25,6 +26,7 @@ SubClassOf(Character ObjectSomeValuesFrom(has Character_State_Datum))
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Domain
 
+EntityAnnotation(OWLClass(Character_State_Domain) Annotation(dc:description "The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.  "))
 
 
 
@@ -33,16 +35,18 @@ SubClassOf(Character ObjectSomeValuesFrom(has Character_State_Datum))
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
-
-SubClassOf(TU owl:Thing)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix_Annotation
 
 Declaration(OWLClass(Character_State_Data_Matrix_Annotation))
+EntityAnnotation(OWLClass(Character_State_Data_Matrix_Annotation) Annotation(dc:description "Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment. "))
 SubClassOf(Character_State_Data_Matrix_Annotation CDAO_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
+
+EntityAnnotation(OWLClass(TU) Annotation(dc:description "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'. "))
+SubClassOf(TU owl:Thing)
 
 
 
@@ -73,6 +77,7 @@ SubClassOf(Coordinate_Point Datum_Coordinate)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Sequence
 
 Declaration(OWLClass(Sequence))
+EntityAnnotation(OWLClass(Sequence) Annotation(dc:description "A set of ordered states, typically the residues in a macromolecular sequence."))
 SubClassOf(Sequence owl:Thing)
 SubClassOf(Sequence ObjectSomeValuesFrom(has Character_State_Datum))
 SubClassOf(Sequence ObjectAllValuesFrom(has ObjectMinCardinality(1 has_Coordinate Datum_Coordinate)))
@@ -144,6 +149,7 @@ SubClassOf(Lineage ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge ObjectMax
 
 Declaration(OWLClass(Edge_Transformation))
 EntityAnnotation(OWLClass(Edge_Transformation) Comment("If left state is same as left node, then transformation will imply correct direction.  "))
+EntityAnnotation(OWLClass(Edge_Transformation) Annotation(dc:description "A transformation (in states of a character) associated with an edge (branch) of a Tree or Network. "))
 SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Right_State Character_State_Domain))
 SubClassOf(Edge_Transformation ObjectExactCardinality(1 transformation_of Character))
 SubClassOf(Edge_Transformation Edge_Annotation)
@@ -210,6 +216,7 @@ SubClassOf(Gap_cost Model_description)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix
 
 Declaration(OWLClass(Character_State_Data_Matrix))
+EntityAnnotation(OWLClass(Character_State_Data_Matrix) Annotation(dc:description "A matrix of observed character-state data, typically observed data though the states in the matrix might be simulated or hypothetical in some cases. Synonyms: character Data matrix, character-state matrix "))
 SubClassOf(Character_State_Data_Matrix ObjectSomeValuesFrom(has Character_State_Data_Matrix_Annotation))
 SubClassOf(Character_State_Data_Matrix owl:Thing)
 
@@ -350,22 +357,26 @@ SubClassOf(Coordinate_List Datum_Coordinate)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Length
 
 Declaration(OWLClass(Edge_Length))
+EntityAnnotation(OWLClass(Edge_Length) Comment("Its possible that this should not be classed as an 'annotation' since it contains data rather than meta-data.  "))
+EntityAnnotation(OWLClass(Edge_Length) Annotation(dc:description "The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.  "))
 SubClassOf(Edge_Length Edge_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt1
+
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Generic_State
 
 Declaration(OWLClass(Generic_State))
+EntityAnnotation(OWLClass(Generic_State) Comment("This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.  "))
+EntityAnnotation(OWLClass(Generic_State) Annotation(dc:description "This concept is tied to the verbally ambiguous 'gap' concept and to the use of a gap character (often the en dash '-') in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these. "))
 SubClassOf(Generic_State Character_State_Domain)
 EquivalentClasses(Generic_State ObjectOneOf(gap
                                             absent
                                             unknown))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt1
-
 
 
 
@@ -439,6 +450,7 @@ SubClassOf(Alignment_Procedure Character_State_Data_Matrix_Annotation)
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Branch
 
+EntityAnnotation(OWLClass(Branch) Annotation(dc:description "'Branch' is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support. "))
 EquivalentClasses(Branch Edge)
 
 
@@ -479,6 +491,7 @@ SubClassOf(Jukes_and_Kantor Substitution_model)
 
 Declaration(OWLClass(Datum_Coordinate))
 EntityAnnotation(OWLClass(Datum_Coordinate) Comment("drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on"))
+EntityAnnotation(OWLClass(Datum_Coordinate) Annotation(dc:description "A positional coordinate giving the source of a character state, used for molecular sequences.  "))
 SubClassOf(Datum_Coordinate ObjectExactCardinality(1 has_Coordinate_System Coordinate_System))
 SubClassOf(Datum_Coordinate owl:Thing)
 
@@ -496,16 +509,16 @@ DisjointClasses(Unrooted_Tree Rooted_Tree)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Parsimony
-
-SubClassOf(Parsimony Tree_Procedure)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#MRCA_Node
 
 Declaration(OWLClass(MRCA_Node))
 SubClassOf(MRCA_Node Common_Ancestral_Node)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Parsimony
+
+SubClassOf(Parsimony Tree_Procedure)
 
 
 
@@ -536,12 +549,6 @@ SubClassOf(Distance_based_method Tree_Procedure)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution_model
-
-SubClassOf(Substitution_model Model_description)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_State_Datum
 
 Declaration(OWLClass(Nucleotide_State_Datum))
@@ -552,8 +559,9 @@ DisjointClasses(Amino_Acid_State_Datum
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution_model
 
+SubClassOf(Substitution_model Model_description)
 
 
 
@@ -562,7 +570,7 @@ DisjointClasses(Amino_Acid_State_Datum
 
 
 
-// Class: http://www.w3.org/2002/07/owl#Thing
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt1
 
 
 
@@ -570,8 +578,14 @@ DisjointClasses(Amino_Acid_State_Datum
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#CDAO_Annotation
 
 Declaration(OWLClass(CDAO_Annotation))
-EntityAnnotation(OWLClass(CDAO_Annotation) Comment("Import Dublin Core annotation and extend with specific classes for tree, matrix, etc. "))
+EntityAnnotation(OWLClass(CDAO_Annotation) Annotation(dc:description "The base class of annotations in CDAO."))
+EntityAnnotation(OWLClass(CDAO_Annotation) Comment("Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists. "))
 SubClassOf(CDAO_Annotation owl:Thing)
+
+
+
+// Class: http://www.w3.org/2002/07/owl#Thing
+
 
 
 
@@ -596,6 +610,7 @@ SubClassOf(Compound_State_Datum Character_State_Datum)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Datum
 
 Declaration(OWLClass(Character_State_Datum))
+EntityAnnotation(OWLClass(Character_State_Datum) Annotation(dc:description "The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid."))
 SubClassOf(Character_State_Datum owl:Thing)
 SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to_TU TU))
 
@@ -624,6 +639,7 @@ DisjointClasses(Amino_Acid_State_Datum
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Taxonomic_Link
 
 Declaration(OWLClass(Taxonomic_Link))
+EntityAnnotation(OWLClass(Taxonomic_Link) Annotation(dc:description "Link to an externally defined taxonomic hierarchy."))
 SubClassOf(Taxonomic_Link TU_Annotation)
 SubClassOf(Taxonomic_Link DataSomeValuesFrom(has_External_Reference xsd:anyType))
 
@@ -673,11 +689,6 @@ SubClassOf(Tree_Procedure Tree_Annotation)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Q
-
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dA
 
 
@@ -688,7 +699,7 @@ SubClassOf(Tree_Procedure Tree_Annotation)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Q
 
 
 
@@ -696,6 +707,11 @@ SubClassOf(Tree_Procedure Tree_Annotation)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree
 
 SubClassOf(Tree Network)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa1
+
 
 
 
@@ -736,6 +752,7 @@ SubClassOf(Common_Ancestral_Node ObjectMinCardinality(2 has_Descendant Node))
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_System
 
 Declaration(OWLClass(Coordinate_System))
+EntityAnnotation(OWLClass(Coordinate_System) Annotation(dc:description "A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system. "))
 SubClassOf(Coordinate_System owl:Thing)
 
 
@@ -743,6 +760,7 @@ SubClassOf(Coordinate_System owl:Thing)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound_Character
 
 Declaration(OWLClass(Compound_Character))
+EntityAnnotation(OWLClass(Compound_Character) Annotation(dc:description "A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block. "))
 SubClassOf(Compound_Character Character)
 
 
@@ -1273,15 +1291,15 @@ Declaration(Individual(dC))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#M
-
-Declaration(Individual(M))
-
-
-
 // Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#K
 
 Declaration(Individual(K))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#M
+
+Declaration(Individual(M))
 
 
 

@@ -14,8 +14,15 @@ Ontology(<http://www.owl-ontologies.com/Ontology1206463179.owl>
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character
 
 EntityAnnotation(OWLClass(Character) Comment("Traits shown to be relevant for phylogenetic classification"^^xsd:string))
+SubClassOf(Character ObjectSomeValuesFrom(has Character_State_Datum))
 SubClassOf(Character ObjectAllValuesFrom(has DataRepresentation))
-SubClassOf(Character Trait)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Length
+
+Declaration(OWLClass(Edge_Length))
+SubClassOf(Edge_Length Edge_Annotation)
 
 
 
@@ -33,8 +40,23 @@ SubClassOf(Transition Substitution)
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
 
+SubClassOf(TU ObjectSomeValuesFrom(has Character_State_Datum))
 SubClassOf(TU owl:Thing)
-SubClassOf(TU ObjectSomeValuesFrom(has Trait))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Annotation
+
+Declaration(OWLClass(Edge_Annotation))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Rooted_Tree
+
+SubClassOf(Rooted_Tree ObjectExactCardinality(1 has_root Node))
+SubClassOf(Rooted_Tree Tree)
+SubClassOf(Rooted_Tree ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge Node)))
+DisjointClasses(Rooted_Tree Unrooted_tree)
 
 
 
@@ -51,23 +73,9 @@ SubClassOf(Taxon Taxonomy)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Terminal_node
-
-SubClassOf(Terminal_node Node)
-EquivalentClasses(Terminal_node Leaf_node)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide
 
 SubClassOf(Nucleotide Residue)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Cladogram
-
-SubClassOf(Cladogram Topology)
-EquivalentClasses(Cladogram Tree)
 
 
 
@@ -77,26 +85,34 @@ SubClassOf(Inversion Sequential)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Unrooted_tree
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous
 
-SubClassOf(Unrooted_tree ObjectSomeValuesFrom(has ObjectComplementOf(Root_node)))
-SubClassOf(Unrooted_tree Topology)
-EquivalentClasses(Unrooted_tree Network)
+SubClassOf(Continuous DataRepresentation)
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_matrix
 
 EntityAnnotation(OWLClass(Character_State_Data_matrix) Comment("Representation of the character state data matrix such as in the input NEX file"^^xsd:string))
-SubClassOf(Character_State_Data_matrix ObjectSomeValuesFrom(has Trait))
 SubClassOf(Character_State_Data_matrix ObjectSomeValuesFrom(has TU))
 SubClassOf(Character_State_Data_matrix owl:Thing)
+SubClassOf(Character_State_Data_matrix ObjectSomeValuesFrom(has Character))
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Unrooted_tree
 
-SubClassOf(Continuous DataRepresentation)
+SubClassOf(Unrooted_tree Tree)
+DisjointClasses(Unrooted_tree Rooted_Tree)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Directed_Edge
+
+Declaration(OWLClass(Directed_Edge))
+SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Child Node))
+SubClassOf(Directed_Edge Edge)
+SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Parent Node))
 
 
 
@@ -118,6 +134,14 @@ SubClassOf(Kimura_2_parameters Substitution_model)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Type
+
+Declaration(OWLClass(Character_State_Type))
+SubClassOf(Character_State_Type ObjectMinCardinality(2 has Character_State))
+SubClassOf(Character_State_Type owl:Thing)
+
+
+
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution
 
 SubClassOf(Substitution Transformation)
@@ -131,19 +155,21 @@ EquivalentClasses(Dichotomy Bifurcation)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Transformation
+
+Declaration(OWLClass(Edge_Transformation))
+SubClassOf(Edge_Transformation Edge_Annotation)
+
+
+
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State
 
-SubClassOf(Character_State ObjectAllValuesFrom(belongs_to ObjectIntersectionOf(TU Trait)))
 SubClassOf(Character_State owl:Thing)
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Branch
 
-SubClassOf(Branch owl:Thing)
-SubClassOf(Branch DataExactCardinality(1 has_length))
-SubClassOf(Branch ObjectSomeValuesFrom(has Transformation))
-SubClassOf(Branch ObjectSomeValuesFrom(has Node))
 EquivalentClasses(Branch Edge)
 
 
@@ -181,9 +207,9 @@ SubClassOf(Parsimony Tree_method_description)
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Network
 
-SubClassOf(Network Topology)
-EquivalentClasses(Network Unrooted_tree)
-DisjointClasses(Network Tree)
+Declaration(OWLClass(Network))
+SubClassOf(Network ObjectAllValuesFrom(has ObjectUnionOf(Node Edge)))
+SubClassOf(Network owl:Thing)
 
 
 
@@ -206,14 +232,14 @@ SubClassOf(Gamma_distribution Substitution_model)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#DataRepresentation
+
+
+
+
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Distance_based_method
 
 SubClassOf(Distance_based_method Tree_method_description)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#DataRepresentation
-
 
 
 
@@ -247,34 +273,22 @@ SubClassOf(Maximum_likelihood Tree_method_description)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Internal_node
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Datum
 
-SubClassOf(Internal_node Node)
-SubClassOf(Internal_node DataExactCardinality(1 has_confidence_value))
-SubClassOf(Internal_node ObjectSomeValuesFrom(has Node_type))
-EquivalentClasses(Internal_node HTU)
-DisjointClasses(Internal_node Leaf_node)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Root_node
-
-SubClassOf(Root_node ObjectExactCardinality(1 has))
-SubClassOf(Root_node Internal_node)
+Declaration(OWLClass(Character_State_Datum))
+SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to Character))
+SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to TU))
+SubClassOf(Character_State_Datum owl:Thing)
+SubClassOf(Character_State_Datum ObjectSomeValuesFrom(has_State Character_State))
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge
 
+SubClassOf(Edge ObjectSomeValuesFrom(has Edge_Annotation))
+SubClassOf(Edge ObjectExactCardinality(2 has_Node Node))
 SubClassOf(Edge owl:Thing)
 EquivalentClasses(Edge Branch)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Topology
-
-SubClassOf(Topology owl:Thing)
-SubClassOf(Topology ObjectAllValuesFrom(has ObjectIntersectionOf(Branch Node)))
 
 
 
@@ -291,37 +305,9 @@ SubClassOf(Transversion Substitution)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#HTU
-
-EntityAnnotation(OWLClass(HTU) Comment("Hypothetical Taxonomic Unit
-Internal Node"^^xsd:string))
-SubClassOf(HTU TU)
-EquivalentClasses(HTU Internal_node)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Trait
-
-EntityAnnotation(OWLClass(Trait) Comment("Each of traits described for a given TU"^^xsd:string))
-SubClassOf(Trait ObjectAllValuesFrom(part_of Character_State_Data_matrix))
-SubClassOf(Trait owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#OTU
-
-EntityAnnotation(OWLClass(OTU) Comment("Operational Taxonomy Units under consideration."^^xsd:string))
-SubClassOf(OTU TU)
-EquivalentClasses(OTU Leaf_node)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree
 
-SubClassOf(Tree ObjectSomeValuesFrom(has Root_node))
-SubClassOf(Tree Topology)
-EquivalentClasses(Tree Cladogram)
-DisjointClasses(Tree Network)
+SubClassOf(Tree Network)
 
 
 
@@ -329,15 +315,6 @@ DisjointClasses(Tree Network)
 
 SubClassOf(Model_description owl:Thing)
 SubClassOf(Model_description ObjectSomeValuesFrom(is_annotation Character_State_Data_matrix))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Leaf_node
-
-SubClassOf(Leaf_node Node)
-EquivalentClasses(Leaf_node Terminal_node)
-EquivalentClasses(Leaf_node OTU)
-DisjointClasses(Leaf_node Internal_node)
 
 
 
@@ -356,20 +333,19 @@ SubClassOf(insertion Transformation)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Node_type
 
 SubClassOf(Node_type owl:Thing)
-SubClassOf(Node_type ObjectSomeValuesFrom(belongs_to Internal_node))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree_method_description
-
-SubClassOf(Tree_method_description owl:Thing)
-SubClassOf(Tree_method_description ObjectSomeValuesFrom(is_annotation Topology))
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_acid
 
 SubClassOf(Amino_acid Residue)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree_method_description
+
+SubClassOf(Tree_method_description owl:Thing)
+SubClassOf(Tree_method_description ObjectSomeValuesFrom(is_annotation Tree))
 
 
 
@@ -385,10 +361,28 @@ SubClassOf(Insertion Sequential)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_descendant
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Child
 
-SubObjectPropertyOf(is_descendant is_child)
-InverseObjectProperties(is_descendant is_ancestor)
+Declaration(ObjectProperty(has_Child))
+SubObjectPropertyOf(has_Child has_Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_State
+
+Declaration(ObjectProperty(has_State))
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has
+
+InverseObjectProperties(belongs_to has)
+InverseObjectProperties(part_of has)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_annotation
+
 
 
 
@@ -396,6 +390,15 @@ InverseObjectProperties(is_descendant is_ancestor)
 
 SubObjectPropertyOf(is_ancestor is_parent)
 InverseObjectProperties(is_descendant is_ancestor)
+TransitiveObjectProperty(is_ancestor)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_descendant
+
+SubObjectPropertyOf(is_descendant is_child)
+InverseObjectProperties(is_descendant is_ancestor)
+TransitiveObjectProperty(is_descendant)
 
 
 
@@ -405,26 +408,31 @@ InverseObjectProperties(is_child is_parent)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Node
 
-InverseObjectProperties(part_of has)
+Declaration(ObjectProperty(has_Node))
+ObjectPropertyDomain(has_Node Edge)
+ObjectPropertyRange(has_Node Node)
 
 
 
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to
 
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_child
-
-InverseObjectProperties(is_child is_parent)
+Declaration(ObjectProperty(belongs_to))
+InverseObjectProperties(belongs_to has)
+InverseFunctionalObjectProperty(belongs_to)
 
 
 
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#part_of
 
 InverseObjectProperties(part_of has)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_child
+
+InverseObjectProperties(is_child is_parent)
 
 
 
@@ -435,8 +443,19 @@ SymmetricObjectProperty(connects_to)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_annotation
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Parent
 
+Declaration(ObjectProperty(has_Parent))
+SubObjectPropertyOf(has_Parent has_Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_root
+
+Declaration(ObjectProperty(has_root))
+FunctionalObjectProperty(has_root)
+ObjectPropertyDomain(has_root Rooted_Tree)
+ObjectPropertyRange(has_root Node)
 
 
 
@@ -488,170 +507,6 @@ DataPropertyDomain(has_boolean_state Character_State)
 
 Declaration(DataProperty(has_numeric_state))
 DataPropertyDomain(has_numeric_state Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Insertion1_mouse
-
-ClassAssertion(Insertion1_mouse Character_State)
-ObjectPropertyAssertion(has Insertion1_mouse Fly)
-ObjectPropertyAssertion(has Insertion1_mouse Insertion1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc25_yeast
-
-ClassAssertion(nuc25_yeast Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Position_26
-
-ClassAssertion(Position_26 Character)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Mouse
-
-ClassAssertion(Mouse OTU)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc26_mouse
-
-ClassAssertion(nuc26_mouse Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Yeast
-
-ClassAssertion(Yeast OTU)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc27_fly
-
-ClassAssertion(nuc27_fly Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc27_yeast
-
-ClassAssertion(nuc27_yeast Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc25_fly
-
-ClassAssertion(nuc25_fly Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_25
-
-ClassAssertion(Nucleotide_25 Nucleotide)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_26
-
-ClassAssertion(Nucleotide_26 Nucleotide)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Fly
-
-ClassAssertion(Fly OTU)
-ObjectPropertyAssertion(part_of Fly Insertion1_mouse)
-ObjectPropertyAssertion(part_of Fly Character_State_Data_matrix_6)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc25_mouse
-
-ClassAssertion(nuc25_mouse Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Characters_27
-
-ClassAssertion(Characters_27 Character)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc27_mouse
-
-ClassAssertion(nuc27_mouse Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_12
-
-ClassAssertion(Character_State_12 Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_matrix_6
-
-ClassAssertion(Character_State_Data_matrix_6 Character_State_Data_matrix)
-ObjectPropertyAssertion(has Character_State_Data_matrix_6 Fly)
-ObjectPropertyAssertion(has Character_State_Data_matrix_6 Insertion1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Insertion1_fly
-
-ClassAssertion(Insertion1_fly Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Insertion1
-
-ClassAssertion(Insertion1 Character)
-ObjectPropertyAssertion(part_of Insertion1 Insertion1_mouse)
-ObjectPropertyAssertion(part_of Insertion1 Character_State_Data_matrix_6)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Branch_43
-
-ClassAssertion(Branch_43 Branch)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_27
-
-ClassAssertion(Nucleotide_27 Nucleotide)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Position_25
-
-ClassAssertion(Position_25 Character)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#insertion1_yeast
-
-ClassAssertion(insertion1_yeast Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc26_yeast
-
-ClassAssertion(nuc26_yeast Character_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Insertion_1
-
-ClassAssertion(Insertion_1 Insertion)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#nuc26_fly
-
-ClassAssertion(nuc26_fly Character_State)
 
 
 

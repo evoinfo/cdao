@@ -36,22 +36,16 @@ SubClassOf(Edge_Length Edge_Annotation)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Transition
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix_Annotation
 
-SubClassOf(Transition Substitution)
+Declaration(OWLClass(Character_State_Data_Matrix_Annotation))
+SubClassOf(Character_State_Data_Matrix_Annotation CDAO_Annotation)
 
 
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
 
 SubClassOf(TU owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix_Annotation
-
-Declaration(OWLClass(Character_State_Data_Matrix_Annotation))
-SubClassOf(Character_State_Data_Matrix_Annotation CDAO_Annotation)
 
 
 
@@ -130,12 +124,6 @@ SubClassOf(Directed_Edge Edge)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#deletion
-
-SubClassOf(deletion Transformation)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Alignment_Procedure
 
 Declaration(OWLClass(Alignment_Procedure))
@@ -146,12 +134,6 @@ SubClassOf(Alignment_Procedure Character_State_Data_Matrix_Annotation)
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Kimura_2_parameters
 
 SubClassOf(Kimura_2_parameters Substitution_model)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution
-
-SubClassOf(Substitution Transformation)
 
 
 
@@ -170,18 +152,22 @@ SubClassOf(Ancestral_Node Node)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Transformation
+
+Declaration(OWLClass(Edge_Transformation))
+EntityAnnotation(OWLClass(Edge_Transformation) Comment("If left state is same as left node, then transformation will imply correct direction.  "))
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Right_State Character_State_Domain))
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 transformation_of Character))
+SubClassOf(Edge_Transformation Edge_Annotation)
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Left_State Character_State_Domain))
+
+
+
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Lineage
 
 Declaration(OWLClass(Lineage))
 SubClassOf(Lineage Tree)
 SubClassOf(Lineage ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge ObjectMaxCardinality(1 has_Child Node))))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Transformation
-
-Declaration(OWLClass(Edge_Transformation))
-SubClassOf(Edge_Transformation Edge_Annotation)
 
 
 
@@ -341,11 +327,6 @@ SubClassOf(Tree_Annotation CDAO_Annotation)
 
 
 
-// Class: http://www.w3.org/2002/07/owl#Thing
-
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#CDAO_Annotation
 
 Declaration(OWLClass(CDAO_Annotation))
@@ -354,10 +335,8 @@ SubClassOf(CDAO_Annotation owl:Thing)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Transformation
+// Class: http://www.w3.org/2002/07/owl#Thing
 
-SubClassOf(Transformation owl:Thing)
-SubClassOf(Transformation ObjectSomeValuesFrom(tranformation_of Character))
 
 
 
@@ -449,12 +428,6 @@ DisjointClasses(Amino_Acid_State_Datum
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Transversion
-
-SubClassOf(Transversion Substitution)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree_Procedure
 
 Declaration(OWLClass(Tree_Procedure))
@@ -482,12 +455,6 @@ SubClassOf(Common_Ancestral_Node ObjectMinCardinality(2 has_Descendant Node))
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#insertion
-
-SubClassOf(insertion Transformation)
-
-
-
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_System
 
 Declaration(OWLClass(Coordinate_System))
@@ -508,12 +475,11 @@ SubClassOf(Compound_Character Character)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Compound_Character
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_Node
 
-Declaration(ObjectProperty(belongs_to_Compound_Character))
-SubObjectPropertyOf(belongs_to_Compound_Character belongs_to_Character)
-ObjectPropertyDomain(belongs_to_Compound_Character Compound_State_Datum)
-ObjectPropertyRange(belongs_to_Compound_Character Compound_Character)
+Declaration(ObjectProperty(has_Left_Node))
+ObjectPropertyDomain(has_Left_Node Edge_Transformation)
+ObjectPropertyRange(has_Left_Node Node)
 
 
 
@@ -523,6 +489,15 @@ Declaration(ObjectProperty(has_Child))
 InverseObjectProperties(has_Child has_Parent)
 ObjectPropertyDomain(has_Child Node)
 ObjectPropertyRange(has_Child Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Compound_Character
+
+Declaration(ObjectProperty(belongs_to_Compound_Character))
+SubObjectPropertyOf(belongs_to_Compound_Character belongs_to_Character)
+ObjectPropertyDomain(belongs_to_Compound_Character Compound_State_Datum)
+ObjectPropertyRange(belongs_to_Compound_Character Compound_Character)
 
 
 
@@ -546,18 +521,18 @@ ObjectPropertyRange(has_Child_Node Node)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_State
-
-Declaration(ObjectProperty(has_State))
-ObjectPropertyDomain(has_State Character_State_Datum)
-
-
-
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Coordinate
 
 Declaration(ObjectProperty(has_Coordinate))
 ObjectPropertyDomain(has_Coordinate Character_State_Datum)
 ObjectPropertyRange(has_Coordinate Datum_Coordinate)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_State
+
+Declaration(ObjectProperty(has_State))
+ObjectPropertyDomain(has_State Character_State_Datum)
 
 
 
@@ -627,6 +602,13 @@ ObjectPropertyRange(has_Coordinate_System Coordinate_System)
 
 
 
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#transformation_of
+
+ObjectPropertyDomain(transformation_of Edge_Transformation)
+ObjectPropertyRange(transformation_of Character)
+
+
+
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#represents_TU
 
 Declaration(ObjectProperty(represents_TU))
@@ -634,14 +616,6 @@ InverseObjectProperties(represented_by_Node represents_TU)
 FunctionalObjectProperty(represents_TU)
 ObjectPropertyDomain(represents_TU Node)
 ObjectPropertyRange(represents_TU TU)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Node
-
-Declaration(ObjectProperty(has_Node))
-ObjectPropertyDomain(has_Node Edge)
-ObjectPropertyRange(has_Node Node)
 
 
 
@@ -655,9 +629,23 @@ ObjectPropertyRange(belongs_to_Amino_Acid_Character Amino_Acid_Character)
 
 
 
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Node
+
+Declaration(ObjectProperty(has_Node))
+ObjectPropertyDomain(has_Node Edge)
+ObjectPropertyRange(has_Node Node)
+
+
+
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Node_of_Edge
 
 Declaration(ObjectProperty(is_Node_of_Edge))
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#precedes
+
+Declaration(ObjectProperty(precedes))
 
 
 
@@ -687,8 +675,11 @@ ObjectPropertyRange(has_root Node)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#tranformation_of
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_Node
 
+Declaration(ObjectProperty(has_Right_Node))
+ObjectPropertyDomain(has_Right_Node Edge_Transformation)
+ObjectPropertyRange(has_Right_Node Node)
 
 
 
@@ -715,6 +706,14 @@ InverseObjectProperties(part_of has)
 
 
 
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_State
+
+Declaration(ObjectProperty(has_Right_State))
+ObjectPropertyDomain(has_Right_State Edge_Transformation)
+ObjectPropertyRange(has_Right_State Character_State_Domain)
+
+
+
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_TU
 
 Declaration(ObjectProperty(has_TU))
@@ -730,6 +729,14 @@ SubObjectPropertyOf(is_Parent_Node_of_Edge is_Node_of_Edge)
 InverseObjectProperties(is_Parent_Node_of_Edge has_Parent_Node)
 ObjectPropertyDomain(is_Parent_Node_of_Edge Node)
 ObjectPropertyRange(is_Parent_Node_of_Edge Directed_Edge)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_State
+
+Declaration(ObjectProperty(has_Left_State))
+ObjectPropertyDomain(has_Left_State Edge_Transformation)
+ObjectPropertyRange(has_Left_State Character_State_Domain)
 
 
 
@@ -774,20 +781,20 @@ ObjectPropertyRange(has_Remaining_Coordinate_List Coordinate_List)
 
 
 
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Descendant
+
+Declaration(ObjectProperty(has_Descendant))
+ObjectPropertyDomain(has_Descendant Ancestral_Node)
+ObjectPropertyRange(has_Descendant Node)
+
+
+
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Parent
 
 Declaration(ObjectProperty(has_Parent))
 InverseObjectProperties(has_Child has_Parent)
 ObjectPropertyDomain(has_Parent Node)
 ObjectPropertyRange(has_Parent Node)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Descendant
-
-Declaration(ObjectProperty(has_Descendant))
-ObjectPropertyDomain(has_Descendant Ancestral_Node)
-ObjectPropertyRange(has_Descendant Node)
 
 
 
@@ -821,6 +828,13 @@ DataPropertyRange(has_Range_End_Value xsd:integer)
 Declaration(DataProperty(has_Range_Start_Value))
 DataPropertyDomain(has_Range_Start_Value Coordinate_Range)
 DataPropertyRange(has_Range_Start_Value xsd:integer)
+
+
+
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Support_Value
+
+Declaration(DataProperty(has_Support_Value))
+DataPropertyRange(has_Support_Value xsd:float)
 
 
 

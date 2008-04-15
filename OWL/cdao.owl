@@ -1,121 +1,63 @@
 Namespace(=<http://www.owl-ontologies.com/Ontology1206463179.owl#>)
-Namespace(Ontology1206463179=<http://www.owl-ontologies.com/Ontology1206463179.owl#>)
-Namespace(owl11=<http://www.w3.org/2006/12/owl11#>)
-Namespace(owl11xml=<http://www.w3.org/2006/12/owl11-xml#>)
-Namespace(xsd=<http://www.w3.org/2001/XMLSchema#>)
 Namespace(dc=<http://purl.org/dc/elements/1.1/>)
 Namespace(rdfs=<http://www.w3.org/2000/01/rdf-schema#>)
-Namespace(rdf=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Namespace(owl11=<http://www.w3.org/2006/12/owl11#>)
+Namespace(owl11xml=<http://www.w3.org/2006/12/owl11-xml#>)
+Namespace(Ontology1206463179=<http://www.owl-ontologies.com/Ontology1206463179.owl#>)
 Namespace(owl=<http://www.w3.org/2002/07/owl#>)
+Namespace(xsd=<http://www.w3.org/2001/XMLSchema#>)
+Namespace(rdf=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 
 
 Ontology(<http://www.owl-ontologies.com/Ontology1206463179.owl>
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character
-
-EntityAnnotation(OWLClass(Character) Comment("Traits shown to be relevant for phylogenetic classification"^^xsd:string))
-SubClassOf(Character ObjectSomeValuesFrom(has Character_State_Datum))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_aa1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#K
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Domain
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU_Annotation
 
-EntityAnnotation(OWLClass(Character_State_Domain) Annotation(dc:description "The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.  "))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#P
+Declaration(OWLClass(TU_Annotation))
+SubClassOf(TU_Annotation CDAO_Annotation)
 
 
 
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix_Annotation
-
-Declaration(OWLClass(Character_State_Data_Matrix_Annotation))
-EntityAnnotation(OWLClass(Character_State_Data_Matrix_Annotation) Annotation(dc:description "Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment. "))
-SubClassOf(Character_State_Data_Matrix_Annotation CDAO_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
-
-EntityAnnotation(OWLClass(TU) Annotation(dc:description "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'. "))
-SubClassOf(TU owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_nt1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dG
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Annotation
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution_model
 
-Declaration(OWLClass(Edge_Annotation))
-SubClassOf(Edge_Annotation CDAO_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_aa1
+SubClassOf(Substitution_model Model_description)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Datum
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_Point
-
-Declaration(OWLClass(Coordinate_Point))
-SubClassOf(Coordinate_Point Datum_Coordinate)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Sequence
-
-Declaration(OWLClass(Sequence))
-EntityAnnotation(OWLClass(Sequence) Annotation(dc:description "A set of ordered states, typically the residues in a macromolecular sequence."))
-SubClassOf(Sequence owl:Thing)
-SubClassOf(Sequence ObjectSomeValuesFrom(has Character_State_Datum))
-SubClassOf(Sequence ObjectAllValuesFrom(has ObjectMinCardinality(1 has_Coordinate Datum_Coordinate)))
+Declaration(OWLClass(Character_State_Datum))
+EntityAnnotation(OWLClass(Character_State_Datum) Annotation(dc:description "The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid."))
+SubClassOf(Character_State_Datum owl:Thing)
+SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to_TU TU))
+SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to_Character Character))
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_Character
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Distance_based_method
 
-Declaration(OWLClass(Continuous_Character))
-SubClassOf(Continuous_Character Character)
-DisjointClasses(Nucleotide_Character
-                Continuous_Character
-                Amino_Acid_Character)
+SubClassOf(Distance_based_method Tree_Procedure)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Rooted_Tree
 
-SubClassOf(Nucleotide Character_State_Domain)
-EquivalentClasses(Nucleotide ObjectOneOf(dT
-                                         dC
-                                         dA
-                                         dG))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dC
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#D
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#IC50
-
+SubClassOf(Rooted_Tree Tree)
+SubClassOf(Rooted_Tree ObjectAllValuesFrom(subtree_of Rooted_Tree))
+SubClassOf(Rooted_Tree ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge Node)))
+SubClassOf(Rooted_Tree ObjectExactCardinality(1 has_root Node))
+DisjointClasses(Rooted_Tree Unrooted_Tree)
 
 
 
@@ -125,124 +67,29 @@ SubClassOf(Kimura_2_parameters Substitution_model)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Ancestral_Node
-
-Declaration(OWLClass(Ancestral_Node))
-SubClassOf(Ancestral_Node ObjectMinCardinality(1 part_of Rooted_Tree))
-SubClassOf(Ancestral_Node Node)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Lineage
-
-SubClassOf(Lineage Tree)
-SubClassOf(Lineage ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge ObjectMaxCardinality(1 has_Child Node))))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Transformation
-
-Declaration(OWLClass(Edge_Transformation))
-EntityAnnotation(OWLClass(Edge_Transformation) Comment("If left state is same as left node, then transformation will imply correct direction.  "))
-EntityAnnotation(OWLClass(Edge_Transformation) Annotation(dc:description "A transformation (in states of a character) associated with an edge (branch) of a Tree or Network. "))
-SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Right_State Character_State_Domain))
-SubClassOf(Edge_Transformation ObjectExactCardinality(1 transformation_of Character))
-SubClassOf(Edge_Transformation Edge_Annotation)
-SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Left_State Character_State_Domain))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#AAAlnCol1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#E
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_aa2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Node
-
-SubClassOf(Node owl:Thing)
-SubClassOf(Node ObjectMinCardinality(1 part_of Network))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#T
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Network
-
-Declaration(OWLClass(Network))
-SubClassOf(Network ObjectAllValuesFrom(has ObjectUnionOf(Node Edge)))
-SubClassOf(Network owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#W
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Gap_cost
-
-SubClassOf(Gap_cost Model_description)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Y
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix
-
-Declaration(OWLClass(Character_State_Data_Matrix))
-EntityAnnotation(OWLClass(Character_State_Data_Matrix) Annotation(dc:description "A matrix of observed character-state data, typically observed data though the states in the matrix might be simulated or hypothetical in some cases. Synonyms: character Data matrix, character-state matrix "))
-SubClassOf(Character_State_Data_Matrix ObjectSomeValuesFrom(has Character_State_Data_Matrix_Annotation))
-SubClassOf(Character_State_Data_Matrix owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_IC50
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree_Annotation
-
-SubClassOf(Tree_Annotation ObjectSomeValuesFrom(is_annotation Tree))
-SubClassOf(Tree_Annotation CDAO_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Imported_Amino_Acid
-
-Declaration(OWLClass(Imported_Amino_Acid))
-SubClassOf(Imported_Amino_Acid Character_State_Domain)
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid
+
+SubClassOf(Amino_Acid Character_State_Domain)
+EquivalentClasses(Amino_Acid ObjectOneOf(L
+                                         E
+                                         V
+                                         P
+                                         D
+                                         C
+                                         H
+                                         Q
+                                         T
+                                         W
+                                         Y
+                                         F
+                                         K
+                                         G
+                                         M
+                                         A
+                                         I
+                                         S
+                                         N
+                                         R))
 
 
 
@@ -251,105 +98,7 @@ SubClassOf(Imported_Amino_Acid Character_State_Domain)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_Character
-
-Declaration(OWLClass(Amino_Acid_Character))
-SubClassOf(Amino_Acid_Character Character)
-DisjointClasses(Nucleotide_Character
-                Continuous_Character
-                Amino_Acid_Character)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound
-
-Declaration(OWLClass(Compound))
-SubClassOf(Compound Character_State_Domain)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge
-
-SubClassOf(Edge ObjectSomeValuesFrom(has Edge_Annotation))
-SubClassOf(Edge ObjectExactCardinality(2 has_Node Node))
-SubClassOf(Edge owl:Thing)
-EquivalentClasses(Edge Branch)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_List
-
-Declaration(OWLClass(Coordinate_List))
-SubClassOf(Coordinate_List Datum_Coordinate)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#NtAlnCol2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#S
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#V
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_IC50
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#M
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#G
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_IC50
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#AAAlnCol2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_aa1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_IC50
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dT
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#NtAlnCol1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#I
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#P
 
 
 
@@ -363,40 +112,37 @@ SubClassOf(Edge_Length Edge_Annotation)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge
+
+SubClassOf(Edge owl:Thing)
+SubClassOf(Edge ObjectExactCardinality(2 has_Node Node))
+SubClassOf(Edge ObjectSomeValuesFrom(has Edge_Annotation))
+EquivalentClasses(Edge Branch)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#R
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Generic_State
-
-Declaration(OWLClass(Generic_State))
-EntityAnnotation(OWLClass(Generic_State) Comment("This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.  "))
-EntityAnnotation(OWLClass(Generic_State) Annotation(dc:description "This concept is tied to the verbally ambiguous 'gap' concept and to the use of a gap character (often the en dash '-') in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these. "))
-SubClassOf(Generic_State Character_State_Domain)
-EquivalentClasses(Generic_State ObjectOneOf(gap
-                                            absent
-                                            unknown))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_aa2
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#I
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_aa1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#N
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Rooted_Tree
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#W
 
-SubClassOf(Rooted_Tree ObjectAllValuesFrom(subtree_of Rooted_Tree))
-SubClassOf(Rooted_Tree ObjectExactCardinality(1 has_root Node))
-SubClassOf(Rooted_Tree Tree)
-SubClassOf(Rooted_Tree ObjectAllValuesFrom(has ObjectUnionOf(Directed_Edge Node)))
-DisjointClasses(Rooted_Tree Unrooted_Tree)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#A
+
 
 
 
@@ -405,7 +151,159 @@ DisjointClasses(Rooted_Tree Unrooted_Tree)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_nt1
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_State_Datum
+
+Declaration(OWLClass(Continuous_State_Datum))
+SubClassOf(Continuous_State_Datum Character_State_Datum)
+DisjointClasses(Continuous_State_Datum
+                Nucleotide_State_Datum
+                Amino_Acid_State_Datum)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Common_Ancestral_Node
+
+Declaration(OWLClass(Common_Ancestral_Node))
+SubClassOf(Common_Ancestral_Node Ancestral_Node)
+SubClassOf(Common_Ancestral_Node ObjectMinCardinality(2 has_Descendant Node))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Sequence
+
+Declaration(OWLClass(Sequence))
+EntityAnnotation(OWLClass(Sequence) Annotation(dc:description "A set of ordered states, typically the residues in a macromolecular sequence."))
+SubClassOf(Sequence ObjectAllValuesFrom(has ObjectMinCardinality(1 has_Coordinate Datum_Coordinate)))
+SubClassOf(Sequence owl:Thing)
+SubClassOf(Sequence ObjectSomeValuesFrom(has Character_State_Datum))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Domain
+
+EntityAnnotation(OWLClass(Character_State_Domain) Annotation(dc:description "The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.  "))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Annotation
+
+Declaration(OWLClass(Edge_Annotation))
+SubClassOf(Edge_Annotation CDAO_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Lineage
+
+SubClassOf(Lineage ObjectAllValuesFrom(has ObjectUnionOf(ObjectMaxCardinality(1 has_Child Node) Directed_Edge)))
+SubClassOf(Lineage Tree)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#MRCA_Node
+
+Declaration(OWLClass(MRCA_Node))
+SubClassOf(MRCA_Node Common_Ancestral_Node)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_Point
+
+Declaration(OWLClass(Coordinate_Point))
+SubClassOf(Coordinate_Point Datum_Coordinate)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_State_Datum
+
+Declaration(OWLClass(Nucleotide_State_Datum))
+SubClassOf(Nucleotide_State_Datum Character_State_Datum)
+DisjointClasses(Continuous_State_Datum
+                Nucleotide_State_Datum
+                Amino_Acid_State_Datum)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Model_description
+
+SubClassOf(Model_description CDAO_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Gap_cost
+
+SubClassOf(Gap_cost Model_description)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#G
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree
+
+SubClassOf(Tree Network)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_Character
+
+Declaration(OWLClass(Continuous_Character))
+SubClassOf(Continuous_Character ObjectAllValuesFrom(has_Datum Continuous_State_Datum))
+SubClassOf(Continuous_Character ObjectSomeValuesFrom(has_Continuous_Datum Continuous_State_Datum))
+SubClassOf(Continuous_Character Character)
+DisjointClasses(Amino_Acid_Character
+                Nucleotide_Character
+                Continuous_Character)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#H
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dT
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Imported_Amino_Acid
+
+Declaration(OWLClass(Imported_Amino_Acid))
+EntityAnnotation(OWLClass(Imported_Amino_Acid) Annotation(dc:description "Open class that should be defined equivalent to an external class defining the concept of Amino Acid. 
+Enables importing external ontologies defining Amino Acids"))
+SubClassOf(Imported_Amino_Acid Character_State_Domain)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Branch
+
+EntityAnnotation(OWLClass(Branch) Annotation(dc:description "'Branch' is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support. "))
+EquivalentClasses(Branch Edge)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge_Transformation
+
+Declaration(OWLClass(Edge_Transformation))
+EntityAnnotation(OWLClass(Edge_Transformation) Annotation(dc:description "A transformation (in states of a character) associated with an edge (branch) of a Tree or Network. "))
+EntityAnnotation(OWLClass(Edge_Transformation) Comment("If left state is same as left node, then transformation will imply correct direction.  "))
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Right_State Character_State_Domain))
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 transformation_of Character))
+SubClassOf(Edge_Transformation ObjectExactCardinality(1 has_Left_State Character_State_Domain))
+SubClassOf(Edge_Transformation Edge_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound
+
+Declaration(OWLClass(Compound))
+SubClassOf(Compound Character_State_Domain)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#F
 
 
 
@@ -417,222 +315,15 @@ SubClassOf(Coordinate_Range Datum_Coordinate)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_nt2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Directed_Edge
-
-Declaration(OWLClass(Directed_Edge))
-SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Child_Node Node))
-SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Parent_Node Node))
-SubClassOf(Directed_Edge Edge)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_aa2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Alignment_Procedure
-
-Declaration(OWLClass(Alignment_Procedure))
-SubClassOf(Alignment_Procedure Character_State_Data_Matrix_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Branch
-
-EntityAnnotation(OWLClass(Branch) Annotation(dc:description "'Branch' is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support. "))
-EquivalentClasses(Branch Edge)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid
-
-SubClassOf(Amino_Acid Character_State_Domain)
-EquivalentClasses(Amino_Acid ObjectOneOf(G
-                                         F
-                                         D
-                                         V
-                                         P
-                                         T
-                                         M
-                                         K
-                                         C
-                                         Y
-                                         W
-                                         N
-                                         L
-                                         A
-                                         I
-                                         H
-                                         Q
-                                         R
-                                         E
-                                         S))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Jukes_and_Kantor
-
-SubClassOf(Jukes_and_Kantor Substitution_model)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Datum_Coordinate
-
-Declaration(OWLClass(Datum_Coordinate))
-EntityAnnotation(OWLClass(Datum_Coordinate) Comment("drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on"))
-EntityAnnotation(OWLClass(Datum_Coordinate) Annotation(dc:description "A positional coordinate giving the source of a character state, used for molecular sequences.  "))
-SubClassOf(Datum_Coordinate ObjectExactCardinality(1 has_Coordinate_System Coordinate_System))
-SubClassOf(Datum_Coordinate owl:Thing)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Unrooted_Tree
-
-SubClassOf(Unrooted_Tree Tree)
-DisjointClasses(Unrooted_Tree Rooted_Tree)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_aa2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#MRCA_Node
-
-Declaration(OWLClass(MRCA_Node))
-SubClassOf(MRCA_Node Common_Ancestral_Node)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Parsimony
-
-SubClassOf(Parsimony Tree_Procedure)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_Character
-
-Declaration(OWLClass(Nucleotide_Character))
-SubClassOf(Nucleotide_Character Character)
-DisjointClasses(Nucleotide_Character
-                Continuous_Character
-                Amino_Acid_Character)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Gamma_distribution
-
-SubClassOf(Gamma_distribution Substitution_model)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Distance_based_method
-
-SubClassOf(Distance_based_method Tree_Procedure)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#A
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_State_Datum
-
-Declaration(OWLClass(Nucleotide_State_Datum))
-SubClassOf(Nucleotide_State_Datum Character_State_Datum)
-DisjointClasses(Amino_Acid_State_Datum
-                Continuous_State_Datum
-                Nucleotide_State_Datum)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Substitution_model
-
-SubClassOf(Substitution_model Model_description)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_nt2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#CDAO_Annotation
-
-Declaration(OWLClass(CDAO_Annotation))
-EntityAnnotation(OWLClass(CDAO_Annotation) Annotation(dc:description "The base class of annotations in CDAO."))
-EntityAnnotation(OWLClass(CDAO_Annotation) Comment("Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists. "))
-SubClassOf(CDAO_Annotation owl:Thing)
-
-
-
-// Class: http://www.w3.org/2002/07/owl#Thing
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Maximum_likelihood
-
-SubClassOf(Maximum_likelihood Tree_Procedure)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound_State_Datum
-
-Declaration(OWLClass(Compound_State_Datum))
-SubClassOf(Compound_State_Datum Character_State_Datum)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Datum
-
-Declaration(OWLClass(Character_State_Datum))
-EntityAnnotation(OWLClass(Character_State_Datum) Annotation(dc:description "The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid."))
-SubClassOf(Character_State_Datum owl:Thing)
-SubClassOf(Character_State_Datum ObjectExactCardinality(1 belongs_to_TU TU))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dG
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_State_Datum
-
-Declaration(OWLClass(Amino_Acid_State_Datum))
-SubClassOf(Amino_Acid_State_Datum Character_State_Datum)
-DisjointClasses(Amino_Acid_State_Datum
-                Continuous_State_Datum
-                Nucleotide_State_Datum)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt2
-
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Generic_State
+
+Declaration(OWLClass(Generic_State))
+EntityAnnotation(OWLClass(Generic_State) Annotation(dc:description "This concept is tied to the verbally ambiguous 'gap' concept and to the use of a gap character (often the en dash '-') in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these. "))
+EntityAnnotation(OWLClass(Generic_State) Comment("This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.  "))
+SubClassOf(Generic_State Character_State_Domain)
+EquivalentClasses(Generic_State ObjectOneOf(gap
+                                            absent
+                                            unknown))
 
 
 
@@ -645,40 +336,70 @@ SubClassOf(Taxonomic_Link DataSomeValuesFrom(has_External_Reference xsd:anyType)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_IC50
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Parsimony
+
+SubClassOf(Parsimony Tree_Procedure)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide
+
+SubClassOf(Nucleotide Character_State_Domain)
+EquivalentClasses(Nucleotide ObjectOneOf(dG
+                                         dC
+                                         dA
+                                         dT))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dA
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#R
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#V
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU_Annotation
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Gamma_distribution
 
-Declaration(OWLClass(TU_Annotation))
-SubClassOf(TU_Annotation CDAO_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#H
+SubClassOf(Gamma_distribution Substitution_model)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_Character
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_State_Datum
+Declaration(OWLClass(Amino_Acid_Character))
+SubClassOf(Amino_Acid_Character ObjectSomeValuesFrom(has_Amino_Acid_Datum Amino_Acid_State_Datum))
+SubClassOf(Amino_Acid_Character Character)
+SubClassOf(Amino_Acid_Character ObjectAllValuesFrom(has_Datum Amino_Acid_State_Datum))
+DisjointClasses(Amino_Acid_Character
+                Nucleotide_Character
+                Continuous_Character)
 
-Declaration(OWLClass(Continuous_State_Datum))
-SubClassOf(Continuous_State_Datum Character_State_Datum)
-DisjointClasses(Amino_Acid_State_Datum
-                Continuous_State_Datum
-                Nucleotide_State_Datum)
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#D
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Imported_Nucleotide
+
+Declaration(OWLClass(Imported_Nucleotide))
+EntityAnnotation(OWLClass(Imported_Nucleotide) Annotation(dc:description "This is an open class that should be made equivalent to an imported class describing the concept of Nucleotide. "))
+SubClassOf(Imported_Nucleotide Character_State_Domain)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Datum_Coordinate
+
+Declaration(OWLClass(Datum_Coordinate))
+EntityAnnotation(OWLClass(Datum_Coordinate) Comment("drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on"))
+EntityAnnotation(OWLClass(Datum_Coordinate) Annotation(dc:description "A positional coordinate giving the source of a character state, used for molecular sequences.  "))
+SubClassOf(Datum_Coordinate owl:Thing)
+SubClassOf(Datum_Coordinate ObjectExactCardinality(1 has_Coordinate_System Coordinate_System))
 
 
 
@@ -689,63 +410,22 @@ SubClassOf(Tree_Procedure Tree_Annotation)
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dA
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Unrooted_Tree
+
+SubClassOf(Unrooted_Tree Tree)
+DisjointClasses(Unrooted_Tree Rooted_Tree)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#E
 
 
 
 
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#K
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound_State_Datum
 
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Q
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree
-
-SubClassOf(Tree Network)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Model_description
-
-SubClassOf(Model_description CDAO_Annotation)
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_nt2
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#F
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Common_Ancestral_Node
-
-Declaration(OWLClass(Common_Ancestral_Node))
-SubClassOf(Common_Ancestral_Node Ancestral_Node)
-SubClassOf(Common_Ancestral_Node ObjectMinCardinality(2 has_Descendant Node))
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_nt1
-
-
-
-
-// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#N
-
+Declaration(OWLClass(Compound_State_Datum))
+SubClassOf(Compound_State_Datum Character_State_Datum)
 
 
 
@@ -757,72 +437,208 @@ SubClassOf(Coordinate_System owl:Thing)
 
 
 
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix
+
+Declaration(OWLClass(Character_State_Data_Matrix))
+EntityAnnotation(OWLClass(Character_State_Data_Matrix) Annotation(dc:description "A matrix of observed character-state data, typically observed data though the states in the matrix might be simulated or hypothetical in some cases. Synonyms: character Data matrix, character-state matrix "))
+SubClassOf(Character_State_Data_Matrix ObjectSomeValuesFrom(has_Character Character))
+SubClassOf(Character_State_Data_Matrix ObjectSomeValuesFrom(has Character_State_Data_Matrix_Annotation))
+SubClassOf(Character_State_Data_Matrix owl:Thing)
+SubClassOf(Character_State_Data_Matrix ObjectSomeValuesFrom(has_TU TU))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Y
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#dC
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Network
+
+Declaration(OWLClass(Network))
+SubClassOf(Network owl:Thing)
+SubClassOf(Network ObjectAllValuesFrom(has ObjectUnionOf(Edge Node)))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#S
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#T
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Tree_Annotation
+
+SubClassOf(Tree_Annotation CDAO_Annotation)
+SubClassOf(Tree_Annotation ObjectSomeValuesFrom(is_annotation Tree))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Directed_Edge
+
+Declaration(OWLClass(Directed_Edge))
+SubClassOf(Directed_Edge Edge)
+SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Parent_Node Node))
+SubClassOf(Directed_Edge ObjectExactCardinality(1 has_Child_Node Node))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#M
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Maximum_likelihood
+
+SubClassOf(Maximum_likelihood Tree_Procedure)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Jukes_and_Kantor
+
+SubClassOf(Jukes_and_Kantor Substitution_model)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_Character
+
+Declaration(OWLClass(Nucleotide_Character))
+SubClassOf(Nucleotide_Character Character)
+SubClassOf(Nucleotide_Character ObjectAllValuesFrom(has_Datum Nucleotide_State_Datum))
+SubClassOf(Nucleotide_Character ObjectSomeValuesFrom(has_Nucleotide_Datum Nucleotide_State_Datum))
+DisjointClasses(Amino_Acid_Character
+                Nucleotide_Character
+                Continuous_Character)
+
+
+
+// Class: http://www.w3.org/2002/07/owl#Thing
+
+EntityAnnotation(OWLClass(owl:Thing) Annotation(dc:creator "CDAO Team"))
+EntityAnnotation(OWLClass(owl:Thing) Annotation(dc:date "Modified 4/14/2008"))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Coordinate_List
+
+Declaration(OWLClass(Coordinate_List))
+SubClassOf(Coordinate_List Datum_Coordinate)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#CDAO_Annotation
+
+Declaration(OWLClass(CDAO_Annotation))
+EntityAnnotation(OWLClass(CDAO_Annotation) Annotation(dc:description "The base class of annotations in CDAO."))
+EntityAnnotation(OWLClass(CDAO_Annotation) Comment("Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists. "))
+SubClassOf(CDAO_Annotation owl:Thing)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous
+
+Declaration(OWLClass(Continuous))
+EntityAnnotation(OWLClass(Continuous) Annotation(dc:description "This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision)."))
+SubClassOf(Continuous Character_State_Domain)
+SubClassOf(Continuous DataExactCardinality(1 has_Value xsd:float))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Q
+
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Node
+
+SubClassOf(Node owl:Thing)
+SubClassOf(Node ObjectMinCardinality(1 part_of Network))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Alignment_Procedure
+
+Declaration(OWLClass(Alignment_Procedure))
+SubClassOf(Alignment_Procedure Character_State_Data_Matrix_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
+
+EntityAnnotation(OWLClass(TU) Annotation(dc:description "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'. "))
+SubClassOf(TU owl:Thing)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Ancestral_Node
+
+Declaration(OWLClass(Ancestral_Node))
+SubClassOf(Ancestral_Node Node)
+SubClassOf(Ancestral_Node ObjectMinCardinality(1 part_of Rooted_Tree))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character
+
+EntityAnnotation(OWLClass(Character) Comment("Traits shown to be relevant for phylogenetic classification"^^xsd:string))
+SubClassOf(Character ObjectSomeValuesFrom(has_Datum Character_State_Datum))
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Character_State_Data_Matrix_Annotation
+
+Declaration(OWLClass(Character_State_Data_Matrix_Annotation))
+EntityAnnotation(OWLClass(Character_State_Data_Matrix_Annotation) Annotation(dc:description "Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment. "))
+SubClassOf(Character_State_Data_Matrix_Annotation CDAO_Annotation)
+
+
+
+// Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_State_Datum
+
+Declaration(OWLClass(Amino_Acid_State_Datum))
+SubClassOf(Amino_Acid_State_Datum Character_State_Datum)
+DisjointClasses(Continuous_State_Datum
+                Nucleotide_State_Datum
+                Amino_Acid_State_Datum)
+
+
+
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Compound_Character
 
 Declaration(OWLClass(Compound_Character))
 EntityAnnotation(OWLClass(Compound_Character) Annotation(dc:description "A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block. "))
+SubClassOf(Compound_Character ObjectSomeValuesFrom(has_Compound_Datum Compound_State_Datum))
+SubClassOf(Compound_Character ObjectAllValuesFrom(has_Datum Compound_State_Datum))
 SubClassOf(Compound_Character Character)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_Node
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Character
 
-Declaration(ObjectProperty(has_Left_Node))
-ObjectPropertyDomain(has_Left_Node Edge_Transformation)
-ObjectPropertyRange(has_Left_Node Node)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Child
-
-Declaration(ObjectProperty(has_Child))
-InverseObjectProperties(has_Child has_Parent)
-ObjectPropertyDomain(has_Child Node)
-ObjectPropertyRange(has_Child Node)
+Declaration(ObjectProperty(belongs_to_Character))
+SubObjectPropertyOf(belongs_to_Character belongs_to)
+FunctionalObjectProperty(belongs_to_Character)
+ObjectPropertyDomain(belongs_to_Character Character_State_Datum)
+ObjectPropertyRange(belongs_to_Character Character)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Compound_Character
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Parent_Node_of_Edge
 
-Declaration(ObjectProperty(belongs_to_Compound_Character))
-SubObjectPropertyOf(belongs_to_Compound_Character belongs_to_Character)
-ObjectPropertyDomain(belongs_to_Compound_Character Compound_State_Datum)
-ObjectPropertyRange(belongs_to_Compound_Character Compound_Character)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Amino_Acid_State
-
-Declaration(ObjectProperty(has_Amino_Acid_State))
-SubObjectPropertyOf(has_Amino_Acid_State has_State)
-ObjectPropertyDomain(has_Amino_Acid_State Amino_Acid_State_Datum)
-ObjectPropertyRange(has_Amino_Acid_State ObjectUnionOf(Amino_Acid Generic_State))
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Child_Node
-
-Declaration(ObjectProperty(has_Child_Node))
-SubObjectPropertyOf(has_Child_Node has_Node)
-InverseObjectProperties(is_Child_Node_of_Edge has_Child_Node)
-FunctionalObjectProperty(has_Child_Node)
-ObjectPropertyDomain(has_Child_Node Directed_Edge)
-ObjectPropertyRange(has_Child_Node Node)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Coordinate
-
-Declaration(ObjectProperty(has_Coordinate))
-ObjectPropertyDomain(has_Coordinate Character_State_Datum)
-ObjectPropertyRange(has_Coordinate Datum_Coordinate)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_State
-
-Declaration(ObjectProperty(has_State))
-ObjectPropertyDomain(has_State Character_State_Datum)
+Declaration(ObjectProperty(is_Parent_Node_of_Edge))
+SubObjectPropertyOf(is_Parent_Node_of_Edge is_Node_of_Edge)
+InverseObjectProperties(has_Parent_Node is_Parent_Node_of_Edge)
+ObjectPropertyDomain(is_Parent_Node_of_Edge Node)
+ObjectPropertyRange(is_Parent_Node_of_Edge Directed_Edge)
 
 
 
@@ -834,61 +650,12 @@ ObjectPropertyRange(has_First_Coordinate_Item ObjectUnionOf(Coordinate_Point Coo
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Nucleotide_Character
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Compound_Character
 
-Declaration(ObjectProperty(belongs_to_Nucleotide_Character))
-SubObjectPropertyOf(belongs_to_Nucleotide_Character belongs_to_Character)
-FunctionalObjectProperty(belongs_to_Nucleotide_Character)
-ObjectPropertyDomain(belongs_to_Nucleotide_Character Nucleotide_State_Datum)
-ObjectPropertyRange(belongs_to_Nucleotide_Character Nucleotide_Character)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Continuous_Character
-
-Declaration(ObjectProperty(belongs_to_Continuous_Character))
-SubObjectPropertyOf(belongs_to_Continuous_Character belongs_to_Character)
-FunctionalObjectProperty(belongs_to_Continuous_Character)
-ObjectPropertyDomain(belongs_to_Continuous_Character Continuous_State_Datum)
-ObjectPropertyRange(belongs_to_Continuous_Character Continuous_Character)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Child_Node_of_Edge
-
-Declaration(ObjectProperty(is_Child_Node_of_Edge))
-SubObjectPropertyOf(is_Child_Node_of_Edge is_Node_of_Edge)
-InverseObjectProperties(is_Child_Node_of_Edge has_Child_Node)
-ObjectPropertyDomain(is_Child_Node_of_Edge Node)
-ObjectPropertyRange(is_Child_Node_of_Edge Directed_Edge)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_annotation
-
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Character
-
-Declaration(ObjectProperty(belongs_to_Character))
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_TU
-
-Declaration(ObjectProperty(belongs_to_TU))
-FunctionalObjectProperty(belongs_to_TU)
-ObjectPropertyDomain(belongs_to_TU Character_State_Datum)
-ObjectPropertyRange(belongs_to_TU TU)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Coordinate_System
-
-Declaration(ObjectProperty(has_Coordinate_System))
-ObjectPropertyDomain(has_Coordinate_System Datum_Coordinate)
-ObjectPropertyRange(has_Coordinate_System Coordinate_System)
+Declaration(ObjectProperty(belongs_to_Compound_Character))
+SubObjectPropertyOf(belongs_to_Compound_Character belongs_to_Character)
+ObjectPropertyDomain(belongs_to_Compound_Character Compound_State_Datum)
+ObjectPropertyRange(belongs_to_Compound_Character Compound_Character)
 
 
 
@@ -902,18 +669,57 @@ ObjectPropertyRange(represents_TU TU)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#transformation_of
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Compound_State
 
-ObjectPropertyDomain(transformation_of Edge_Transformation)
-ObjectPropertyRange(transformation_of Character)
+Declaration(ObjectProperty(has_Compound_State))
+SubObjectPropertyOf(has_Compound_State has_State)
+ObjectPropertyDomain(has_Compound_State Compound_State_Datum)
+ObjectPropertyRange(has_Compound_State ObjectUnionOf(Generic_State Compound))
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#homologous_to
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Compound_Datum
 
-Declaration(ObjectProperty(homologous_to))
-ObjectPropertyDomain(homologous_to Character_State_Datum)
-ObjectPropertyRange(homologous_to Character_State_Datum)
+Declaration(ObjectProperty(has_Compound_Datum))
+SubObjectPropertyOf(has_Compound_Datum has_Datum)
+ObjectPropertyDomain(has_Compound_Datum Compound_Character)
+ObjectPropertyRange(has_Compound_Datum Compound_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_State
+
+Declaration(ObjectProperty(has_State))
+SubObjectPropertyOf(has_State has)
+ObjectPropertyDomain(has_State Character_State_Datum)
+ObjectPropertyRange(has_State Character_State_Domain)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_State
+
+Declaration(ObjectProperty(has_Left_State))
+ObjectPropertyDomain(has_Left_State Edge_Transformation)
+ObjectPropertyRange(has_Left_State Character_State_Domain)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_TU
+
+Declaration(ObjectProperty(belongs_to_TU))
+SubObjectPropertyOf(belongs_to_TU belongs_to)
+FunctionalObjectProperty(belongs_to_TU)
+ObjectPropertyDomain(belongs_to_TU Character_State_Datum)
+ObjectPropertyRange(belongs_to_TU TU)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_root
+
+Declaration(ObjectProperty(has_root))
+FunctionalObjectProperty(has_root)
+ObjectPropertyDomain(has_root Rooted_Tree)
+ObjectPropertyRange(has_root Node)
 
 
 
@@ -927,32 +733,45 @@ ObjectPropertyRange(belongs_to_Amino_Acid_Character Amino_Acid_Character)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Node
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Datum
 
-Declaration(ObjectProperty(has_Node))
-ObjectPropertyDomain(has_Node Edge)
-ObjectPropertyRange(has_Node Node)
+Declaration(ObjectProperty(has_Datum))
+SubObjectPropertyOf(has_Datum has)
+ObjectPropertyDomain(has_Datum Character)
+ObjectPropertyRange(has_Datum Character_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Coordinate
+
+Declaration(ObjectProperty(has_Coordinate))
+ObjectPropertyDomain(has_Coordinate Character_State_Datum)
+ObjectPropertyRange(has_Coordinate Datum_Coordinate)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Continuous_Character
+
+Declaration(ObjectProperty(belongs_to_Continuous_Character))
+SubObjectPropertyOf(belongs_to_Continuous_Character belongs_to_Character)
+FunctionalObjectProperty(belongs_to_Continuous_Character)
+ObjectPropertyDomain(belongs_to_Continuous_Character Continuous_State_Datum)
+ObjectPropertyRange(belongs_to_Continuous_Character Continuous_Character)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Continuous_State
+
+Declaration(ObjectProperty(has_Continuous_State))
+SubObjectPropertyOf(has_Continuous_State has_State)
+ObjectPropertyDomain(has_Continuous_State Continuous_State_Datum)
+ObjectPropertyRange(has_Continuous_State Continuous)
 
 
 
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Node_of_Edge
 
 Declaration(ObjectProperty(is_Node_of_Edge))
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#precedes
-
-Declaration(ObjectProperty(precedes))
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Nucleotide_State
-
-Declaration(ObjectProperty(has_Nucleotide_State))
-SubObjectPropertyOf(has_Nucleotide_State has_State)
-ObjectPropertyDomain(has_Nucleotide_State Nucleotide_State_Datum)
-ObjectPropertyRange(has_Nucleotide_State ObjectUnionOf(Generic_State Nucleotide))
 
 
 
@@ -964,28 +783,103 @@ ObjectPropertyRange(subtree_of Network)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_root
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Child_Node
 
-Declaration(ObjectProperty(has_root))
-FunctionalObjectProperty(has_root)
-ObjectPropertyDomain(has_root Rooted_Tree)
-ObjectPropertyRange(has_root Node)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_Node
-
-Declaration(ObjectProperty(has_Right_Node))
-ObjectPropertyDomain(has_Right_Node Edge_Transformation)
-ObjectPropertyRange(has_Right_Node Node)
+Declaration(ObjectProperty(has_Child_Node))
+SubObjectPropertyOf(has_Child_Node has_Node)
+InverseObjectProperties(has_Child_Node is_Child_Node_of_Edge)
+FunctionalObjectProperty(has_Child_Node)
+ObjectPropertyDomain(has_Child_Node Directed_Edge)
+ObjectPropertyRange(has_Child_Node Node)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Character
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#connects_to
 
-Declaration(ObjectProperty(has_Character))
-ObjectPropertyDomain(has_Character Character_State_Data_Matrix)
-ObjectPropertyRange(has_Character Character)
+InverseObjectProperties(connects_to connects_to)
+SymmetricObjectProperty(connects_to)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Child_Node_of_Edge
+
+Declaration(ObjectProperty(is_Child_Node_of_Edge))
+SubObjectPropertyOf(is_Child_Node_of_Edge is_Node_of_Edge)
+InverseObjectProperties(has_Child_Node is_Child_Node_of_Edge)
+ObjectPropertyDomain(is_Child_Node_of_Edge Node)
+ObjectPropertyRange(is_Child_Node_of_Edge Directed_Edge)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Node
+
+Declaration(ObjectProperty(has_Node))
+ObjectPropertyDomain(has_Node Edge)
+ObjectPropertyRange(has_Node Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Character_State_Data_Matrix
+
+Declaration(ObjectProperty(belongs_to_Character_State_Data_Matrix))
+SubObjectPropertyOf(belongs_to_Character_State_Data_Matrix belongs_to)
+ObjectPropertyDomain(belongs_to_Character_State_Data_Matrix ObjectUnionOf(Character TU))
+ObjectPropertyRange(belongs_to_Character_State_Data_Matrix Character_State_Data_Matrix)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_State
+
+Declaration(ObjectProperty(has_Right_State))
+ObjectPropertyDomain(has_Right_State Edge_Transformation)
+ObjectPropertyRange(has_Right_State Character_State_Domain)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Remaining_Coordinate_List
+
+Declaration(ObjectProperty(has_Remaining_Coordinate_List))
+ObjectPropertyDomain(has_Remaining_Coordinate_List Coordinate_List)
+ObjectPropertyRange(has_Remaining_Coordinate_List Coordinate_List)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_Node
+
+Declaration(ObjectProperty(has_Left_Node))
+ObjectPropertyDomain(has_Left_Node Edge_Transformation)
+ObjectPropertyRange(has_Left_Node Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#transformation_of
+
+ObjectPropertyDomain(transformation_of Edge_Transformation)
+ObjectPropertyRange(transformation_of Character)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_annotation
+
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Parent_Node
+
+Declaration(ObjectProperty(has_Parent_Node))
+SubObjectPropertyOf(has_Parent_Node has_Node)
+InverseObjectProperties(has_Parent_Node is_Parent_Node_of_Edge)
+FunctionalObjectProperty(has_Parent_Node)
+ObjectPropertyDomain(has_Parent_Node Directed_Edge)
+ObjectPropertyRange(has_Parent_Node Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Coordinate_System
+
+Declaration(ObjectProperty(has_Coordinate_System))
+ObjectPropertyDomain(has_Coordinate_System Datum_Coordinate)
+ObjectPropertyRange(has_Coordinate_System Coordinate_System)
 
 
 
@@ -1000,82 +894,16 @@ ObjectPropertyRange(represented_by_Node Node)
 
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has
 
-InverseObjectProperties(part_of has)
+InverseObjectProperties(has part_of)
 
 
 
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_State
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Amino_Acid_State
 
-Declaration(ObjectProperty(has_Right_State))
-ObjectPropertyDomain(has_Right_State Edge_Transformation)
-ObjectPropertyRange(has_Right_State Character_State_Domain)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#is_Parent_Node_of_Edge
-
-Declaration(ObjectProperty(is_Parent_Node_of_Edge))
-SubObjectPropertyOf(is_Parent_Node_of_Edge is_Node_of_Edge)
-InverseObjectProperties(is_Parent_Node_of_Edge has_Parent_Node)
-ObjectPropertyDomain(is_Parent_Node_of_Edge Node)
-ObjectPropertyRange(is_Parent_Node_of_Edge Directed_Edge)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_TU
-
-Declaration(ObjectProperty(has_TU))
-ObjectPropertyDomain(has_TU Character_State_Data_Matrix)
-ObjectPropertyRange(has_TU TU)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Left_State
-
-Declaration(ObjectProperty(has_Left_State))
-ObjectPropertyDomain(has_Left_State Edge_Transformation)
-ObjectPropertyRange(has_Left_State Character_State_Domain)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Parent_Node
-
-Declaration(ObjectProperty(has_Parent_Node))
-SubObjectPropertyOf(has_Parent_Node has_Node)
-InverseObjectProperties(is_Parent_Node_of_Edge has_Parent_Node)
-FunctionalObjectProperty(has_Parent_Node)
-ObjectPropertyDomain(has_Parent_Node Directed_Edge)
-ObjectPropertyRange(has_Parent_Node Node)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#part_of
-
-InverseObjectProperties(part_of has)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#connects_to
-
-InverseObjectProperties(connects_to connects_to)
-SymmetricObjectProperty(connects_to)
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Compound_State
-
-Declaration(ObjectProperty(has_Compound_State))
-SubObjectPropertyOf(has_Compound_State has_State)
-ObjectPropertyDomain(has_Compound_State Compound_State_Datum)
-ObjectPropertyRange(has_Compound_State ObjectUnionOf(Compound Generic_State))
-
-
-
-// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Remaining_Coordinate_List
-
-Declaration(ObjectProperty(has_Remaining_Coordinate_List))
-ObjectPropertyDomain(has_Remaining_Coordinate_List Coordinate_List)
-ObjectPropertyRange(has_Remaining_Coordinate_List Coordinate_List)
+Declaration(ObjectProperty(has_Amino_Acid_State))
+SubObjectPropertyOf(has_Amino_Acid_State has_State)
+ObjectPropertyDomain(has_Amino_Acid_State Amino_Acid_State_Datum)
+ObjectPropertyRange(has_Amino_Acid_State ObjectUnionOf(Generic_State Amino_Acid))
 
 
 
@@ -1087,12 +915,123 @@ ObjectPropertyRange(has_Descendant Node)
 
 
 
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Nucleotide_Datum
+
+Declaration(ObjectProperty(has_Nucleotide_Datum))
+SubObjectPropertyOf(has_Nucleotide_Datum has_Datum)
+ObjectPropertyDomain(has_Nucleotide_Datum Nucleotide_Character)
+ObjectPropertyRange(has_Nucleotide_Datum Nucleotide_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#part_of
+
+EquivalentObjectProperties(part_of belongs_to)
+InverseObjectProperties(has part_of)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Child
+
+Declaration(ObjectProperty(has_Child))
+InverseObjectProperties(has_Parent has_Child)
+ObjectPropertyDomain(has_Child Node)
+ObjectPropertyRange(has_Child Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Nucleotide_State
+
+Declaration(ObjectProperty(has_Nucleotide_State))
+SubObjectPropertyOf(has_Nucleotide_State has_State)
+ObjectPropertyDomain(has_Nucleotide_State Nucleotide_State_Datum)
+ObjectPropertyRange(has_Nucleotide_State ObjectUnionOf(Nucleotide Generic_State))
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Right_Node
+
+Declaration(ObjectProperty(has_Right_Node))
+ObjectPropertyDomain(has_Right_Node Edge_Transformation)
+ObjectPropertyRange(has_Right_Node Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_TU
+
+Declaration(ObjectProperty(has_TU))
+SubObjectPropertyOf(has_TU has)
+ObjectPropertyDomain(has_TU Character_State_Data_Matrix)
+ObjectPropertyRange(has_TU TU)
+
+
+
 // Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Parent
 
 Declaration(ObjectProperty(has_Parent))
-InverseObjectProperties(has_Child has_Parent)
+InverseObjectProperties(has_Parent has_Child)
 ObjectPropertyDomain(has_Parent Node)
 ObjectPropertyRange(has_Parent Node)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#homologous_to
+
+Declaration(ObjectProperty(homologous_to))
+ObjectPropertyDomain(homologous_to Character_State_Datum)
+ObjectPropertyRange(homologous_to Character_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#precedes
+
+Declaration(ObjectProperty(precedes))
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to_Nucleotide_Character
+
+Declaration(ObjectProperty(belongs_to_Nucleotide_Character))
+SubObjectPropertyOf(belongs_to_Nucleotide_Character belongs_to_Character)
+FunctionalObjectProperty(belongs_to_Nucleotide_Character)
+ObjectPropertyDomain(belongs_to_Nucleotide_Character Nucleotide_State_Datum)
+ObjectPropertyRange(belongs_to_Nucleotide_Character Nucleotide_Character)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Amino_Acid_Datum
+
+Declaration(ObjectProperty(has_Amino_Acid_Datum))
+SubObjectPropertyOf(has_Amino_Acid_Datum has_Datum)
+ObjectPropertyDomain(has_Amino_Acid_Datum Amino_Acid_Character)
+ObjectPropertyRange(has_Amino_Acid_Datum Amino_Acid_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Continuous_Datum
+
+Declaration(ObjectProperty(has_Continuous_Datum))
+SubObjectPropertyOf(has_Continuous_Datum has_Datum)
+ObjectPropertyDomain(has_Continuous_Datum Continuous_Character)
+ObjectPropertyRange(has_Continuous_Datum Continuous_State_Datum)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#belongs_to
+
+Declaration(ObjectProperty(belongs_to))
+EquivalentObjectProperties(belongs_to part_of)
+ObjectPropertyDomain(belongs_to owl:Thing)
+ObjectPropertyRange(belongs_to owl:Thing)
+
+
+
+// Object property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Character
+
+Declaration(ObjectProperty(has_Character))
+SubObjectPropertyOf(has_Character has)
+ObjectPropertyDomain(has_Character Character_State_Data_Matrix)
+ObjectPropertyRange(has_Character Character)
 
 
 
@@ -1104,26 +1043,17 @@ DataPropertyRange(has_Point_Coordinate_Value xsd:integer)
 
 
 
-// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Continuous_State
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Support_Value
 
-Declaration(DataProperty(has_Continuous_State))
-FunctionalDataProperty(has_Continuous_State)
-DataPropertyDomain(has_Continuous_State Continuous_State_Datum)
-DataPropertyRange(has_Continuous_State xsd:float)
+Declaration(DataProperty(has_Support_Value))
+DataPropertyRange(has_Support_Value xsd:float)
 
 
 
-// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Range_End_Value
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Precision
 
-Declaration(DataProperty(has_Range_End_Value))
-DataPropertyDomain(has_Range_End_Value Coordinate_Range)
-DataPropertyRange(has_Range_End_Value xsd:integer)
-
-
-
-// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_External_Reference
-
-Declaration(DataProperty(has_External_Reference))
+Declaration(DataProperty(has_Precision))
+DataPropertyRange(has_Precision xsd:float)
 
 
 
@@ -1135,101 +1065,30 @@ DataPropertyRange(has_Range_Start_Value xsd:integer)
 
 
 
-// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Support_Value
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Range_End_Value
 
-Declaration(DataProperty(has_Support_Value))
-DataPropertyRange(has_Support_Value xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_Character
-
-ClassAssertion(Continuous_Character IC50)
+Declaration(DataProperty(has_Range_End_Value))
+DataPropertyDomain(has_Range_End_Value Coordinate_Range)
+DataPropertyRange(has_Range_End_Value xsd:integer)
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_Value
 
-ClassAssertion(Nucleotide dA)
-ClassAssertion(Nucleotide dC)
-ClassAssertion(Nucleotide dG)
-ClassAssertion(Nucleotide dT)
+Declaration(DataProperty(has_Value))
+DataPropertyRange(has_Value xsd:float)
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_aa1
+// Data property: http://www.owl-ontologies.com/Ontology1206463179.owl#has_External_Reference
 
-Declaration(Individual(otuA_aa1))
-ObjectPropertyAssertion(has_Amino_Acid_State otuA_aa1 T)
-ObjectPropertyAssertion(belongs_to_TU otuA_aa1 otuA)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuA_aa1 AAAlnCol1)
+Declaration(DataProperty(has_External_Reference))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_aa2
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dG
 
-Declaration(Individual(otuE_aa2))
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuE_aa2 AAAlnCol2)
-ObjectPropertyAssertion(belongs_to_TU otuE_aa2 otuE)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dA
-
-Declaration(Individual(dA))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#T
-
-Declaration(Individual(T))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa2
-
-Declaration(Individual(otuD_aa2))
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuD_aa2 AAAlnCol2)
-ObjectPropertyAssertion(belongs_to_TU otuD_aa2 otuD)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#C
-
-Declaration(Individual(C))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_aa1
-
-Declaration(Individual(otuC_aa1))
-ObjectPropertyAssertion(belongs_to_TU otuC_aa1 otuC)
-ObjectPropertyAssertion(has_Amino_Acid_State otuC_aa1 S)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuC_aa1 AAAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_Character
-
-ClassAssertion(Nucleotide_Character NtAlnCol2)
-ClassAssertion(Nucleotide_Character NtAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_nt1
-
-Declaration(Individual(otuD_nt1))
-ObjectPropertyAssertion(belongs_to_TU otuD_nt1 otuD)
-ObjectPropertyAssertion(has_Nucleotide_State otuD_nt1 dC)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuD_nt1 NtAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt2
-
-Declaration(Individual(otuC_nt2))
-ObjectPropertyAssertion(belongs_to_TU otuC_nt2 otuC)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuC_nt2 NtAlnCol2)
+Declaration(Individual(dG))
 
 
 
@@ -1239,135 +1098,9 @@ Declaration(Individual(L))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#I
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#E
 
-Declaration(Individual(I))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#H
-
-Declaration(Individual(H))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_nt2
-
-Declaration(Individual(otuD_nt2))
-ObjectPropertyAssertion(belongs_to_TU otuD_nt2 otuD)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuD_nt2 NtAlnCol2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt2
-
-Declaration(Individual(otuB_nt2))
-ObjectPropertyAssertion(belongs_to_TU otuB_nt2 otuB)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuB_nt2 NtAlnCol2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE
-
-Declaration(Individual(otuE))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#IC50
-
-Declaration(Individual(IC50))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#F
-
-Declaration(Individual(F))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dC
-
-Declaration(Individual(dC))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#K
-
-Declaration(Individual(K))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#M
-
-Declaration(Individual(M))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_aa2
-
-Declaration(Individual(otuC_aa2))
-ObjectPropertyAssertion(belongs_to_TU otuC_aa2 otuC)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuC_aa2 AAAlnCol2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Y
-
-Declaration(Individual(Y))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_IC50
-
-Declaration(Individual(otuB_IC50))
-ObjectPropertyAssertion(belongs_to_Continuous_Character otuB_IC50 IC50)
-ObjectPropertyAssertion(belongs_to_TU otuB_IC50 otuB)
-DataPropertyAssertion(has_Continuous_State otuB_IC50 "0.2773"^^xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#NtAlnCol1
-
-Declaration(Individual(NtAlnCol1))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#W
-
-Declaration(Individual(W))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_State_Datum
-
-ClassAssertion(Amino_Acid_State_Datum otuC_aa1)
-ClassAssertion(Amino_Acid_State_Datum otuA_aa2)
-ClassAssertion(Amino_Acid_State_Datum otuC_aa2)
-ClassAssertion(Amino_Acid_State_Datum otuB_aa1)
-ClassAssertion(Amino_Acid_State_Datum otuD_aa2)
-ClassAssertion(Amino_Acid_State_Datum otuD_aa1)
-ClassAssertion(Amino_Acid_State_Datum otuA_aa1)
-ClassAssertion(Amino_Acid_State_Datum otuB_aa2)
-ClassAssertion(Amino_Acid_State_Datum otuE_aa1)
-ClassAssertion(Amino_Acid_State_Datum otuE_aa2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA
-
-Declaration(Individual(otuA))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#A
-
-Declaration(Individual(A))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#R
-
-Declaration(Individual(R))
+Declaration(Individual(E))
 
 
 
@@ -1378,115 +1111,21 @@ ClassAssertion(gap Generic_State)
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#absent
-
-Declaration(Individual(absent))
-ClassAssertion(absent Generic_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid
-
-ClassAssertion(Amino_Acid M)
-ClassAssertion(Amino_Acid S)
-ClassAssertion(Amino_Acid N)
-ClassAssertion(Amino_Acid G)
-ClassAssertion(Amino_Acid C)
-ClassAssertion(Amino_Acid W)
-ClassAssertion(Amino_Acid Y)
-ClassAssertion(Amino_Acid A)
-ClassAssertion(Amino_Acid P)
-ClassAssertion(Amino_Acid K)
-ClassAssertion(Amino_Acid L)
-ClassAssertion(Amino_Acid E)
-ClassAssertion(Amino_Acid R)
-ClassAssertion(Amino_Acid Q)
-ClassAssertion(Amino_Acid V)
-ClassAssertion(Amino_Acid D)
-ClassAssertion(Amino_Acid F)
-ClassAssertion(Amino_Acid I)
-ClassAssertion(Amino_Acid H)
-ClassAssertion(Amino_Acid T)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_aa1
-
-Declaration(Individual(otuB_aa1))
-ObjectPropertyAssertion(has_Amino_Acid_State otuB_aa1 T)
-ObjectPropertyAssertion(belongs_to_TU otuB_aa1 otuB)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuB_aa1 AAAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#D
-
-Declaration(Individual(D))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_nt2
-
-Declaration(Individual(otuE_nt2))
-ObjectPropertyAssertion(belongs_to_TU otuE_nt2 otuE)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuE_nt2 NtAlnCol2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC
-
-Declaration(Individual(otuC))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#V
-
-Declaration(Individual(V))
-
-
-
 // Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#P
 
 Declaration(Individual(P))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_aa2
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dA
 
-Declaration(Individual(otuB_aa2))
-ObjectPropertyAssertion(belongs_to_TU otuB_aa2 otuB)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuB_aa2 AAAlnCol2)
+Declaration(Individual(dA))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#NtAlnCol2
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#H
 
-Declaration(Individual(NtAlnCol2))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#unknown
-
-Declaration(Individual(unknown))
-ClassAssertion(unknown Generic_State)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_IC50
-
-Declaration(Individual(otuE_IC50))
-ObjectPropertyAssertion(belongs_to_Continuous_Character otuE_IC50 IC50)
-ObjectPropertyAssertion(belongs_to_TU otuE_IC50 otuE)
-DataPropertyAssertion(has_Continuous_State otuE_IC50 "0.5591"^^xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB_nt1
-
-Declaration(Individual(otuB_nt1))
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuB_nt1 NtAlnCol1)
-ObjectPropertyAssertion(belongs_to_TU otuB_nt1 otuB)
-ObjectPropertyAssertion(has_Nucleotide_State otuB_nt1 dT)
+Declaration(Individual(H))
 
 
 
@@ -1496,165 +1135,28 @@ Declaration(Individual(Q))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_aa1
-
-Declaration(Individual(otuD_aa1))
-ObjectPropertyAssertion(belongs_to_TU otuD_aa1 otuD)
-ObjectPropertyAssertion(has_Amino_Acid_State otuD_aa1 S)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuD_aa1 AAAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#E
-
-Declaration(Individual(E))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide_State_Datum
-
-ClassAssertion(Nucleotide_State_Datum otuE_nt2)
-ClassAssertion(Nucleotide_State_Datum otuB_nt2)
-ClassAssertion(Nucleotide_State_Datum otuE_nt1)
-ClassAssertion(Nucleotide_State_Datum otuC_nt1)
-ClassAssertion(Nucleotide_State_Datum otuA_nt1)
-ClassAssertion(Nucleotide_State_Datum otuD_nt2)
-ClassAssertion(Nucleotide_State_Datum otuC_nt2)
-ClassAssertion(Nucleotide_State_Datum otuA_nt2)
-ClassAssertion(Nucleotide_State_Datum otuB_nt1)
-ClassAssertion(Nucleotide_State_Datum otuD_nt1)
-
-
-
 // Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#G
 
 Declaration(Individual(G))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid_Character
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#absent
 
-ClassAssertion(Amino_Acid_Character AAAlnCol1)
-ClassAssertion(Amino_Acid_Character AAAlnCol2)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#AAAlnCol2
-
-Declaration(Individual(AAAlnCol2))
+Declaration(Individual(absent))
+ClassAssertion(absent Generic_State)
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#I
 
-Declaration(Individual(otuD))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_aa2
-
-Declaration(Individual(otuA_aa2))
-ObjectPropertyAssertion(belongs_to_TU otuA_aa2 otuA)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuA_aa2 AAAlnCol2)
+Declaration(Individual(I))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_nt1
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#R
 
-Declaration(Individual(otuE_nt1))
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuE_nt1 NtAlnCol1)
-ObjectPropertyAssertion(has_Nucleotide_State otuE_nt1 dC)
-ObjectPropertyAssertion(belongs_to_TU otuE_nt1 otuE)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_nt1
-
-Declaration(Individual(otuA_nt1))
-ObjectPropertyAssertion(belongs_to_TU otuA_nt1 otuA)
-ObjectPropertyAssertion(has_Nucleotide_State otuA_nt1 dT)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuA_nt1 NtAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_IC50
-
-Declaration(Individual(otuC_IC50))
-ObjectPropertyAssertion(belongs_to_Continuous_Character otuC_IC50 IC50)
-ObjectPropertyAssertion(belongs_to_TU otuC_IC50 otuC)
-DataPropertyAssertion(has_Continuous_State otuC_IC50 "0.3590"^^xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuE_aa1
-
-Declaration(Individual(otuE_aa1))
-ObjectPropertyAssertion(belongs_to_TU otuE_aa1 otuE)
-ObjectPropertyAssertion(belongs_to_Amino_Acid_Character otuE_aa1 AAAlnCol1)
-ObjectPropertyAssertion(has_Amino_Acid_State otuE_aa1 S)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#TU
-
-ClassAssertion(TU otuD)
-ClassAssertion(TU otuB)
-ClassAssertion(TU otuC)
-ClassAssertion(TU otuA)
-ClassAssertion(TU otuE)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuC_nt1
-
-Declaration(Individual(otuC_nt1))
-ObjectPropertyAssertion(belongs_to_TU otuC_nt1 otuC)
-ObjectPropertyAssertion(has_Nucleotide_State otuC_nt1 dC)
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuC_nt1 NtAlnCol1)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuD_IC50
-
-Declaration(Individual(otuD_IC50))
-ObjectPropertyAssertion(belongs_to_TU otuD_IC50 otuD)
-ObjectPropertyAssertion(belongs_to_Continuous_Character otuD_IC50 IC50)
-DataPropertyAssertion(has_Continuous_State otuD_IC50 "0.5538"^^xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dG
-
-Declaration(Individual(dG))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuB
-
-Declaration(Individual(otuB))
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_nt2
-
-Declaration(Individual(otuA_nt2))
-ObjectPropertyAssertion(belongs_to_Nucleotide_Character otuA_nt2 NtAlnCol2)
-ObjectPropertyAssertion(belongs_to_TU otuA_nt2 otuA)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#otuA_IC50
-
-Declaration(Individual(otuA_IC50))
-ObjectPropertyAssertion(belongs_to_TU otuA_IC50 otuA)
-ObjectPropertyAssertion(belongs_to_Continuous_Character otuA_IC50 IC50)
-DataPropertyAssertion(has_Continuous_State otuA_IC50 "0.7772"^^xsd:float)
-
-
-
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dT
-
-Declaration(Individual(dT))
+Declaration(Individual(R))
 
 
 
@@ -1664,25 +1166,122 @@ Declaration(Individual(N))
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#AAAlnCol1
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Nucleotide
 
-Declaration(Individual(AAAlnCol1))
+ClassAssertion(Nucleotide dT)
+ClassAssertion(Nucleotide dG)
+ClassAssertion(Nucleotide dA)
+ClassAssertion(Nucleotide dC)
 
 
 
-// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Continuous_State_Datum
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#V
 
-ClassAssertion(Continuous_State_Datum otuB_IC50)
-ClassAssertion(Continuous_State_Datum otuC_IC50)
-ClassAssertion(Continuous_State_Datum otuD_IC50)
-ClassAssertion(Continuous_State_Datum otuE_IC50)
-ClassAssertion(Continuous_State_Datum otuA_IC50)
+Declaration(Individual(V))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Amino_Acid
+
+ClassAssertion(Amino_Acid S)
+ClassAssertion(Amino_Acid G)
+ClassAssertion(Amino_Acid D)
+ClassAssertion(Amino_Acid Y)
+ClassAssertion(Amino_Acid W)
+ClassAssertion(Amino_Acid H)
+ClassAssertion(Amino_Acid F)
+ClassAssertion(Amino_Acid V)
+ClassAssertion(Amino_Acid L)
+ClassAssertion(Amino_Acid A)
+ClassAssertion(Amino_Acid Q)
+ClassAssertion(Amino_Acid T)
+ClassAssertion(Amino_Acid I)
+ClassAssertion(Amino_Acid R)
+ClassAssertion(Amino_Acid K)
+ClassAssertion(Amino_Acid E)
+ClassAssertion(Amino_Acid N)
+ClassAssertion(Amino_Acid P)
+ClassAssertion(Amino_Acid C)
+ClassAssertion(Amino_Acid M)
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#D
+
+Declaration(Individual(D))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dT
+
+Declaration(Individual(dT))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#C
+
+Declaration(Individual(C))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#T
+
+Declaration(Individual(T))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#W
+
+Declaration(Individual(W))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#Y
+
+Declaration(Individual(Y))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#F
+
+Declaration(Individual(F))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#K
+
+Declaration(Individual(K))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#dC
+
+Declaration(Individual(dC))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#A
+
+Declaration(Individual(A))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#M
+
+Declaration(Individual(M))
 
 
 
 // Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#S
 
 Declaration(Individual(S))
+
+
+
+// Individual: http://www.owl-ontologies.com/Ontology1206463179.owl#unknown
+
+Declaration(Individual(unknown))
+ClassAssertion(unknown Generic_State)
 
 
 

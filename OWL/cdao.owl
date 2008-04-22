@@ -479,7 +479,7 @@ DisjointClasses(Amino_Acid_State_Datum
 
 // Class: http://www.owl-ontologies.com/Ontology1206463179.owl#Edge
 
-EntityAnnotation(OWLClass(Edge) Annotation(dc:description "An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a "branch".  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a "split" or bipartition, since each edge in a tree divides the terminal nodes into two sets. "))
+EntityAnnotation(OWLClass(Edge) Annotation(dc:description "An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a 'branch'.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a 'split' or bipartition, since each edge in a tree divides the terminal nodes into two sets. "))
 SubClassOf(Edge ObjectSomeValuesFrom(has Edge_Annotation))
 SubClassOf(Edge ObjectExactCardinality(2 has_Node Node))
 SubClassOf(Edge owl:Thing)

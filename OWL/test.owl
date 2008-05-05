@@ -1,0 +1,1617 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cdao "http://www.evolutionaryontology.org/CDAO/cdao.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.evolutionaryontology.org/CDAO/cdao.owl#"
+     xml:base="http://www.evolutionaryontology.org/CDAO/cdao.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:cdao="http://www.evolutionaryontology.org/CDAO/cdao.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;subject"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to">
+        <dc:description
+            >Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of. </dc:description>
+        <owl:equivalentProperty rdf:resource="#part_of"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Amino_Acid_Character -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Amino_Acid_Character">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Amino_Acid_Character"/>
+        <rdfs:domain rdf:resource="#Amino_Acid_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Character -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Character">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Character"/>
+        <rdfs:domain rdf:resource="#Character_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Character_State_Data_Matrix -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Character_State_Data_Matrix">
+        <rdfs:range rdf:resource="#Character_State_Data_Matrix"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Character"/>
+                    <rdf:Description rdf:about="#TU"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Compound_Character -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Compound_Character">
+        <rdfs:range rdf:resource="#Compound_Character"/>
+        <rdfs:domain rdf:resource="#Compound_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Continuous_Character -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Continuous_Character">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Continuous_Character"/>
+        <rdfs:domain rdf:resource="#Continuous_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Edge -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Edge">
+        <dc:description
+            >The property links a Node to one of the edges that are incident on such node.</dc:description>
+        <rdfs:range rdf:resource="#Edge"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Edge_as_Child -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Child">
+        <dc:description
+            >The property links a Node to the Edge it belongs to in the child position.</dc:description>
+        <rdfs:range rdf:resource="#Directed_Edge"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Edge"/>
+        <owl:inverseOf rdf:resource="#has_Child_Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Edge_as_Parent -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Parent">
+        <dc:description
+            >The property linksa Node to one of the Edges where the node appears in the parent position (i.e., closer to the root).</dc:description>
+        <rdfs:range rdf:resource="#Directed_Edge"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Edge"/>
+        <owl:inverseOf rdf:resource="#has_Parent_Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_Nucleotide_Character -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Nucleotide_Character">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Nucleotide_Character"/>
+        <rdfs:domain rdf:resource="#Nucleotide_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to_Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#belongs_to_TU -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_TU">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Character_State_Datum"/>
+        <rdfs:range rdf:resource="#TU"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#connects_to -->
+
+    <owl:ObjectProperty rdf:about="#connects_to">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <owl:inverseOf rdf:resource="#connects_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has -->
+
+    <owl:ObjectProperty rdf:about="#has">
+        <dc:description
+            >Generic &#39;has&#39; property. </dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Amino_Acid_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Amino_Acid_Datum">
+        <rdfs:domain rdf:resource="#Amino_Acid_Character"/>
+        <rdfs:range rdf:resource="#Amino_Acid_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Amino_Acid_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Amino_Acid_State">
+        <rdfs:domain rdf:resource="#Amino_Acid_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_State"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Generic_State"/>
+                    <rdf:Description rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Ancestor -->
+
+    <owl:ObjectProperty rdf:about="#has_Ancestor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <dc:description
+            >The property links a node to any of the other nodes that are its ancestors in a rooted tree.</dc:description>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+        <owl:inverseOf rdf:resource="#has_Descendant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Character -->
+
+    <owl:ObjectProperty rdf:about="#has_Character">
+        <rdfs:range rdf:resource="#Character"/>
+        <rdfs:domain rdf:resource="#Character_State_Data_Matrix"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Child -->
+
+    <owl:ObjectProperty rdf:about="#has_Child">
+        <dc:description
+            >The property links a node to a node that is an immediate descendant in the tree.</dc:description>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+        <owl:inverseOf rdf:resource="#has_Parent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Child_Node -->
+
+    <owl:ObjectProperty rdf:about="#has_Child_Node">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description
+            >The property associates to a Directed Edge the Node that is in the child position in the edge, i.e., the node touched by the edge and closer to the leaves of the tree.</dc:description>
+        <rdfs:domain rdf:resource="#Directed_Edge"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Compound_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Compound_Datum">
+        <rdfs:domain rdf:resource="#Compound_Character"/>
+        <rdfs:range rdf:resource="#Compound_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Compound_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Compound_State">
+        <rdfs:domain rdf:resource="#Compound_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_State"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Compound"/>
+                    <rdf:Description rdf:about="#Generic_State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Continuous_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Continuous_Datum">
+        <rdfs:domain rdf:resource="#Continuous_Character"/>
+        <rdfs:range rdf:resource="#Continuous_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Continuous_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Continuous_State">
+        <rdfs:range rdf:resource="#Continuous"/>
+        <rdfs:domain rdf:resource="#Continuous_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Coordinate -->
+
+    <owl:ObjectProperty rdf:about="#has_Coordinate">
+        <rdfs:domain rdf:resource="#Character_State_Datum"/>
+        <rdfs:range rdf:resource="#Datum_Coordinate"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Coordinate_System -->
+
+    <owl:ObjectProperty rdf:about="#has_Coordinate_System">
+        <rdfs:range rdf:resource="#Coordinate_System"/>
+        <rdfs:domain rdf:resource="#Datum_Coordinate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Datum">
+        <rdfs:domain rdf:resource="#Character"/>
+        <rdfs:range rdf:resource="#Character_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Descendant -->
+
+    <owl:ObjectProperty rdf:about="#has_Descendant">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <dc:description
+            >A property that links a node to any of its descendants in a rooted tree. </dc:description>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_First_Coordinate_Item -->
+
+    <owl:ObjectProperty rdf:about="#has_First_Coordinate_Item">
+        <rdfs:domain rdf:resource="#Coordinate_List"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Coordinate_Point"/>
+                    <rdf:Description rdf:about="#Coordinate_Range"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Left_Node -->
+
+    <owl:ObjectProperty rdf:about="#has_Left_Node">
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Left_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Left_State">
+        <rdfs:range rdf:resource="#Character_State_Domain"/>
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Node -->
+
+    <owl:ObjectProperty rdf:about="#has_Node">
+        <dc:description
+            >Property that associates to each Edge the Nodes it connects.</dc:description>
+        <rdfs:domain rdf:resource="#Edge"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Nucleotide_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Nucleotide_Datum">
+        <rdfs:domain rdf:resource="#Nucleotide_Character"/>
+        <rdfs:range rdf:resource="#Nucleotide_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Nucleotide_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Nucleotide_State">
+        <rdfs:domain rdf:resource="#Nucleotide_State_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_State"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Generic_State"/>
+                    <rdf:Description rdf:about="#Nucleotide"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Parent -->
+
+    <owl:ObjectProperty rdf:about="#has_Parent">
+        <dc:description
+            >The property that links a node to its unique parent in a rooted tree.</dc:description>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Parent_Node -->
+
+    <owl:ObjectProperty rdf:about="#has_Parent_Node">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description
+            >Associates to a Directed Edge the Node that is in the parent position in the edge (i.e., the node touched by the edge and closer to the root of the tree)</dc:description>
+        <rdfs:domain rdf:resource="#Directed_Edge"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Remaining_Coordinate_List -->
+
+    <owl:ObjectProperty rdf:about="#has_Remaining_Coordinate_List">
+        <rdfs:domain rdf:resource="#Coordinate_List"/>
+        <rdfs:range rdf:resource="#Coordinate_List"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Right_Node -->
+
+    <owl:ObjectProperty rdf:about="#has_Right_Node">
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Right_State -->
+
+    <owl:ObjectProperty rdf:about="#has_Right_State">
+        <rdfs:range rdf:resource="#Character_State_Domain"/>
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_State -->
+
+    <owl:ObjectProperty rdf:about="#has_State">
+        <rdfs:domain rdf:resource="#Character_State_Datum"/>
+        <rdfs:range rdf:resource="#Character_State_Domain"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_TU -->
+
+    <owl:ObjectProperty rdf:about="#has_TU">
+        <rdfs:domain rdf:resource="#Character_State_Data_Matrix"/>
+        <rdfs:range rdf:resource="#TU"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Transformation_Component -->
+
+    <owl:ObjectProperty rdf:about="#has_Transformation_Component">
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_root -->
+
+    <owl:ObjectProperty rdf:about="#has_root">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description
+            >The property links a rooted tree to the specific node that represents the unique root of the tree.</dc:description>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#Rooted_Tree"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#homologous_to -->
+
+    <owl:ObjectProperty rdf:about="#homologous_to">
+        <rdfs:domain rdf:resource="#Character_State_Datum"/>
+        <rdfs:range rdf:resource="#Character_State_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#is_annotation -->
+
+    <owl:ObjectProperty rdf:about="#is_annotation"/>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="#part_of">
+        <owl:inverseOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="#precedes"/>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#represented_by_Node -->
+
+    <owl:ObjectProperty rdf:about="#represented_by_Node">
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#TU"/>
+        <owl:inverseOf rdf:resource="#represents_TU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#represents_TU -->
+
+    <owl:ObjectProperty rdf:about="#represents_TU">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#TU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#subtree_of -->
+
+    <owl:ObjectProperty rdf:about="#subtree_of">
+        <dc:description
+            >The property links two networks where the latter is a substructure of the former</dc:description>
+        <rdfs:range rdf:resource="#Network"/>
+        <rdfs:domain rdf:resource="#Network"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#transformation_of -->
+
+    <owl:ObjectProperty rdf:about="#transformation_of">
+        <rdfs:range rdf:resource="#Character"/>
+        <rdfs:domain rdf:resource="#Edge_Transformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_External_Reference -->
+
+    <owl:DatatypeProperty rdf:about="#has_External_Reference"/>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Point_Coordinate_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Point_Coordinate_Value">
+        <rdfs:domain rdf:resource="#Coordinate_Point"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Precision -->
+
+    <owl:DatatypeProperty rdf:about="#has_Precision">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Range_End_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Range_End_Value">
+        <rdfs:domain rdf:resource="#Coordinate_Range"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Range_Start_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Range_Start_Value">
+        <rdfs:domain rdf:resource="#Coordinate_Range"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Support_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Support_Value">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Value">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#AminoAcid -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#AminoAcid">
+        <owl:equivalentClass rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Alignment_Procedure -->
+
+    <owl:Class rdf:about="#Alignment_Procedure">
+        <rdfs:subClassOf rdf:resource="#Character_State_Data_Matrix_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid_Character -->
+
+    <owl:Class rdf:about="#Amino_Acid_Character">
+        <rdfs:subClassOf rdf:resource="#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#Amino_Acid_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Amino_Acid_Datum"/>
+                <owl:someValuesFrom rdf:resource="#Amino_Acid_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid_State_Datum -->
+
+    <owl:Class rdf:about="#Amino_Acid_State_Datum">
+        <rdfs:subClassOf rdf:resource="#Character_State_Datum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Ancestral_Node -->
+
+    <owl:Class rdf:about="#Ancestral_Node">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#part_of"/>
+                <owl2:onClass rdf:resource="#Rooted_Tree"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Branch -->
+
+    <owl:Class rdf:about="#Branch">
+        <owl:equivalentClass rdf:resource="#Edge"/>
+        <dc:description
+            >&#39;Branch&#39; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character -->
+
+    <owl:Class rdf:about="#Character">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:someValuesFrom rdf:resource="#Character_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Traits shown to be relevant for phylogenetic classification</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character_State_Data_Matrix -->
+
+    <owl:Class rdf:about="#Character_State_Data_Matrix">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_TU"/>
+                <owl:someValuesFrom rdf:resource="#TU"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:someValuesFrom rdf:resource="#Character_State_Data_Matrix_Annotation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Character"/>
+                <owl:someValuesFrom rdf:resource="#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character_State_Data_Matrix_Annotation -->
+
+    <owl:Class rdf:about="#Character_State_Data_Matrix_Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <dc:description
+            >Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character_State_Datum -->
+
+    <owl:Class rdf:about="#Character_State_Datum">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#belongs_to_Character"/>
+                <owl2:onClass rdf:resource="#Character"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#belongs_to_TU"/>
+                <owl2:onClass rdf:resource="#TU"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character_State_Domain -->
+
+    <owl:Class rdf:about="#Character_State_Domain">
+        <dc:description
+            >The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.  </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Common_Ancestral_Node -->
+
+    <owl:Class rdf:about="#Common_Ancestral_Node">
+        <rdfs:subClassOf rdf:resource="#Ancestral_Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Descendant"/>
+                <owl2:onClass rdf:resource="#Node"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Compound -->
+
+    <owl:Class rdf:about="#Compound">
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Compound_Character -->
+
+    <owl:Class rdf:about="#Compound_Character">
+        <rdfs:subClassOf rdf:resource="#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Compound_Datum"/>
+                <owl:someValuesFrom rdf:resource="#Compound_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#Compound_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Compound_State_Datum -->
+
+    <owl:Class rdf:about="#Compound_State_Datum">
+        <rdfs:subClassOf rdf:resource="#Character_State_Datum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Continuous -->
+
+    <owl:Class rdf:about="#Continuous">
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Value"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision).</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Continuous_Character -->
+
+    <owl:Class rdf:about="#Continuous_Character">
+        <rdfs:subClassOf rdf:resource="#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Continuous_Datum"/>
+                <owl:someValuesFrom rdf:resource="#Continuous_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#Continuous_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Continuous_State_Datum -->
+
+    <owl:Class rdf:about="#Continuous_State_Datum">
+        <rdfs:subClassOf rdf:resource="#Character_State_Datum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Coordinate_List -->
+
+    <owl:Class rdf:about="#Coordinate_List">
+        <rdfs:subClassOf rdf:resource="#Datum_Coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Coordinate_Point -->
+
+    <owl:Class rdf:about="#Coordinate_Point">
+        <rdfs:subClassOf rdf:resource="#Datum_Coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Coordinate_Range -->
+
+    <owl:Class rdf:about="#Coordinate_Range">
+        <rdfs:subClassOf rdf:resource="#Datum_Coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Coordinate_System -->
+
+    <owl:Class rdf:about="#Coordinate_System">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Datum_Coordinate -->
+
+    <owl:Class rdf:about="#Datum_Coordinate">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Coordinate_System"/>
+                <owl2:onClass rdf:resource="#Coordinate_System"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >A positional coordinate giving the source of a character state, used for molecular sequences.  </dc:description>
+        <rdfs:comment
+            >drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Directed_Edge -->
+
+    <owl:Class rdf:about="#Directed_Edge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Edge"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#has_Child_Node"/>
+                        <owl2:onClass rdf:resource="#Node"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#has_Parent_Node"/>
+                        <owl2:onClass rdf:resource="#Node"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description
+            >A directed edge. Rooted trees have directed edges. The direction is specified by way of the parent and child relationships of nodes that the edge connects. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Distance_based_method -->
+
+    <owl:Class rdf:about="#Distance_based_method">
+        <rdfs:subClassOf rdf:resource="#Tree_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Edge -->
+
+    <owl:Class rdf:about="#Edge">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Node"/>
+                <owl2:onClass rdf:resource="#Node"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:someValuesFrom rdf:resource="#Edge_Annotation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &#39;branch&#39;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &#39;split&#39; or bipartition, since each edge in a tree divides the terminal nodes into two sets. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Edge_Annotation -->
+
+    <owl:Class rdf:about="#Edge_Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Edge_Length -->
+
+    <owl:Class rdf:about="#Edge_Length">
+        <rdfs:subClassOf rdf:resource="#Edge_Annotation"/>
+        <rdfs:comment
+            >Its possible that this should not be classed as an &#39;annotation&#39; since it contains data rather than meta-data.  </rdfs:comment>
+        <dc:description
+            >The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.  </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Edge_Transformation -->
+
+    <owl:Class rdf:about="#Edge_Transformation">
+        <rdfs:subClassOf rdf:resource="#Edge_Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Right_State"/>
+                <owl2:onClass rdf:resource="#Character_State_Domain"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#transformation_of"/>
+                <owl2:onClass rdf:resource="#Character"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Left_State"/>
+                <owl2:onClass rdf:resource="#Character_State_Domain"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >If left state is same as left node, then transformation will imply correct direction.  </rdfs:comment>
+        <dc:description
+            >A transformation (in states of a character) associated with an edge (branch) of a Tree or Network. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Gamma_distribution -->
+
+    <owl:Class rdf:about="#Gamma_distribution">
+        <rdfs:subClassOf rdf:resource="#Substitution_model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Gap_cost -->
+
+    <owl:Class rdf:about="#Gap_cost">
+        <rdfs:subClassOf rdf:resource="#Model_description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Generic_State -->
+
+    <owl:Class rdf:about="#Generic_State">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#gap"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#absent"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#unknown"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+        <rdfs:comment
+            >This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.  </rdfs:comment>
+        <dc:description
+            >This concept is tied to the verbally ambiguous &#39;gap&#39; concept and to the use of a gap character (often the en dash &#39;-&#39;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Imported_Nucleotide -->
+
+    <owl:Class rdf:about="#Imported_Nucleotide">
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+        <dc:description
+            >This is an open class that should be made equivalent to an imported class describing the concept of Nucleotide. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Jukes_and_Kantor -->
+
+    <owl:Class rdf:about="#Jukes_and_Kantor">
+        <rdfs:subClassOf rdf:resource="#Substitution_model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Kimura_2_parameters -->
+
+    <owl:Class rdf:about="#Kimura_2_parameters">
+        <rdfs:subClassOf rdf:resource="#Substitution_model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Lineage -->
+
+    <owl:Class rdf:about="#Lineage">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Directed_Edge"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#has_Child"/>
+                                <owl2:onClass rdf:resource="#Node"/>
+                                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#MRCA_Node -->
+
+    <owl:Class rdf:about="#MRCA_Node">
+        <rdfs:subClassOf rdf:resource="#Common_Ancestral_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Maximum_likelihood -->
+
+    <owl:Class rdf:about="#Maximum_likelihood">
+        <rdfs:subClassOf rdf:resource="#Tree_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Model_description -->
+
+    <owl:Class rdf:about="#Model_description">
+        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <dc:description
+            >Description of a model of transformations. </dc:description>
+        <rdfs:comment
+            >This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Network -->
+
+    <owl:Class rdf:about="#Network">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Edge"/>
+                            <rdf:Description rdf:about="#Node"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Node -->
+
+    <owl:Class rdf:about="#Node">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#belongs_to_Edge_as_Child"/>
+                <owl2:onClass rdf:resource="#Directed_Edge"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#part_of"/>
+                <owl2:onClass rdf:resource="#Network"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Nucleotide -->
+
+    <owl:Class rdf:about="#Nucleotide">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dT"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dC"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dG"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dA"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Nucleotide_Character -->
+
+    <owl:Class rdf:about="#Nucleotide_Character">
+        <rdfs:subClassOf rdf:resource="#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#Nucleotide_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Nucleotide_Datum"/>
+                <owl:someValuesFrom rdf:resource="#Nucleotide_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Nucleotide_State_Datum -->
+
+    <owl:Class rdf:about="#Nucleotide_State_Datum">
+        <rdfs:subClassOf rdf:resource="#Character_State_Datum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Parsimony -->
+
+    <owl:Class rdf:about="#Parsimony">
+        <rdfs:subClassOf rdf:resource="#Tree_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Rooted_Tree -->
+
+    <owl:Class rdf:about="#Rooted_Tree">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_root"/>
+                <owl2:onClass rdf:resource="#Node"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Directed_Edge"/>
+                            <rdf:Description rdf:about="#Node"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#subtree_of"/>
+                <owl:allValuesFrom rdf:resource="#Rooted_Tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Unrooted_Tree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Sequence -->
+
+    <owl:Class rdf:about="#Sequence">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#has_Coordinate"/>
+                        <owl2:onClass rdf:resource="#Datum_Coordinate"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:someValuesFrom rdf:resource="#Character_State_Datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >A set of ordered states, typically the residues in a macromolecular sequence.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Substitution_model -->
+
+    <owl:Class rdf:about="#Substitution_model">
+        <rdfs:subClassOf rdf:resource="#Model_description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#TU -->
+
+    <owl:Class rdf:about="#TU">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &#39;OTU&#39; and &#39;HTU&#39;. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#TU_Annotation -->
+
+    <owl:Class rdf:about="#TU_Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Taxonomic_Link -->
+
+    <owl:Class rdf:about="#Taxonomic_Link">
+        <rdfs:subClassOf rdf:resource="#TU_Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_External_Reference"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >Link to an externally defined taxonomic hierarchy.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Tree -->
+
+    <owl:Class rdf:about="#Tree">
+        <rdfs:subClassOf rdf:resource="#Network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Tree_Annotation -->
+
+    <owl:Class rdf:about="#Tree_Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#is_annotation"/>
+                <owl:someValuesFrom rdf:resource="#Tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Tree_Procedure -->
+
+    <owl:Class rdf:about="#Tree_Procedure">
+        <rdfs:subClassOf rdf:resource="#Tree_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Unrooted_Tree -->
+
+    <owl:Class rdf:about="#Unrooted_Tree">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid -->
+
+    <owl:Class rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid">
+        <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
+        <dc:description
+            >This class will be declared equivalent ot the amino acid class description imported</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation -->
+
+    <owl:Class rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >The base class of annotations in CDAO.</dc:description>
+        <rdfs:comment
+            >Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing">
+        <dc:source
+            >http://sourceforge.net/projects/cdao/</dc:source>
+        <dc:identifier
+            >http://cdao.cvs.sourceforge.net/cdao/cdao/OWL/cdao.owl?view=log</dc:identifier>
+        <dc:language>OWL (RDF-XML)</dc:language>
+        <owl:versionInfo>$Revision$
+</owl:versionInfo>
+        <dc:date>$Date$</dc:date>
+        <dc:creator>CDAO Team</dc:creator>
+        <dc:subject
+            >character data analysis; evolutionary informatics; </dc:subject>
+        <dc:title
+            >The Character Data Analysis Ontology</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#absent -->
+
+    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#absent"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dA -->
+
+    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dA"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dC -->
+
+    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dC"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dG -->
+
+    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dG"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dT -->
+
+    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dT"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#gap -->
+
+    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#gap"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#unknown -->
+
+    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#unknown"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="#has_Child"/>
+        <owl2:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#has_Child_Node"/>
+            <rdf:Description rdf:about="#belongs_to_Edge_as_Parent"/>
+        </owl2:propertyChain>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="#has_Descendant"/>
+        <owl2:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#has_Child_Node"/>
+            <rdf:Description rdf:about="#belongs_to_Edge_as_Parent"/>
+        </owl2:propertyChain>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="#has_Parent"/>
+        <owl2:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#has_Parent_Node"/>
+            <rdf:Description rdf:about="#belongs_to_Edge_as_Child"/>
+        </owl2:propertyChain>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="#has_Ancestor"/>
+        <owl2:propertyChain rdf:parseType="Collection">
+            <rdf:Description rdf:about="#has_Parent_Node"/>
+            <rdf:Description rdf:about="#belongs_to_Edge_as_Child"/>
+        </owl2:propertyChain>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl2;AllDisjointClasses"/>
+        <owl2:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Amino_Acid_Character"/>
+            <rdf:Description rdf:about="#Continuous_Character"/>
+            <rdf:Description rdf:about="#Nucleotide_Character"/>
+        </owl2:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl2;AllDisjointClasses"/>
+        <owl2:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Amino_Acid_State_Datum"/>
+            <rdf:Description rdf:about="#Continuous_State_Datum"/>
+            <rdf:Description rdf:about="#Nucleotide_State_Datum"/>
+        </owl2:members>
+    </rdf:Description>
+</rdf:RDF>

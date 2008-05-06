@@ -186,6 +186,8 @@
 
     <owl:ObjectProperty rdf:about="#belongs_to_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a character-state datum to its TU. </dc:description>
         <rdfs:domain rdf:resource="#Character_State_Datum"/>
         <rdfs:range rdf:resource="#TU"/>
         <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
@@ -214,6 +216,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Amino_Acid_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_Datum">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
         <rdfs:domain rdf:resource="#Amino_Acid_Character"/>
         <rdfs:range rdf:resource="#Amino_Acid_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -224,6 +228,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Amino_Acid_State -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a amino acid character-state instance with a state value from the domain of amino acid states.</dc:description>
         <rdfs:domain rdf:resource="#Amino_Acid_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_State"/>
         <rdfs:range>
@@ -255,6 +261,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Character -->
 
     <owl:ObjectProperty rdf:about="#has_Character">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a character data matrix with a character (a column) represented in the matrix.</dc:description>
         <rdfs:range rdf:resource="#Character"/>
         <rdfs:domain rdf:resource="#Character_State_Data_Matrix"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -291,6 +299,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Compound_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_Datum">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a compound character (a character with some states that are subdividable) to a state datum for the character. </dc:description>
         <rdfs:domain rdf:resource="#Compound_Character"/>
         <rdfs:range rdf:resource="#Compound_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -301,6 +311,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Compound_State -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a compound character-state instance with its compound state value.</dc:description>
         <rdfs:domain rdf:resource="#Compound_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_State"/>
         <rdfs:range>
@@ -318,6 +330,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Continuous_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_Datum">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a continuous character to a state datum for the character.</dc:description>
         <rdfs:domain rdf:resource="#Continuous_Character"/>
         <rdfs:range rdf:resource="#Continuous_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -328,6 +342,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Continuous_State -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a character-state instance with a state value on a continuous numeric scale.</dc:description>
         <rdfs:range rdf:resource="#Continuous"/>
         <rdfs:domain rdf:resource="#Continuous_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_State"/>
@@ -348,6 +364,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Coordinate_System -->
 
     <owl:ObjectProperty rdf:about="#has_Coordinate_System">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property links a coordinate to the coordinate system it references. </dc:description>
         <rdfs:range rdf:resource="#Coordinate_System"/>
         <rdfs:domain rdf:resource="#Datum_Coordinate"/>
     </owl:ObjectProperty>
@@ -357,6 +375,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Datum">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a character to a state datum for the character.</dc:description>
         <rdfs:domain rdf:resource="#Character"/>
         <rdfs:range rdf:resource="#Character_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -380,6 +400,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_First_Coordinate_Item -->
 
     <owl:ObjectProperty rdf:about="#has_First_Coordinate_Item">
+        <dc:description rdf:datatype="&xsd;string"
+            >The property that relates a coordinate list to the first item in the list.</dc:description>
         <rdfs:domain rdf:resource="#Coordinate_List"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
         <rdfs:range>
@@ -397,6 +419,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Left_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Left_Node">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a transformation to a &#39;left&#39; node (the node that has the &#39;left&#39; state).</dc:description>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
         <rdfs:range rdf:resource="#Node"/>
         <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
@@ -407,6 +431,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Left_State -->
 
     <owl:ObjectProperty rdf:about="#has_Left_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a transformation to a &#39;left&#39; state (the state associated with the &#39;left&#39; node).</dc:description>
         <rdfs:range rdf:resource="#Character_State_Domain"/>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
         <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
@@ -429,6 +455,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Nucleotide_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_Datum">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
         <rdfs:domain rdf:resource="#Nucleotide_Character"/>
         <rdfs:range rdf:resource="#Nucleotide_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -439,6 +467,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Nucleotide_State -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.</dc:description>
         <rdfs:domain rdf:resource="#Nucleotide_State_Datum"/>
         <rdfs:subPropertyOf rdf:resource="#has_State"/>
         <rdfs:range>
@@ -481,6 +511,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Remaining_Coordinate_List -->
 
     <owl:ObjectProperty rdf:about="#has_Remaining_Coordinate_List">
+        <dc:description rdf:datatype="&xsd;string"
+            >The property that relates a coordinate list to the item in the list beyond the first item.</dc:description>
         <rdfs:domain rdf:resource="#Coordinate_List"/>
         <rdfs:range rdf:resource="#Coordinate_List"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -491,6 +523,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Right_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Right_Node">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a transformation to a &#39;right&#39; node (the node that has the &#39;right&#39; state).</dc:description>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
         <rdfs:range rdf:resource="#Node"/>
         <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
@@ -501,6 +535,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Right_State -->
 
     <owl:ObjectProperty rdf:about="#has_Right_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a transformation to a &#39;right&#39; state (the state associated with the &#39;right&#39; node).</dc:description>
         <rdfs:range rdf:resource="#Character_State_Domain"/>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
         <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
@@ -511,6 +547,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_State -->
 
     <owl:ObjectProperty rdf:about="#has_State">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.</dc:description>
         <rdfs:domain rdf:resource="#Character_State_Datum"/>
         <rdfs:range rdf:resource="#Character_State_Domain"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -521,6 +559,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_TU -->
 
     <owl:ObjectProperty rdf:about="#has_TU">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property associates a character data matrix with a TU (a row) represented in the matrix.</dc:description>
         <rdfs:domain rdf:resource="#Character_State_Data_Matrix"/>
         <rdfs:range rdf:resource="#TU"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -531,6 +571,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#has_Transformation_Component -->
 
     <owl:ObjectProperty rdf:about="#has_Transformation_Component">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a transformation to the components that compose it. </dc:description>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
     </owl:ObjectProperty>
@@ -553,6 +595,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#homologous_to -->
 
     <owl:ObjectProperty rdf:about="#homologous_to">
+        <dc:description rdf:datatype="&xsd;string"
+            >This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</dc:description>
         <rdfs:domain rdf:resource="#Character_State_Datum"/>
         <rdfs:range rdf:resource="#Character_State_Datum"/>
     </owl:ObjectProperty>
@@ -582,6 +626,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#represented_by_Node -->
 
     <owl:ObjectProperty rdf:about="#represented_by_Node">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a TU to a node that represents it in a network. </dc:description>
         <rdfs:range rdf:resource="#Node"/>
         <rdfs:domain rdf:resource="#TU"/>
         <owl:inverseOf rdf:resource="#represents_TU"/>
@@ -593,6 +639,8 @@
 
     <owl:ObjectProperty rdf:about="#represents_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).</dc:description>
         <rdfs:domain rdf:resource="#Node"/>
         <rdfs:range rdf:resource="#TU"/>
     </owl:ObjectProperty>
@@ -603,7 +651,7 @@
 
     <owl:ObjectProperty rdf:about="#subtree_of">
         <dc:description
-            >The property links two networks where the latter is a substructure of the former</dc:description>
+            >This property links two networks where the latter is a substructure of the former</dc:description>
         <rdfs:range rdf:resource="#Network"/>
         <rdfs:domain rdf:resource="#Network"/>
     </owl:ObjectProperty>
@@ -613,6 +661,8 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#transformation_of -->
 
     <owl:ObjectProperty rdf:about="#transformation_of">
+        <dc:description rdf:datatype="&xsd;string"
+            >This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</dc:description>
         <rdfs:range rdf:resource="#Character"/>
         <rdfs:domain rdf:resource="#Edge_Transformation"/>
     </owl:ObjectProperty>
@@ -1496,7 +1546,8 @@
     <owl:Class rdf:about="&owl;Thing">
         <dc:date rdf:datatype="&xsd;string"
             >$Date$</dc:date>
-        <owl:versionInfo rdf:datatype="&xsd;string">$Id$</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string"
+            >$Id$</owl:versionInfo>
         <dc:coverage rdf:datatype="&xsd;string"
             >Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
         <dc:rights rdf:datatype="&xsd;string"

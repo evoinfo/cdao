@@ -236,7 +236,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Generic_State"/>
-                    <rdf:Description rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -751,7 +751,7 @@
     <!-- http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#AminoAcid -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#AminoAcid">
-        <owl:equivalentClass rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
+        <owl:equivalentClass rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid"/>
     </owl:Class>
     
 
@@ -863,7 +863,7 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Character_State_Data_Matrix_Annotation -->
 
     <owl:Class rdf:about="#Character_State_Data_Matrix_Annotation">
-        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
         <dc:description
             >Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.</dc:description>
     </owl:Class>
@@ -1113,7 +1113,7 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Edge_Annotation -->
 
     <owl:Class rdf:about="#Edge_Annotation">
-        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
     </owl:Class>
     
 
@@ -1270,7 +1270,7 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Model_description -->
 
     <owl:Class rdf:about="#Model_description">
-        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
         <rdfs:comment
             >This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.</rdfs:comment>
         <dc:description
@@ -1460,7 +1460,7 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#TU_Annotation -->
 
     <owl:Class rdf:about="#TU_Annotation">
-        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
     </owl:Class>
     
 
@@ -1492,7 +1492,7 @@
     <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Tree_Annotation -->
 
     <owl:Class rdf:about="#Tree_Annotation">
-        <rdfs:subClassOf rdf:resource="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
+        <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#is_annotation"/>
@@ -1519,9 +1519,9 @@
     
 
 
-    <!-- http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid -->
 
-    <owl:Class rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#Amino_Acid">
+    <owl:Class rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#Amino_Acid">
         <rdfs:subClassOf rdf:resource="#Character_State_Domain"/>
         <dc:description
             >This class will be declared equivalent ot the amino acid class description imported</dc:description>
@@ -1529,9 +1529,9 @@
     
 
 
-    <!-- http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation -->
 
-    <owl:Class rdf:about="http://www.evolutonaryontology.org/CDAO/cdao.owl#CDAO_Annotation">
+    <owl:Class rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#CDAO_Annotation">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment
             >Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>

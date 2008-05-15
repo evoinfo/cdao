@@ -1185,9 +1185,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#gap"/>
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#absent"/>
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#unknown"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#gap"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#absent"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#unknown"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1328,10 +1328,10 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dT"/>
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dC"/>
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dG"/>
-                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dA"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dT"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dC"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dG"/>
+                    <rdf:Description rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dA"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1579,45 +1579,45 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#absent -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#absent -->
 
-    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#absent"/>
+    <Generic_State rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#absent"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dA -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#dA -->
 
-    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dA"/>
+    <Nucleotide rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dA"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dC -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#dC -->
 
-    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dC"/>
+    <Nucleotide rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dC"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dG -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#dG -->
 
-    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dG"/>
+    <Nucleotide rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dG"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#dT -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#dT -->
 
-    <Nucleotide rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#dT"/>
+    <Nucleotide rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#dT"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#gap -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#gap -->
 
-    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#gap"/>
+    <Generic_State rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#gap"/>
     
 
 
-    <!-- http://www.owl-ontologies.com/Ontology1206463179.owl#unknown -->
+    <!-- http://www.evolutionaryontology.org/CDAO/cdao.owl#unknown -->
 
-    <Generic_State rdf:about="http://www.owl-ontologies.com/Ontology1206463179.owl#unknown"/>
+    <Generic_State rdf:about="http://www.evolutionaryontology.org/CDAO/cdao.owl#unknown"/>
     
 
 

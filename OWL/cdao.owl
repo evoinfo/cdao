@@ -171,6 +171,23 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Network -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Network">
+        <rdfs:range rdf:resource="#Network"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Node"/>
+                    <rdf:Description rdf:about="#Tree"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Nucleotide_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Nucleotide_Character">
@@ -198,7 +215,27 @@
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Tree -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Tree">
+        <rdfs:range rdf:resource="#Tree"/>
         <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Edge"/>
+                    <rdf:Description rdf:about="#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Tree_as_Root -->
+
+    <owl:ObjectProperty rdf:about="#belongs_to_Tree_as_Root">
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Tree"/>
+        <rdfs:subPropertyOf rdf:resource="#belongs_to"/>
+        <owl:inverseOf rdf:resource="#has_Root"/>
     </owl:ObjectProperty>
     
 
@@ -617,6 +654,19 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Root -->
+
+    <owl:ObjectProperty rdf:about="#has_Root">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description
+            >The property links a rooted tree to the specific node that represents the unique root of the tree.</dc:description>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#RootedTree"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_State -->
 
     <owl:ObjectProperty rdf:about="#has_State">
@@ -647,19 +697,6 @@
         <dc:description rdf:datatype="&xsd;string"
             >This property relates a transformation to the components that compose it.</dc:description>
         <rdfs:domain rdf:resource="#EdgeTransformation"/>
-        <rdfs:subPropertyOf rdf:resource="#has"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_root -->
-
-    <owl:ObjectProperty rdf:about="#has_root">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <dc:description
-            >The property links a rooted tree to the specific node that represents the unique root of the tree.</dc:description>
-        <rdfs:range rdf:resource="#Node"/>
-        <rdfs:domain rdf:resource="#RootedTree"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
     </owl:ObjectProperty>
     
@@ -771,6 +808,24 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Float_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Float_Value">
+        <rdfs:subPropertyOf rdf:resource="#has_Value"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Int_Value -->
+
+    <owl:DatatypeProperty rdf:about="#has_Int_Value">
+        <rdfs:subPropertyOf rdf:resource="#has_Value"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Point_Coordinate_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Point_Coordinate_Value">
@@ -814,10 +869,18 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Uncertainty_Factor -->
+
+    <owl:DatatypeProperty rdf:about="#has_Uncertainty_Factor">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Value">
-        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:range rdf:resource="&xsd;anySimpleType"/>
     </owl:DatatypeProperty>
     
 
@@ -1246,6 +1309,12 @@
 
     <owl:Class rdf:about="#EdgeLength">
         <rdfs:subClassOf rdf:resource="#EdgeAnnotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Value"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >Its possible that this should not be classed as an &#39;annotation&#39; since it contains data rather than meta-data.</rdfs:comment>
         <dc:description
@@ -1500,6 +1569,20 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#PolymorphicStateDomain -->
+
+    <owl:Class rdf:about="#PolymorphicStateDomain">
+        <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Uncertainty_Factor"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RootedTree -->
 
     <owl:Class rdf:about="#RootedTree">
@@ -1519,15 +1602,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#subtree_of"/>
-                <owl:allValuesFrom rdf:resource="#RootedTree"/>
+                <owl:onProperty rdf:resource="#has_Root"/>
+                <owl2:onClass rdf:resource="#Node"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_root"/>
-                <owl2:onClass rdf:resource="#Node"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="#subtree_of"/>
+                <owl:allValuesFrom rdf:resource="#RootedTree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#UnrootedTree"/>
@@ -1677,6 +1760,20 @@
 
     <owl:Class rdf:about="#TreeProcedure">
         <rdfs:subClassOf rdf:resource="#TreeAnnotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#UncertainStateDomain -->
+
+    <owl:Class rdf:about="#UncertainStateDomain">
+        <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Uncertainty_Factor"/>
+                <owl:someValuesFrom rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

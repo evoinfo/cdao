@@ -264,7 +264,7 @@
         <dc:description rdf:datatype="&xsd;string"
             >This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
         <rdfs:range rdf:resource="#AminoAcidResidueStateDatum"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Molecular_Datum"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -321,6 +321,14 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Categorical_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Categorical_Datum">
+        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Character -->
 
     <owl:ObjectProperty rdf:about="#has_Character">
@@ -365,7 +373,7 @@
         <dc:description rdf:datatype="&xsd;string"
             >This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.</dc:description>
         <rdfs:range rdf:resource="#CompoundStateDatum"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Categorical_Datum"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -543,6 +551,23 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Molecular_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Molecular_Datum">
+        <rdfs:range rdf:resource="#MolecularStateDatum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Categorical_Datum"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MolecularCharacter"/>
+                    <rdf:Description rdf:about="#TU"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Node">
@@ -561,7 +586,7 @@
         <dc:description rdf:datatype="&xsd;string"
             >This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
         <rdfs:range rdf:resource="#NucleotideStateDatum"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Molecular_Datum"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -618,6 +643,14 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_RNA_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_RNA_Datum">
+        <rdfs:subPropertyOf rdf:resource="#has_Molecular_Datum"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Remaining_Coordinate_List -->
 
     <owl:ObjectProperty rdf:about="#has_Remaining_Coordinate_List">
@@ -663,6 +696,23 @@
         <rdfs:range rdf:resource="#Node"/>
         <rdfs:domain rdf:resource="#RootedTree"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Standard_Datum -->
+
+    <owl:ObjectProperty rdf:about="#has_Standard_Datum">
+        <rdfs:range rdf:resource="#StandardStateDatum"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Categorical_Datum"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#StandardCharacter"/>
+                    <rdf:Description rdf:about="#TU"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1579,6 +1629,36 @@
                 <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RNAResidue -->
+
+    <owl:Class rdf:about="#RNAResidue">
+        <rdfs:subClassOf rdf:resource="#Molecular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RNAResidueCharacter -->
+
+    <owl:Class rdf:about="#RNAResidueCharacter">
+        <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#RNAResidueStateDatum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RNAResidueStateDatum -->
+
+    <owl:Class rdf:about="#RNAResidueStateDatum">
+        <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
     </owl:Class>
     
 

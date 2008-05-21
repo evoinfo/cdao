@@ -179,8 +179,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Edge"/>
                     <rdf:Description rdf:about="#Node"/>
-                    <rdf:Description rdf:about="#Tree"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>

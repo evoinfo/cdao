@@ -199,14 +199,6 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDataMatrix -->
-
-    <owl:Class rdf:about="http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDataMatrix">
-        <owl:equivalentClass rdf:resource="#Class1211569052148176000"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1211569019639745000 -->
 
     <owl:Class rdf:about="#Class1211569019639745000">
@@ -294,7 +286,8 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1211569532409137000 -->
 
     <owl:Class rdf:about="#Class1211569532409137000">
-        <rdfs:label>Parameters</rdfs:label>
+        <rdfs:label>Parameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A condition determined by the executable software that implements an algorithm, or the user of the software, that may affect the outcome of applying the software&#39;s algorithm to a case.  This excludes  conditions inherent to the algorithm as well as conditions inherent to the platform on which the software executes.</dc:description>
     </owl:Class>
@@ -663,12 +656,22 @@
     
 
 
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212171869832068000 -->
+
+    <owl:Class rdf:about="#Class1212171869832068000">
+        <rdfs:label>Step</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing">
-        <owl:versionInfo>$Id$</owl:versionInfo>
+        <rdfs:label>MIAPA_Thing</rdfs:label>
         <dc:title
             >Minimal Information for a Phylogenetic Analysis (MIAPA)</dc:title>
+        <owl:versionInfo>$Id$</owl:versionInfo>
         <dc:type
             >Formal ontology expressed in the OWL-DL dialect.</dc:type>
         <dc:creator>Arlin Stoltzfus</dc:creator>

@@ -188,6 +188,16 @@
     
 
 
+    <!-- http://www.evolutionaryontology.org/miapa.owl#DataProperty1212418061103998000 -->
+
+    <owl:DatatypeProperty rdf:about="#DataProperty1212418061103998000">
+        <rdfs:label>has_location</rdfs:label>
+        <rdfs:domain rdf:resource="#Class1212417995316263000"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -203,7 +213,7 @@
 
     <owl:Class rdf:about="#Class1211569019639745000">
         <rdfs:label>Publication</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417995316263000"/>
         <dc:description
             >A citable publication in electronic or print format, with named authors</dc:description>
     </owl:Class>
@@ -225,7 +235,7 @@
 
     <owl:Class rdf:about="#Class1211569046373997000">
         <rdfs:label>Sequence</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417790402824000"/>
     </owl:Class>
     
 
@@ -233,8 +243,9 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1211569052148176000 -->
 
     <owl:Class rdf:about="#Class1211569052148176000">
-        <rdfs:label>AlignmentData</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:label
+            >SequenceAlignment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212417790402824000"/>
     </owl:Class>
     
 
@@ -244,7 +255,7 @@
     <owl:Class rdf:about="#Class1211569123040472000">
         <rdfs:label
             >PhylogeneticTree</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417790402824000"/>
     </owl:Class>
     
 
@@ -253,7 +264,7 @@
 
     <owl:Class rdf:about="#Class1211569134471772000">
         <rdfs:label>SourceTaxon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417790402824000"/>
         <dc:description
             >The biological species (or the most restrictive higher-level taxon that can be identified reliably) that is the source of a result.</dc:description>
     </owl:Class>
@@ -265,7 +276,7 @@
     <owl:Class rdf:about="#Class1211569507521592000">
         <rdfs:label
             >ExecutableSoftware</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417905062580000"/>
         <dc:description
             >A symbolically encoded artefact that, when executed on its platform,  implements some algorithm or procedure that takes input and generates output.</dc:description>
     </owl:Class>
@@ -325,7 +336,8 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1211570939665959000 -->
 
     <owl:Class rdf:about="#Class1211570939665959000">
-        <rdfs:label>Progressive</rdfs:label>
+        <rdfs:label
+            >ProgressivePairwise</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Class1211570903467375000"/>
     </owl:Class>
     
@@ -420,7 +432,7 @@
 
     <owl:Class rdf:about="#Class1212153653143474000">
         <rdfs:label>SoftwarePackage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212417905062580000"/>
         <dc:description
             >A transferrable software package containing an executable program and, optionally, additional executable programs and documentation.</dc:description>
     </owl:Class>
@@ -660,6 +672,209 @@
 
     <owl:Class rdf:about="#Class1212171869832068000">
         <rdfs:label>Step</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416759730473000 -->
+
+    <owl:Class rdf:about="#Class1212416759730473000">
+        <rdfs:label>FASTA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416767051498000 -->
+
+    <owl:Class rdf:about="#Class1212416767051498000">
+        <rdfs:label>NEXUS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416770434148000 -->
+
+    <owl:Class rdf:about="#Class1212416770434148000">
+        <rdfs:label>PHYLIP</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416773610023000 -->
+
+    <owl:Class rdf:about="#Class1212416773610023000">
+        <rdfs:label>PhyloXML</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416777736456000 -->
+
+    <owl:Class rdf:about="#Class1212416777736456000">
+        <rdfs:label>neXML</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416786644097000 -->
+
+    <owl:Class rdf:about="#Class1212416786644097000">
+        <rdfs:label>BEAST</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416802584639000 -->
+
+    <owl:Class rdf:about="#Class1212416802584639000">
+        <rdfs:label>GenBank</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212416826198822000 -->
+
+    <owl:Class rdf:about="#Class1212416826198822000">
+        <rdfs:label>aln (ClustalW)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417099495348000 -->
+
+    <owl:Class rdf:about="#Class1212417099495348000">
+        <rdfs:label>BLAST</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1211569507521592000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417107501787000 -->
+
+    <owl:Class rdf:about="#Class1212417107501787000">
+        <rdfs:label>FASTA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1211569507521592000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417494199182000 -->
+
+    <owl:Class rdf:about="#Class1212417494199182000">
+        <rdfs:label>NHX</rdfs:label>
+        <owl:equivalentClass rdf:resource="#Class1212417546347267000"/>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417511079949000 -->
+
+    <owl:Class rdf:about="#Class1212417511079949000">
+        <rdfs:label>Newick</rdfs:label>
+        <owl:equivalentClass rdf:resource="#Class1212417518603754000"/>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417518603754000 -->
+
+    <owl:Class rdf:about="#Class1212417518603754000">
+        <rdfs:label>New Hampshire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417546347267000 -->
+
+    <owl:Class rdf:about="#Class1212417546347267000">
+        <rdfs:label
+            >New Hampshire Extended</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212155141536669000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417611562866000 -->
+
+    <owl:Class rdf:about="#Class1212417611562866000">
+        <rdfs:label>Phylogenetic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1211570903467375000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417625052732000 -->
+
+    <owl:Class rdf:about="#Class1212417625052732000">
+        <rdfs:label>Pairwise</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1211570903467375000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417790402824000 -->
+
+    <owl:Class rdf:about="#Class1212417790402824000">
+        <rdfs:label>Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417905062580000 -->
+
+    <owl:Class rdf:about="#Class1212417905062580000">
+        <rdfs:label>Software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417995316263000 -->
+
+    <owl:Class rdf:about="#Class1212417995316263000">
+        <rdfs:label
+            >LocatableElectronicResource</rdfs:label>
+        <owl:equivalentClass rdf:resource="#Class1212418125463999000"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212418030052338000 -->
+
+    <owl:Class rdf:about="#Class1212418030052338000">
+        <rdfs:label>Database</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212417995316263000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212418043095416000 -->
+
+    <owl:Class rdf:about="#Class1212418043095416000">
+        <rdfs:label>Website</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212417995316263000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212418125463999000 -->
+
+    <owl:Class rdf:about="#Class1212418125463999000">
+        <rdfs:label>Resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     

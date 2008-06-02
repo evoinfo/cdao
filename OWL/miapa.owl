@@ -150,7 +150,7 @@
         <rdfs:label
             >has_param_float_value</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
-        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -170,9 +170,9 @@
 
     <owl:DatatypeProperty rdf:about="#DataProperty1212155680769028000">
         <rdfs:label
-            >has_param_int_value</rdfs:label>
+            >has_param_integer_value</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
 
@@ -671,9 +671,10 @@
         <rdfs:label>MIAPA_Thing</rdfs:label>
         <dc:title
             >Minimal Information for a Phylogenetic Analysis (MIAPA)</dc:title>
-        <owl:versionInfo>$Id$</owl:versionInfo>
         <dc:type
             >Formal ontology expressed in the OWL-DL dialect.</dc:type>
+        <owl:versionInfo
+            >$Id$</owl:versionInfo>
         <dc:creator>Arlin Stoltzfus</dc:creator>
         <dc:language>OWL</dc:language>
         <dc:date>May 30, 2008</dc:date>

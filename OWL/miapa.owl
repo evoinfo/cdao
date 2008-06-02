@@ -287,7 +287,7 @@
 
     <owl:Class rdf:about="#Class1211569515999235000">
         <rdfs:label>Algorithm</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
         <dc:description
             >A clearly defined abstract recipe for carrying out some task, that is, an algorithm (sensu strictu) or procedure.</dc:description>
     </owl:Class>
@@ -432,7 +432,7 @@
 
     <owl:Class rdf:about="#Class1212153653143474000">
         <rdfs:label>SoftwarePackage</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Class1212417905062580000"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
             >A transferrable software package containing an executable program and, optionally, additional executable programs and documentation.</dc:description>
     </owl:Class>
@@ -671,7 +671,7 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212171869832068000 -->
 
     <owl:Class rdf:about="#Class1212171869832068000">
-        <rdfs:label>Step</rdfs:label>
+        <rdfs:label>Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
@@ -827,8 +827,10 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417790402824000 -->
 
     <owl:Class rdf:about="#Class1212417790402824000">
-        <rdfs:label>Data</rdfs:label>
+        <rdfs:label>DataType</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >A type of biological data.</dc:description>
     </owl:Class>
     
 
@@ -836,8 +838,10 @@
     <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212417905062580000 -->
 
     <owl:Class rdf:about="#Class1212417905062580000">
-        <rdfs:label>Software</rdfs:label>
+        <rdfs:label>Implementation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >The concrete means by which an abstract method is implemented.  </dc:description>
     </owl:Class>
     
 
@@ -876,6 +880,54 @@
     <owl:Class rdf:about="#Class1212418125463999000">
         <rdfs:label>Resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <dc:description
+            >An electronic source available on the internet. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212423781061057000 -->
+
+    <owl:Class rdf:about="#Class1212423781061057000">
+        <rdfs:label>Edit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212423833910723000 -->
+
+    <owl:Class rdf:about="#Class1212423833910723000">
+        <rdfs:label>Observation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212424274073581000 -->
+
+    <owl:Class rdf:about="#Class1212424274073581000">
+        <rdfs:label
+            >QueryAndRetrieval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212424348623686000 -->
+
+    <owl:Class rdf:about="#Class1212424348623686000">
+        <rdfs:label>Measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/miapa.owl#Class1212424436178561000 -->
+
+    <owl:Class rdf:about="#Class1212424436178561000">
+        <rdfs:label>Manual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Class1212417905062580000"/>
     </owl:Class>
     
 
@@ -888,8 +940,6 @@
             >Minimal Information for a Phylogenetic Analysis (MIAPA)</dc:title>
         <dc:type
             >Formal ontology expressed in the OWL-DL dialect.</dc:type>
-        <owl:versionInfo
-            >$Id$</owl:versionInfo>
         <dc:creator>Arlin Stoltzfus</dc:creator>
         <dc:language>OWL</dc:language>
         <dc:date>May 30, 2008</dc:date>
@@ -900,6 +950,8 @@
         <dc:format>RDF-XML</dc:format>
         <dc:contributor
             >The MIAPA Consortium.</dc:contributor>
+        <owl:versionInfo
+            >$Id$</owl:versionInfo>
         <dc:subject
             >Reports of phylogenetic analysis and related evolutionary studies.</dc:subject>
         <dc:coverage

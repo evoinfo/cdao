@@ -1726,6 +1726,14 @@
     
 
 
+    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SetOfCharacters -->
+
+    <owl:Class rdf:about="#SetOfCharacters">
+        <rdfs:subClassOf rdf:resource="#SetOfThings"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SetOfNodes -->
 
     <owl:Class rdf:about="#SetOfNodes">
@@ -1744,6 +1752,21 @@
 
     <owl:Class rdf:about="#SetOfThings">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Element"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Character"/>
+                            <rdf:Description rdf:about="#SetOfCharacters"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description
+            >The class is used to describe either colletions of characters or higher order grouping (e.g., groups of groups of characters). This extends the CharSet block of NEXUS.</dc:description>
     </owl:Class>
     
 

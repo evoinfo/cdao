@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY phylogenetic_methods "http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#"
+     xml:base="http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:phylogenetic_methods="http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.mygrid.org.uk/mygrid-moby-service"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#FASTA_algorithm -->
+
+    <owl:Class rdf:about="#FASTA_algorithm">
+        <rdfs:subClassOf rdf:resource="#data_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#GenBank_algorithm -->
+
+    <owl:Class rdf:about="#GenBank_algorithm">
+        <rdfs:subClassOf rdf:resource="#data_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#NEXUS_algorithm -->
+
+    <owl:Class rdf:about="#NEXUS_algorithm">
+        <rdfs:subClassOf rdf:resource="#data_file_format_algorithm"/>
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#OUCH_algorithm -->
+
+    <owl:Class rdf:about="#OUCH_algorithm">
+        <rdfs:subClassOf rdf:resource="#data_file_format_algorithm"/>
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#PHYLIP_algorithm -->
+
+    <owl:Class rdf:about="#PHYLIP_algorithm">
+        <rdfs:subClassOf rdf:resource="#data_file_format_algorithm"/>
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#SIMMAP_algorithm -->
+
+    <owl:Class rdf:about="#SIMMAP_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#bayesian_algorithm -->
+
+    <owl:Class rdf:about="#bayesian_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+        <rdfs:subClassOf rdf:resource="#phylogenetic_criterion_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#binary_tree_algorithm -->
+
+    <owl:Class rdf:about="#binary_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#complete_tree_algorithm -->
+
+    <owl:Class rdf:about="#complete_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#consensus_tree_algorithm -->
+
+    <owl:Class rdf:about="#consensus_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#data_file_format_algorithm -->
+
+    <owl:Class rdf:about="#data_file_format_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_tapper_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#distance_matrix_algorithm -->
+
+    <owl:Class rdf:about="#distance_matrix_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+        <rdfs:subClassOf rdf:resource="#phylogenetic_criterion_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#felsenstein_classification -->
+
+    <owl:Class rdf:about="#felsenstein_classification">
+        <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology#phylogenetic_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#galled_tree_algorithm -->
+
+    <owl:Class rdf:about="#galled_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#general_network_algorithm -->
+
+    <owl:Class rdf:about="#general_network_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_type_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#genetic_algorithm -->
+
+    <owl:Class rdf:about="#genetic_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#incomplete_tree_algorithm -->
+
+    <owl:Class rdf:about="#incomplete_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#known_branch_width_algorithm -->
+
+    <owl:Class rdf:about="#known_branch_width_algorithm">
+        <rdfs:subClassOf rdf:resource="#general_network_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#maximum_likelihood_algorithm -->
+
+    <owl:Class rdf:about="#maximum_likelihood_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+        <rdfs:subClassOf rdf:resource="#phylogenetic_criterion_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#newick_algorithm -->
+
+    <owl:Class rdf:about="#newick_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#parsimony_algorithm -->
+
+    <owl:Class rdf:about="#parsimony_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+        <rdfs:subClassOf rdf:resource="#phylogenetic_criterion_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#phylo4_algorithm -->
+
+    <owl:Class rdf:about="#phylo4_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_file_format_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#phylogenetic_criterion_algorithm -->
+
+    <owl:Class rdf:about="#phylogenetic_criterion_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_tapper_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#polytomies_tree_algorithm -->
+
+    <owl:Class rdf:about="#polytomies_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#quartet_algorithm -->
+
+    <owl:Class rdf:about="#quartet_algorithm">
+        <rdfs:subClassOf rdf:resource="#felsenstein_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#rooted_tree_algorithm -->
+
+    <owl:Class rdf:about="#rooted_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#tree_algorithm -->
+
+    <owl:Class rdf:about="#tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_type_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#tree_file_format_algorithm -->
+
+    <owl:Class rdf:about="#tree_file_format_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_tapper_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#tree_tapper_classification -->
+
+    <owl:Class rdf:about="#tree_tapper_classification">
+        <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology#phylogenetic_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#tree_type_algorithm -->
+
+    <owl:Class rdf:about="#tree_type_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_tapper_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#unkown_branch_width_algorithm -->
+
+    <owl:Class rdf:about="#unkown_branch_width_algorithm">
+        <rdfs:subClassOf rdf:resource="#general_network_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#unrooted_tree_algorithm -->
+
+    <owl:Class rdf:about="#unrooted_tree_algorithm">
+        <rdfs:subClassOf rdf:resource="#tree_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mygrid.org.uk/ontology#phylogenetic_algorithm -->
+
+    <owl:Class rdf:about="http://www.mygrid.org.uk/ontology#phylogenetic_algorithm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#MetaPIGA -->
+
+    <genetic_algorithm rdf:about="#MetaPIGA">
+        <rdf:type rdf:resource="#maximum_likelihood_algorithm"/>
+    </genetic_algorithm>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl#PHYLIP -->
+
+    <parsimony_algorithm rdf:about="#PHYLIP"/>
+</rdf:RDF>

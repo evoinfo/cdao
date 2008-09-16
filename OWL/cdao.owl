@@ -9,14 +9,14 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY cdao "http://www.cs.nmsu.edu/~epontell/CURRENT.owl#" >
+    <!ENTITY cdao "http://www.evolutionaryontology.org/cdao.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.cs.nmsu.edu/~epontell/CURRENT.owl#"
-     xml:base="http://www.cs.nmsu.edu/~epontell/CURRENT.owl"
+<rdf:RDF xmlns="http://www.evolutionaryontology.org/cdao.owl#"
+     xml:base="http://www.evolutionaryontology.org/cdao.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:cdao="http://www.cs.nmsu.edu/~epontell/CURRENT.owl#"
+     xmlns:cdao="http://www.evolutionaryontology.org/cdao.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl2="http://www.w3.org/2006/12/owl2#"
@@ -61,7 +61,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to -->
 
     <owl:ObjectProperty rdf:about="#belongs_to">
         <dc:description
@@ -73,7 +73,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Amino_Acid_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Amino_Acid_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Amino_Acid_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -84,7 +84,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -95,7 +95,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Character_State_Data_Matrix -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Character_State_Data_Matrix -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Character_State_Data_Matrix">
         <rdfs:range rdf:resource="#CharacterStateDataMatrix"/>
@@ -112,7 +112,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Compound_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Compound_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Compound_Character">
         <rdfs:range rdf:resource="#CompoundCharacter"/>
@@ -122,7 +122,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Continuous_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Continuous_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Continuous_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -133,7 +133,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Edge -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge">
         <dc:description
@@ -145,7 +145,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Edge_as_Child -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge_as_Child -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Child">
         <dc:description
@@ -158,7 +158,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Edge_as_Parent -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge_as_Parent -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Parent">
         <dc:description
@@ -171,7 +171,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Network -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Network -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Network">
         <rdfs:range rdf:resource="#Network"/>
@@ -188,7 +188,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Nucleotide_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Nucleotide_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Nucleotide_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -199,7 +199,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_TU -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -212,7 +212,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Tree -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Tree -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Tree">
         <rdfs:range rdf:resource="#Tree"/>
@@ -229,7 +229,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#belongs_to_Tree_as_Root -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Tree_as_Root -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Tree_as_Root">
         <rdfs:domain rdf:resource="#Node"/>
@@ -240,7 +240,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#connects_to -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#connects_to -->
 
     <owl:ObjectProperty rdf:about="#connects_to">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -249,7 +249,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has -->
 
     <owl:ObjectProperty rdf:about="#has">
         <dc:description
@@ -258,7 +258,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Amino_Acid_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Amino_Acid_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -277,7 +277,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Amino_Acid_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Amino_Acid_State -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -296,7 +296,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Ancestor -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Ancestor -->
 
     <owl:ObjectProperty rdf:about="#has_Ancestor">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -310,7 +310,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Annotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Annotation -->
 
     <owl:ObjectProperty rdf:about="#has_Annotation">
         <rdfs:range rdf:resource="#CDAOAnnotation"/>
@@ -321,7 +321,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Categorical_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Categorical_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Categorical_Datum">
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -329,7 +329,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Character -->
 
     <owl:ObjectProperty rdf:about="#has_Character">
         <dc:description rdf:datatype="&xsd;string"
@@ -341,7 +341,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Child -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Child -->
 
     <owl:ObjectProperty rdf:about="#has_Child">
         <dc:description
@@ -354,7 +354,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Child_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Child_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Child_Node">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -367,7 +367,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Compound_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Compound_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -386,7 +386,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Compound_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Compound_State -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -405,7 +405,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Continuous_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Continuous_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -424,7 +424,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Continuous_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Continuous_State -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -436,7 +436,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Coordinate -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Coordinate -->
 
     <owl:ObjectProperty rdf:about="#has_Coordinate">
         <rdfs:domain rdf:resource="#CharacterStateDatum"/>
@@ -446,7 +446,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Coordinate_System -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Coordinate_System -->
 
     <owl:ObjectProperty rdf:about="#has_Coordinate_System">
         <dc:description rdf:datatype="&xsd;string"
@@ -457,7 +457,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -476,7 +476,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Descendant -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Descendant -->
 
     <owl:ObjectProperty rdf:about="#has_Descendant">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -489,7 +489,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Element -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Element -->
 
     <owl:ObjectProperty rdf:about="#has_Element">
         <rdfs:domain rdf:resource="#SetOfThings"/>
@@ -498,7 +498,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_First_Coordinate_Item -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_First_Coordinate_Item -->
 
     <owl:ObjectProperty rdf:about="#has_First_Coordinate_Item">
         <dc:description rdf:datatype="&xsd;string"
@@ -517,7 +517,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Left_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Left_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Left_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -529,7 +529,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Left_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Left_State -->
 
     <owl:ObjectProperty rdf:about="#has_Left_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -541,7 +541,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Lineage_node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Lineage_node -->
 
     <owl:ObjectProperty rdf:about="#has_Lineage_node">
         <rdfs:domain rdf:resource="#Lineage"/>
@@ -551,7 +551,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Molecular_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Molecular_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Molecular_Datum">
         <rdfs:range rdf:resource="#MolecularStateDatum"/>
@@ -568,7 +568,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Node">
         <dc:description
@@ -580,7 +580,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Nucleotide_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Nucleotide_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -599,7 +599,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Nucleotide_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Nucleotide_State -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -618,7 +618,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Parent -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Parent -->
 
     <owl:ObjectProperty rdf:about="#has_Parent">
         <dc:description
@@ -630,7 +630,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Parent_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Parent_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Parent_Node">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -643,7 +643,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_RNA_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_RNA_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_RNA_Datum">
         <rdfs:subPropertyOf rdf:resource="#has_Molecular_Datum"/>
@@ -651,7 +651,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Remaining_Coordinate_List -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Remaining_Coordinate_List -->
 
     <owl:ObjectProperty rdf:about="#has_Remaining_Coordinate_List">
         <dc:description rdf:datatype="&xsd;string"
@@ -663,7 +663,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Right_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Right_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Right_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -675,7 +675,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Right_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Right_State -->
 
     <owl:ObjectProperty rdf:about="#has_Right_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -687,7 +687,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Root -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Root -->
 
     <owl:ObjectProperty rdf:about="#has_Root">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -700,7 +700,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Standard_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Standard_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Standard_Datum">
         <rdfs:range rdf:resource="#StandardStateDatum"/>
@@ -717,7 +717,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_State -->
 
     <owl:ObjectProperty rdf:about="#has_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -729,7 +729,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_TU -->
 
     <owl:ObjectProperty rdf:about="#has_TU">
         <dc:description rdf:datatype="&xsd;string"
@@ -741,7 +741,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Transformation_Component -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Transformation_Component -->
 
     <owl:ObjectProperty rdf:about="#has_Transformation_Component">
         <dc:description rdf:datatype="&xsd;string"
@@ -752,7 +752,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#homologous_to -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#homologous_to -->
 
     <owl:ObjectProperty rdf:about="#homologous_to">
         <dc:description rdf:datatype="&xsd;string"
@@ -763,7 +763,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#is_annotation_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#is_annotation_of -->
 
     <owl:ObjectProperty rdf:about="#is_annotation_of">
         <rdfs:domain rdf:resource="#CDAOAnnotation"/>
@@ -772,7 +772,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#nca_node_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#nca_node_of -->
 
     <owl:ObjectProperty rdf:about="#nca_node_of">
         <rdfs:domain rdf:resource="#Node"/>
@@ -781,7 +781,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#part_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#part_of -->
 
     <owl:ObjectProperty rdf:about="#part_of">
         <owl:inverseOf rdf:resource="#has"/>
@@ -789,13 +789,13 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#precedes -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#represented_by_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#represented_by_Node -->
 
     <owl:ObjectProperty rdf:about="#represented_by_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -807,7 +807,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#represents_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#represents_TU -->
 
     <owl:ObjectProperty rdf:about="#represents_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -819,7 +819,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#subtree_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#subtree_of -->
 
     <owl:ObjectProperty rdf:about="#subtree_of">
         <dc:description
@@ -830,7 +830,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#transformation_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#transformation_of -->
 
     <owl:ObjectProperty rdf:about="#transformation_of">
         <dc:description rdf:datatype="&xsd;string"
@@ -852,13 +852,13 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_External_Reference -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_External_Reference -->
 
     <owl:DatatypeProperty rdf:about="#has_External_Reference"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Float_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Float_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Float_Value">
         <rdfs:subPropertyOf rdf:resource="#has_Value"/>
@@ -867,7 +867,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Int_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Int_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Int_Value">
         <rdfs:subPropertyOf rdf:resource="#has_Value"/>
@@ -876,7 +876,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Point_Coordinate_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Point_Coordinate_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Point_Coordinate_Value">
         <rdfs:domain rdf:resource="#CoordinatePoint"/>
@@ -885,7 +885,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Precision -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Precision -->
 
     <owl:DatatypeProperty rdf:about="#has_Precision">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -893,7 +893,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Range_End_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Range_End_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Range_End_Value">
         <rdfs:domain rdf:resource="#CoordinateRange"/>
@@ -902,7 +902,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Range_Start_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Range_Start_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Range_Start_Value">
         <rdfs:domain rdf:resource="#CoordinateRange"/>
@@ -911,7 +911,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Support_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Support_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Support_Value">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -919,7 +919,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Uncertainty_Factor -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Uncertainty_Factor -->
 
     <owl:DatatypeProperty rdf:about="#has_Uncertainty_Factor">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -927,7 +927,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#has_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Value">
         <rdfs:range rdf:resource="&xsd;anySimpleType"/>
@@ -958,7 +958,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#AlignmentProcedure -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#AlignmentProcedure -->
 
     <owl:Class rdf:about="#AlignmentProcedure">
         <rdfs:subClassOf rdf:resource="#CharacterStateDataMatrixAnnotation"/>
@@ -968,7 +968,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#AminoAcidResidue -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidue -->
 
     <owl:Class rdf:about="#AminoAcidResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -978,7 +978,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#AminoAcidResidueCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidueCharacter -->
 
     <owl:Class rdf:about="#AminoAcidResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -998,7 +998,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#AminoAcidResidueStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidueStateDatum -->
 
     <owl:Class rdf:about="#AminoAcidResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -1006,7 +1006,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#AncestralNode -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#AncestralNode -->
 
     <owl:Class rdf:about="#AncestralNode">
         <rdfs:subClassOf rdf:resource="#Node"/>
@@ -1017,6 +1017,18 @@
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+<<<<<<< cdao.owl
+        <dc:description
+            >A node that has descendants in the tree</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#BayesianMethod -->
+
+    <owl:Class rdf:about="#BayesianMethod">
+        <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
+=======
         <dc:description
             >A node that has descendants in the tree</dc:description>
     </owl:Class>
@@ -1027,11 +1039,12 @@
 
     <owl:Class rdf:about="#BayesianMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
+>>>>>>> 1.26
     </owl:Class>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Branch -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Branch -->
 
     <owl:Class rdf:about="#Branch">
         <owl:equivalentClass rdf:resource="#Edge"/>
@@ -1041,7 +1054,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CDAOAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CDAOAnnotation -->
 
     <owl:Class rdf:about="#CDAOAnnotation">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1051,7 +1064,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Categorical -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Categorical -->
 
     <owl:Class rdf:about="#Categorical">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1059,7 +1072,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CategoricalCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CategoricalCharacter -->
 
     <owl:Class rdf:about="#CategoricalCharacter">
         <rdfs:subClassOf rdf:resource="#Character"/>
@@ -1069,7 +1082,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CategoricalStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CategoricalStateDatum -->
 
     <owl:Class rdf:about="#CategoricalStateDatum">
         <rdfs:subClassOf rdf:resource="#CharacterStateDatum"/>
@@ -1079,7 +1092,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Character -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Character -->
 
     <owl:Class rdf:about="#Character">
         <rdfs:subClassOf>
@@ -1094,7 +1107,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDataMatrix -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDataMatrix -->
 
     <owl:Class rdf:about="#CharacterStateDataMatrix">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1122,7 +1135,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDataMatrixAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDataMatrixAnnotation -->
 
     <owl:Class rdf:about="#CharacterStateDataMatrixAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1132,7 +1145,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDatum -->
 
     <owl:Class rdf:about="#CharacterStateDatum">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1156,7 +1169,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CharacterStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDomain -->
 
     <owl:Class rdf:about="#CharacterStateDomain">
         <dc:description
@@ -1165,7 +1178,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CommonAncestralNode -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CommonAncestralNode -->
 
     <owl:Class rdf:about="#CommonAncestralNode">
         <rdfs:subClassOf rdf:resource="#AncestralNode"/>
@@ -1175,7 +1188,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Compound -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Compound -->
 
     <owl:Class rdf:about="#Compound">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -1183,7 +1196,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CompoundCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CompoundCharacter -->
 
     <owl:Class rdf:about="#CompoundCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -1205,7 +1218,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CompoundStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CompoundStateDatum -->
 
     <owl:Class rdf:about="#CompoundStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -1215,7 +1228,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Continuous -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Continuous -->
 
     <owl:Class rdf:about="#Continuous">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1231,7 +1244,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#ContinuousCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharacter -->
 
     <owl:Class rdf:about="#ContinuousCharacter">
         <rdfs:subClassOf rdf:resource="#Character"/>
@@ -1253,7 +1266,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#ContinuousStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousStateDatum -->
 
     <owl:Class rdf:about="#ContinuousStateDatum">
         <rdfs:subClassOf rdf:resource="#CharacterStateDatum"/>
@@ -1263,7 +1276,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CoordinateList -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateList -->
 
     <owl:Class rdf:about="#CoordinateList">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1271,7 +1284,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CoordinatePoint -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinatePoint -->
 
     <owl:Class rdf:about="#CoordinatePoint">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1279,7 +1292,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CoordinateRange -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateRange -->
 
     <owl:Class rdf:about="#CoordinateRange">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1287,7 +1300,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#CoordinateSystem -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateSystem -->
 
     <owl:Class rdf:about="#CoordinateSystem">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1297,7 +1310,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DatumCoordinate -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DatumCoordinate -->
 
     <owl:Class rdf:about="#DatumCoordinate">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1316,6 +1329,45 @@
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidue -->
+
+    <owl:Class rdf:about="#DesoxiRibonucleotideResidue">
+        <rdfs:subClassOf rdf:resource="#Molecular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidueCharacter -->
+
+    <owl:Class rdf:about="#DesoxiRibonucleotideResidueCharacter">
+        <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#DesoxiRibonucleotideResidueStateDatum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Nucleotide_Datum"/>
+                <owl:someValuesFrom rdf:resource="#DesoxiRibonucleotideResidueStateDatum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidueStateDatum -->
+
+    <owl:Class rdf:about="#DesoxiRibonucleotideResidueStateDatum">
+        <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DirectedEdge -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DesoxiRibonucleotideResidue -->
 
     <owl:Class rdf:about="#DesoxiRibonucleotideResidue">
@@ -1353,6 +1405,7 @@
 
 
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DirectedEdge -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#DirectedEdge">
         <owl:equivalentClass>
@@ -1378,7 +1431,11 @@
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#DistanceMatrixBasedMethod -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DistanceMatrixBasedMethod -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#DistanceMatrixBasedMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1386,7 +1443,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Edge -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Edge -->
 
     <owl:Class rdf:about="#Edge">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1409,7 +1466,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#EdgeAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeAnnotation -->
 
     <owl:Class rdf:about="#EdgeAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1419,7 +1476,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#EdgeLength -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeLength -->
 
     <owl:Class rdf:about="#EdgeLength">
         <rdfs:subClassOf rdf:resource="#EdgeAnnotation"/>
@@ -1435,7 +1492,7 @@
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#EdgeTransformation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeTransformation -->
 
     <owl:Class rdf:about="#EdgeTransformation">
         <rdfs:subClassOf rdf:resource="#EdgeAnnotation"/>
@@ -1469,7 +1526,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#GammaDistribution -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#GammaDistribution -->
 
     <owl:Class rdf:about="#GammaDistribution">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1477,7 +1534,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#GapCost -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#GapCost -->
 
     <owl:Class rdf:about="#GapCost">
         <rdfs:subClassOf rdf:resource="#ModelDescription"/>
@@ -1485,7 +1542,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Generic_State -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Generic_State -->
 
     <owl:Class rdf:about="#Generic_State">
         <owl:equivalentClass>
@@ -1506,7 +1563,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#JukesKantor -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#JukesKantor -->
 
     <owl:Class rdf:about="#JukesKantor">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1514,7 +1571,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Kimura2Parameters -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Kimura2Parameters -->
 
     <owl:Class rdf:about="#Kimura2Parameters">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1522,7 +1579,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Lineage -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Lineage -->
 
     <owl:Class rdf:about="#Lineage">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -1538,7 +1595,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#MRCANode -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#MRCANode -->
 
     <owl:Class rdf:about="#MRCANode">
         <rdfs:subClassOf rdf:resource="#CommonAncestralNode"/>
@@ -1555,7 +1612,11 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#MaximumLikelihoodMethod -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#MaximumLikelihoodMethod -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#MaximumLikelihoodMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1563,7 +1624,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#ModelDescription -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#ModelDescription -->
 
     <owl:Class rdf:about="#ModelDescription">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1575,7 +1636,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Molecular -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Molecular -->
 
     <owl:Class rdf:about="#Molecular">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -1583,7 +1644,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#MolecularCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#MolecularCharacter -->
 
     <owl:Class rdf:about="#MolecularCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -1593,7 +1654,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#MolecularStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#MolecularStateDatum -->
 
     <owl:Class rdf:about="#MolecularStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -1603,7 +1664,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Network -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Network -->
 
     <owl:Class rdf:about="#Network">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1626,7 +1687,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Node -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Node -->
 
     <owl:Class rdf:about="#Node">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1650,7 +1711,11 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#ParsimonyMethod -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#ParsimonyMethod -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#ParsimonyMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1658,7 +1723,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#PolymorphicStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#PolymorphicStateDomain -->
 
     <owl:Class rdf:about="#PolymorphicStateDomain">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1672,7 +1737,11 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidue -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidue -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -1680,7 +1749,11 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueCharacter -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidueCharacter -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -1694,7 +1767,11 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueStateDatum -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidueStateDatum -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -1702,7 +1779,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#RootedTree -->
 
     <owl:Class rdf:about="#RootedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -1739,7 +1816,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Sequence -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Sequence -->
 
     <owl:Class rdf:about="#Sequence">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1767,7 +1844,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SetOfCharacters -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfCharacters -->
 
     <owl:Class rdf:about="#SetOfCharacters">
         <rdfs:subClassOf rdf:resource="#SetOfThings"/>
@@ -1775,7 +1852,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SetOfNodes -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfNodes -->
 
     <owl:Class rdf:about="#SetOfNodes">
         <rdfs:subClassOf rdf:resource="#SetOfThings"/>
@@ -1789,7 +1866,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SetOfThings -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfThings -->
 
     <owl:Class rdf:about="#SetOfThings">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1812,7 +1889,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Standard -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Standard -->
 
     <owl:Class rdf:about="#Standard">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -1820,7 +1897,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#StandardCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#StandardCharacter -->
 
     <owl:Class rdf:about="#StandardCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -1830,7 +1907,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#StandardStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#StandardStateDatum -->
 
     <owl:Class rdf:about="#StandardStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -1840,7 +1917,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#SubstitutionModel -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#SubstitutionModel -->
 
     <owl:Class rdf:about="#SubstitutionModel">
         <rdfs:subClassOf rdf:resource="#ModelDescription"/>
@@ -1848,7 +1925,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TU -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TU -->
 
     <owl:Class rdf:about="#TU">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1858,7 +1935,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TUAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TUAnnotation -->
 
     <owl:Class rdf:about="#TUAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1866,7 +1943,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TaxonomicLink -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TaxonomicLink -->
 
     <owl:Class rdf:about="#TaxonomicLink">
         <rdfs:subClassOf rdf:resource="#TUAnnotation"/>
@@ -1882,6 +1959,19 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
+<<<<<<< cdao.owl
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TerminalNode -->
+
+    <owl:Class rdf:about="#TerminalNode">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <dc:description
+            >A node that has not descendants in the tree; it typically represents an OTU</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#Tree -->
+=======
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TerminalNode -->
 
     <owl:Class rdf:about="#TerminalNode">
@@ -1893,6 +1983,7 @@ Each transformation has a left state (original) and a right state (resutl of the
 
 
     <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Tree -->
+>>>>>>> 1.26
 
     <owl:Class rdf:about="#Tree">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -1902,7 +1993,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TreeAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TreeAnnotation -->
 
     <owl:Class rdf:about="#TreeAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1918,7 +2009,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TreeProcedure -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#TreeProcedure -->
 
     <owl:Class rdf:about="#TreeProcedure">
         <rdfs:subClassOf rdf:resource="#TreeAnnotation"/>
@@ -1928,7 +2019,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#UncertainStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#UncertainStateDomain -->
 
     <owl:Class rdf:about="#UncertainStateDomain">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1942,7 +2033,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#UnrootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#UnrootedTree -->
 
     <owl:Class rdf:about="#UnrootedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -1990,43 +2081,43 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#absent -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#absent -->
 
     <Generic_State rdf:about="#absent"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#dA -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#dA -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dA"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#dC -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#dC -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dC"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#dG -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#dG -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dG"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#dT -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#dT -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dT"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#gap -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#gap -->
 
     <Generic_State rdf:about="#gap"/>
     
 
 
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#unknown -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#unknown -->
 
     <Generic_State rdf:about="#unknown"/>
     

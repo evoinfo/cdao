@@ -1016,7 +1016,6 @@
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< cdao.owl
         <dc:description
             >A node that has descendants in the tree</dc:description>
     </owl:Class>
@@ -1027,18 +1026,6 @@
 
     <owl:Class rdf:about="#BayesianMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
-=======
-        <dc:description
-            >A node that has descendants in the tree</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#BayesianMethod -->
-
-    <owl:Class rdf:about="#BayesianMethod">
-        <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
->>>>>>> 1.26
     </owl:Class>
     
 
@@ -1328,7 +1315,6 @@
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidue -->
 
     <owl:Class rdf:about="#DesoxiRibonucleotideResidue">
@@ -1366,45 +1352,7 @@
 
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#DirectedEdge -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DesoxiRibonucleotideResidue -->
 
-    <owl:Class rdf:about="#DesoxiRibonucleotideResidue">
-        <rdfs:subClassOf rdf:resource="#Molecular"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DesoxiRibonucleotideResidueCharacter -->
-
-    <owl:Class rdf:about="#DesoxiRibonucleotideResidueCharacter">
-        <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Datum"/>
-                <owl:allValuesFrom rdf:resource="#DesoxiRibonucleotideResidueStateDatum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Nucleotide_Datum"/>
-                <owl:someValuesFrom rdf:resource="#DesoxiRibonucleotideResidueStateDatum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DesoxiRibonucleotideResidueStateDatum -->
-
-    <owl:Class rdf:about="#DesoxiRibonucleotideResidueStateDatum">
-        <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DirectedEdge -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#DirectedEdge">
         <owl:equivalentClass>
@@ -1430,11 +1378,7 @@
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#DistanceMatrixBasedMethod -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#DistanceMatrixBasedMethod -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#DistanceMatrixBasedMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1611,11 +1555,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#MaximumLikelihoodMethod -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#MaximumLikelihoodMethod -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#MaximumLikelihoodMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1710,11 +1650,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#ParsimonyMethod -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#ParsimonyMethod -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#ParsimonyMethod">
         <rdfs:subClassOf rdf:resource="#TreeProcedure"/>
@@ -1736,11 +1672,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidue -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidue -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -1748,11 +1680,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueCharacter -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidueCharacter -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -1766,11 +1694,7 @@ Each transformation has a left state (original) and a right state (resutl of the
     
 
 
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueStateDatum -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#RibonucleotideResidueStateDatum -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#RibonucleotideResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -1956,9 +1880,6 @@ Each transformation has a left state (original) and a right state (resutl of the
             >Link to an externally defined taxonomic hierarchy.</dc:description>
     </owl:Class>
     
-
-
-<<<<<<< cdao.owl
     <!-- http://www.evolutionaryontology.org/cdao.owl#TerminalNode -->
 
     <owl:Class rdf:about="#TerminalNode">
@@ -1966,23 +1887,8 @@ Each transformation has a left state (original) and a right state (resutl of the
         <dc:description
             >A node that has not descendants in the tree; it typically represents an OTU</dc:description>
     </owl:Class>
-    
-
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#Tree -->
-=======
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#TerminalNode -->
-
-    <owl:Class rdf:about="#TerminalNode">
-        <rdfs:subClassOf rdf:resource="#Node"/>
-        <dc:description
-            >A node that has not descendants in the tree; it typically represents an OTU</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cs.nmsu.edu/~epontell/CURRENT.owl#Tree -->
->>>>>>> 1.26
 
     <owl:Class rdf:about="#Tree">
         <rdfs:subClassOf rdf:resource="#Network"/>

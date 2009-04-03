@@ -520,10 +520,10 @@
 
     <owl:ObjectProperty rdf:about="#has_Left_Node">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a transformation to a &#39;left&#39; node (the node that has the &#39;left&#39; state).</dc:description>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
+            >This property relates a transition to a &#39;left&#39; node (the node that has the &#39;left&#39; state).</dc:description>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
         <rdfs:range rdf:resource="#Node"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transition_Component"/>
     </owl:ObjectProperty>
     
 
@@ -532,10 +532,10 @@
 
     <owl:ObjectProperty rdf:about="#has_Left_State">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a transformation to a &#39;left&#39; state (the state associated with the &#39;left&#39; node).</dc:description>
+            >This property relates a transition to a &#39;left&#39; state (the state associated with the &#39;left&#39; node).</dc:description>
         <rdfs:range rdf:resource="#CharacterStateDomain"/>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transition_Component"/>
     </owl:ObjectProperty>
     
 
@@ -666,10 +666,10 @@
 
     <owl:ObjectProperty rdf:about="#has_Right_Node">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a transformation to a &#39;right&#39; node (the node that has the &#39;right&#39; state).</dc:description>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
+            >This property relates a transition to a &#39;right&#39; node (the node that has the &#39;right&#39; state).</dc:description>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
         <rdfs:range rdf:resource="#Node"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transition_Component"/>
     </owl:ObjectProperty>
     
 
@@ -678,10 +678,10 @@
 
     <owl:ObjectProperty rdf:about="#has_Right_State">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a transformation to a &#39;right&#39; state (the state associated with the &#39;right&#39; node).</dc:description>
+            >This property relates a transition to a &#39;right&#39; state (the state associated with the &#39;right&#39; node).</dc:description>
         <rdfs:range rdf:resource="#CharacterStateDomain"/>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
-        <rdfs:subPropertyOf rdf:resource="#has_Transformation_Component"/>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
+        <rdfs:subPropertyOf rdf:resource="#has_Transition_Component"/>
     </owl:ObjectProperty>
     
 
@@ -740,12 +740,12 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Transformation_Component -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Transition_Component -->
 
-    <owl:ObjectProperty rdf:about="#has_Transformation_Component">
+    <owl:ObjectProperty rdf:about="#has_Transition_Component">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a transformation to the components that compose it.</dc:description>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
+            >This property relates a transition to the components that compose it.</dc:description>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
     </owl:ObjectProperty>
     
@@ -829,13 +829,13 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#transformation_of -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#transition_of -->
 
-    <owl:ObjectProperty rdf:about="#transformation_of">
+    <owl:ObjectProperty rdf:about="#transition_of">
         <dc:description rdf:datatype="&xsd;string"
-            >This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</dc:description>
+            >This property relates a type of evolutionary change (an Edge_Transition) to the character that undergoes the change.  The change is a transition_of the affected character.</dc:description>
         <rdfs:range rdf:resource="#Character"/>
-        <rdfs:domain rdf:resource="#EdgeTransformation"/>
+        <rdfs:domain rdf:resource="#EdgeTransition"/>
     </owl:ObjectProperty>
     
 
@@ -1435,13 +1435,13 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeTransformation -->
+    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeTransition -->
 
-    <owl:Class rdf:about="#EdgeTransformation">
+    <owl:Class rdf:about="#EdgeTransition">
         <rdfs:subClassOf rdf:resource="#EdgeAnnotation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#transformation_of"/>
+                <owl:onProperty rdf:resource="#transition_of"/>
                 <owl2:onClass rdf:resource="#Character"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -1461,10 +1461,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >If left state is same as left node, then transformation will imply correct direction.</rdfs:comment>
+            >If left state is same as left node, then transition will imply correct direction.</rdfs:comment>
         <dc:description
-            >A transformation (in states of a character) associated with an edge (branch) of a Tree or Network.
-Each transformation has a left state (original) and a right state (resutl of the transformation).</dc:description>
+            >A transition (in states of a character) associated with an edge (branch) of a Tree or Network.
+Each transition has a left state (original) and a right state (resutl of the transition).</dc:description>
     </owl:Class>
     
 
@@ -1568,9 +1568,9 @@ Each transformation has a left state (original) and a right state (resutl of the
     <owl:Class rdf:about="#ModelDescription">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
         <dc:description
-            >Description of a model of transformations.</dc:description>
+            >Description of a model of transitions.</dc:description>
         <rdfs:comment
-            >This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.</rdfs:comment>
+            >This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transition to various parameters.</rdfs:comment>
     </owl:Class>
     
 
@@ -1962,7 +1962,7 @@ Each transformation has a left state (original) and a right state (resutl of the
         <dc:title rdf:datatype="&xsd;string"
             >The Character Data Analysis Ontology</dc:title>
         <dc:description rdf:datatype="&xsd;string"
-            >The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &#39;OTUs&#39; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &#39;character-state data model&#39;.  For a given character, such as &#39;beak length&#39;, each OTU has a state, such as &#39;short&#39; or &#39;long&#39;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
+            >The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &#39;OTUs&#39; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &#39;character-state data model&#39;.  For a given character, such as &#39;beak length&#39;, each OTU has a state, such as &#39;short&#39; or &#39;long&#39;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transitions, and characters.  The representation of characters and transitions may depend on imported ontologies for a specific type of character.</dc:description>
         <dc:identifier rdf:datatype="&xsd;anyURI"
             >http://cdao.cvs.sourceforge.net/*checkout*/cdao/cdao/OWL/cdao.owl</dc:identifier>
         <dc:source rdf:datatype="&xsd;anyURI"

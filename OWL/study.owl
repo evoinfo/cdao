@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY study "http://www.cs.nmsu.edu/~bchisham/study.owl#" >
+    <!ENTITY contact "http://www.w3.org/2000/10/swap/pim/contact#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.cs.nmsu.edu/~bchisham/study.owl#"
+     xml:base="http://www.cs.nmsu.edu/~bchisham/study.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:study="http://www.cs.nmsu.edu/~bchisham/study.owl#"
+     xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.mindswap.org/2003/owl/foaf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_analysis -->
+
+    <owl:ObjectProperty rdf:about="#has_analysis">
+        <rdfs:range rdf:resource="#Analysis"/>
+        <rdfs:domain rdf:resource="#Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_author -->
+
+    <owl:ObjectProperty rdf:about="#has_author">
+        <rdfs:range rdf:resource="#Author"/>
+        <rdfs:domain rdf:resource="#Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_history -->
+
+    <owl:ObjectProperty rdf:about="#has_history">
+        <rdfs:range rdf:resource="#Histroy"/>
+        <rdfs:domain rdf:resource="#Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_input_matrix -->
+
+    <owl:ObjectProperty rdf:about="#has_input_matrix">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="#InputMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_matrix -->
+
+    <owl:ObjectProperty rdf:about="#has_matrix">
+        <rdfs:range rdf:resource="#Matrix"/>
+        <rdfs:domain rdf:resource="#Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_output_tree -->
+
+    <owl:ObjectProperty rdf:about="#has_output_tree">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="#OutputTree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_abstract -->
+
+    <owl:DatatypeProperty rdf:about="#has_abstract">
+        <rdfs:domain rdf:resource="#Study"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_algorithm -->
+
+    <owl:DatatypeProperty rdf:about="#has_algorithm">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_analysisid -->
+
+    <owl:DatatypeProperty rdf:about="#has_analysisid">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_analysisname -->
+
+    <owl:DatatypeProperty rdf:about="#has_analysisname">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_authorid -->
+
+    <owl:DatatypeProperty rdf:about="#has_authorid">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_citation -->
+
+    <owl:DatatypeProperty rdf:about="#has_citation">
+        <rdfs:domain rdf:resource="#Study"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_data_type -->
+
+    <owl:DatatypeProperty rdf:about="#has_data_type">
+        <rdfs:domain rdf:resource="#Matrix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_date -->
+
+    <owl:DatatypeProperty rdf:about="#has_date">
+        <rdfs:domain rdf:resource="#Histroy"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_email -->
+
+    <owl:DatatypeProperty rdf:about="#has_email">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_event -->
+
+    <owl:DatatypeProperty rdf:about="#has_event">
+        <rdfs:domain rdf:resource="#Histroy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_first_name -->
+
+    <owl:DatatypeProperty rdf:about="#has_first_name">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_label -->
+
+    <owl:DatatypeProperty rdf:about="#has_label">
+        <rdfs:domain rdf:resource="#OutputTree"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_last_name -->
+
+    <owl:DatatypeProperty rdf:about="#has_last_name">
+        <rdfs:domain rdf:resource="#Author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_matrixid -->
+
+    <owl:DatatypeProperty rdf:about="#has_matrixid">
+        <rdfs:domain rdf:resource="#Matrix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_matrixname -->
+
+    <owl:DatatypeProperty rdf:about="#has_matrixname">
+        <rdfs:domain rdf:resource="#Matrix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_nchar -->
+
+    <owl:DatatypeProperty rdf:about="#has_nchar">
+        <rdfs:domain rdf:resource="#Matrix"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_person -->
+
+    <owl:DatatypeProperty rdf:about="#has_person">
+        <rdfs:domain rdf:resource="#Histroy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_software -->
+
+    <owl:DatatypeProperty rdf:about="#has_software">
+        <rdfs:domain rdf:resource="#Analysis"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_studyid -->
+
+    <owl:DatatypeProperty rdf:about="#has_studyid">
+        <rdfs:domain rdf:resource="#Study"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_time -->
+
+    <owl:DatatypeProperty rdf:about="#has_time">
+        <rdfs:domain rdf:resource="#Histroy"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_title -->
+
+    <owl:DatatypeProperty rdf:about="#has_title">
+        <rdfs:domain rdf:resource="#OutputTree"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_tree_name -->
+
+    <owl:DatatypeProperty rdf:about="#has_tree_name">
+        <rdfs:domain rdf:resource="#OutputTree"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#has_type -->
+
+    <owl:DatatypeProperty rdf:about="#has_type">
+        <rdfs:domain rdf:resource="#OutputTree"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#Analysis -->
+
+    <owl:Class rdf:about="#Analysis"/>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#Author -->
+
+    <owl:Class rdf:about="#Author">
+        <owl:equivalentClass rdf:resource="&contact;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#Histroy -->
+
+    <owl:Class rdf:about="#Histroy"/>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#InputMatrix -->
+
+    <owl:Class rdf:about="#InputMatrix"/>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#Matrix -->
+
+    <owl:Class rdf:about="#Matrix"/>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#OutputTree -->
+
+    <owl:Class rdf:about="#OutputTree"/>
+    
+
+
+    <!-- http://www.cs.nmsu.edu/~bchisham/study.owl#Study -->
+
+    <owl:Class rdf:about="#Study"/>
+    
+
+
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <owl:Class rdf:about="&contact;Person"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

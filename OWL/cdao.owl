@@ -19,12 +19,12 @@
      xml:base="http://www.evolutionaryontology.org/cdao.owl"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:amino-acid="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#"
+     xmlns:cdao="http://www.evolutionaryontology.org/cdao.owl#"
      xmlns:mao="http://purl.org/obo/owl/mao.obo#"
      xmlns:ontology="http://www.mygrid.org.uk/ontology#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:cdao="http://www.evolutionaryontology.org/cdao.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="">
@@ -332,8 +332,8 @@
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description
             >The property links a node to any of the other nodes that are its ancestors in a rooted tree.</dc:description>
-        <rdfs:range rdf:resource="#Node"/>
         <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Node"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
         <owl:inverseOf rdf:resource="#has_Descendant"/>
     </owl:ObjectProperty>
@@ -527,8 +527,8 @@
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description
             >A property that links a node to any of its descendants in a rooted tree.</dc:description>
-        <rdfs:range rdf:resource="#Node"/>
         <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Node"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
     </owl:ObjectProperty>
     
@@ -549,6 +549,17 @@
     <owl:ObjectProperty rdf:about="#has_Element">
         <rdfs:domain rdf:resource="#SetOfThings"/>
         <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao.owl#has_External_Reference -->
+
+    <owl:ObjectProperty rdf:about="#has_External_Reference">
+        <rdfs:comment rdf:datatype="&rdfs;Literal"
+            >Associates a TU to some external taxonomy reference.</rdfs:comment>
+        <rdfs:domain rdf:resource="#TU"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
@@ -833,8 +844,8 @@
     <owl:ObjectProperty rdf:about="#homologous_to">
         <dc:description rdf:datatype="&xsd;string"
             >This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</dc:description>
-        <rdfs:range rdf:resource="#CharacterStateDatum"/>
         <rdfs:domain rdf:resource="#CharacterStateDatum"/>
+        <rdfs:range rdf:resource="#CharacterStateDatum"/>
     </owl:ObjectProperty>
     
 
@@ -923,12 +934,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_External_Reference -->
-
-    <owl:DatatypeProperty rdf:about="#has_External_Reference"/>
     
 
 
@@ -1105,14 +1110,14 @@
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Amino_Acid_Datum"/>
-                <owl:someValuesFrom rdf:resource="#AminoAcidResidueStateDatum"/>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#AminoAcidResidueStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Datum"/>
-                <owl:allValuesFrom rdf:resource="#AminoAcidResidueStateDatum"/>
+                <owl:onProperty rdf:resource="#has_Amino_Acid_Datum"/>
+                <owl:someValuesFrom rdf:resource="#AminoAcidResidueStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1133,15 +1138,15 @@
         <rdfs:subClassOf rdf:resource="#Node"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Descendant"/>
-                <owl:onClass rdf:resource="#Node"/>
+                <owl:onProperty rdf:resource="#part_of"/>
+                <owl:onClass rdf:resource="#RootedTree"/>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#part_of"/>
-                <owl:onClass rdf:resource="#RootedTree"/>
+                <owl:onProperty rdf:resource="#has_Descendant"/>
+                <owl:onClass rdf:resource="#Node"/>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1189,10 +1194,10 @@
 
     <owl:Class rdf:about="#CDAOAnnotation">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:comment
-            >Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>
         <dc:description
             >The base class of annotations in CDAO.</dc:description>
+        <rdfs:comment
+            >Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>
     </owl:Class>
     
 
@@ -1248,14 +1253,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_TU"/>
-                <owl:someValuesFrom rdf:resource="#TU"/>
+                <owl:onProperty rdf:resource="#has"/>
+                <owl:someValuesFrom rdf:resource="#CharacterStateDataMatrixAnnotation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has"/>
-                <owl:someValuesFrom rdf:resource="#CharacterStateDataMatrixAnnotation"/>
+                <owl:onProperty rdf:resource="#has_TU"/>
+                <owl:someValuesFrom rdf:resource="#TU"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description
@@ -1280,15 +1285,15 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#belongs_to_Character"/>
-                <owl:onClass rdf:resource="#Character"/>
+                <owl:onProperty rdf:resource="#belongs_to_TU"/>
+                <owl:onClass rdf:resource="#TU"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#belongs_to_TU"/>
-                <owl:onClass rdf:resource="#TU"/>
+                <owl:onProperty rdf:resource="#belongs_to_Character"/>
+                <owl:onClass rdf:resource="#Character"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1345,14 +1350,14 @@
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Compound_Datum"/>
-                <owl:someValuesFrom rdf:resource="#CompoundStateDatum"/>
+                <owl:onProperty rdf:resource="#has_Character"/>
+                <owl:someValuesFrom rdf:resource="#Character"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Character"/>
-                <owl:someValuesFrom rdf:resource="#Character"/>
+                <owl:onProperty rdf:resource="#has_Compound_Datum"/>
+                <owl:someValuesFrom rdf:resource="#CompoundStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1429,14 +1434,14 @@
         <rdfs:subClassOf rdf:resource="#Character"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Continuous_Datum"/>
-                <owl:someValuesFrom rdf:resource="#ContinuousStateDatum"/>
+                <owl:onProperty rdf:resource="#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="#ContinuousStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Datum"/>
-                <owl:allValuesFrom rdf:resource="#ContinuousStateDatum"/>
+                <owl:onProperty rdf:resource="#has_Continuous_Datum"/>
+                <owl:someValuesFrom rdf:resource="#ContinuousStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1512,10 +1517,10 @@
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on</rdfs:comment>
         <dc:description
             >A positional coordinate giving the source of a character state, used for molecular sequences.</dc:description>
+        <rdfs:comment
+            >drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on</rdfs:comment>
     </owl:Class>
     
 
@@ -1678,10 +1683,10 @@
                 <owl:someValuesFrom rdf:resource="&xsd;anySimpleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Its possible that this should not be classed as an &#39;annotation&#39; since it contains data rather than meta-data.</rdfs:comment>
         <dc:description
             >The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.</dc:description>
+        <rdfs:comment
+            >Its possible that this should not be classed as an &#39;annotation&#39; since it contains data rather than meta-data.</rdfs:comment>
     </owl:Class>
     
 
@@ -1787,10 +1792,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Categorical"/>
-        <rdfs:comment
-            >This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.</rdfs:comment>
         <dc:description
             >This concept is tied to the verbally ambiguous &#39;gap&#39; concept and to the use of a gap character (often the en dash &#39;-&#39;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</dc:description>
+        <rdfs:comment
+            >This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.</rdfs:comment>
     </owl:Class>
     
 
@@ -2131,12 +2136,6 @@
         <rdfs:subClassOf rdf:resource="#Tree"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#subtree_of"/>
-                <owl:allValuesFrom rdf:resource="#RootedTree"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#has"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2153,6 +2152,12 @@
                 <owl:onProperty rdf:resource="#has_Root"/>
                 <owl:onClass rdf:resource="#Node"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#subtree_of"/>
+                <owl:allValuesFrom rdf:resource="#RootedTree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#UnrootedTree"/>
@@ -2175,6 +2180,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#has"/>
+                <owl:someValuesFrom rdf:resource="#CharacterStateDatum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#has_Coordinate"/>
@@ -2182,12 +2193,6 @@
                         <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
                     </owl:Restriction>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#has"/>
-                <owl:someValuesFrom rdf:resource="#CharacterStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description
@@ -2331,12 +2336,6 @@
 
     <owl:Class rdf:about="#TaxonomicLink">
         <rdfs:subClassOf rdf:resource="#TUAnnotation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_External_Reference"/>
-                <owl:someValuesFrom rdf:resource="&xsd;anyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:description
             >Link to an externally defined taxonomic hierarchy.</dc:description>
     </owl:Class>
@@ -2506,15 +2505,15 @@
         <rdfs:subClassOf rdf:resource="#hereditaryChange"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hereditary_change_of"/>
-                <owl:onClass rdf:resource="#Character"/>
+                <owl:onProperty rdf:resource="#has_Left_State"/>
+                <owl:onClass rdf:resource="#CharacterStateDomain"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Left_State"/>
-                <owl:onClass rdf:resource="#CharacterStateDomain"/>
+                <owl:onProperty rdf:resource="#hereditary_change_of"/>
+                <owl:onClass rdf:resource="#Character"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2550,13 +2549,6 @@
     <owl:Class rdf:about="#hereditaryChange">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#has_Right_State"/>
-                <owl:onClass rdf:resource="#CharacterStateDomain"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hereditary_change_of"/>
                 <owl:onClass rdf:resource="#Character"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
@@ -2565,6 +2557,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#has_Left_State"/>
+                <owl:onClass rdf:resource="#CharacterStateDomain"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#has_Right_State"/>
                 <owl:onClass rdf:resource="#CharacterStateDomain"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
@@ -2669,9 +2668,9 @@
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#absent -->
 
-    <Generic_State rdf:about="#absent">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Generic_State>
+    <owl:Thing rdf:about="#absent">
+        <rdf:type rdf:resource="#Generic_State"/>
+    </owl:Thing>
     
 
 
@@ -2685,9 +2684,9 @@
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#dC -->
 
-    <owl:Thing rdf:about="#dC">
-        <rdf:type rdf:resource="#DesoxiRibonucleotideResidue"/>
-    </owl:Thing>
+    <DesoxiRibonucleotideResidue rdf:about="#dC">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </DesoxiRibonucleotideResidue>
     
 
 
@@ -2701,9 +2700,9 @@
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#dT -->
 
-    <owl:Thing rdf:about="#dT">
-        <rdf:type rdf:resource="#DesoxiRibonucleotideResidue"/>
-    </owl:Thing>
+    <DesoxiRibonucleotideResidue rdf:about="#dT">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </DesoxiRibonucleotideResidue>
     
 
 
@@ -2717,9 +2716,9 @@
 
     <!-- http://www.evolutionaryontology.org/cdao.owl#rU -->
 
-    <RibonucleotideResidueStateDatum rdf:about="#rU">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </RibonucleotideResidueStateDatum>
+    <owl:Thing rdf:about="#rU">
+        <rdf:type rdf:resource="#RibonucleotideResidueStateDatum"/>
+    </owl:Thing>
     
 
 
@@ -2742,17 +2741,17 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#AminoAcidResidueCharacter"/>
-            <rdf:Description rdf:about="#ContinuousCharacter"/>
-            <rdf:Description rdf:about="#DesoxiRibonucleotideResidueCharacter"/>
+            <rdf:Description rdf:about="#AminoAcidResidueStateDatum"/>
+            <rdf:Description rdf:about="#ContinuousStateDatum"/>
+            <rdf:Description rdf:about="#DesoxiRibonucleotideResidueStateDatum"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#AminoAcidResidueStateDatum"/>
-            <rdf:Description rdf:about="#ContinuousStateDatum"/>
-            <rdf:Description rdf:about="#DesoxiRibonucleotideResidueStateDatum"/>
+            <rdf:Description rdf:about="#AminoAcidResidueCharacter"/>
+            <rdf:Description rdf:about="#ContinuousCharacter"/>
+            <rdf:Description rdf:about="#DesoxiRibonucleotideResidueCharacter"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

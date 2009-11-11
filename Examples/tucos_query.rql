@@ -1,0 +1,14 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tdwg09: <http://www.tdwg.org/tdwg09.rdf#>
+PREFIX cdao: <http://www.evolutionaryontology.org/cdao.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  $name $country
+WHERE { 
+        
+        $datum cdao:belongs_to_TU $tu.
+        $datum cdao:has_Standard_State tdwg09:s1. 
+        $name cdao:represents_TU $tu.
+        $name tdwg09:country  $country.
+
+ }

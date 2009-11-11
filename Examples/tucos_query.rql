@@ -7,7 +7,8 @@ SELECT  $name $country
 WHERE { 
         
         $datum cdao:belongs_to_TU $tu.
-        $datum cdao:has_Standard_State tdwg09:s1. 
+        $datum cdao:has_Standard_State tdwg09:s2. 
+        #$datum cdao:belongs_to_Character $character.
         $name cdao:represents_TU $tu.
         $name tdwg09:country  $country.
 

@@ -10,16 +10,16 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY cdao "http://www.evolutionaryontology.org/cdao.owl#" >
+    <!ENTITY cdao "http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#" >
     <!ENTITY amino-acid "http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.evolutionaryontology.org/cdao.owl#"
-     xml:base="http://www.evolutionaryontology.org/cdao.owl"
+<rdf:RDF xmlns="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
+     xml:base="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:amino-acid="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#"
-     xmlns:cdao="http://www.evolutionaryontology.org/cdao.owl#"
+     xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
      xmlns:mao="http://purl.org/obo/owl/mao.obo#"
      xmlns:ontology="http://www.mygrid.org.uk/ontology#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -67,7 +67,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to -->
 
     <owl:ObjectProperty rdf:about="#belongs_to">
         <dc:description
@@ -79,7 +79,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Amino_Acid_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Amino_Acid_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Amino_Acid_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -90,7 +90,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -101,7 +101,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Character_State_Data_Matrix -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Character_State_Data_Matrix -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Character_State_Data_Matrix">
         <rdfs:range rdf:resource="#CharacterStateDataMatrix"/>
@@ -118,7 +118,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Compound_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Compound_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Compound_Character">
         <rdfs:range rdf:resource="#CompoundCharacter"/>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Continuous_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Continuous_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Continuous_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -139,7 +139,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge">
         <dc:description
@@ -151,7 +151,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge_as_Child -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge_as_Child -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Child">
         <dc:description
@@ -164,7 +164,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Edge_as_Parent -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge_as_Parent -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Edge_as_Parent">
         <dc:description
@@ -177,7 +177,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Network -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Network -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Network">
         <rdfs:range rdf:resource="#Network"/>
@@ -194,7 +194,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Nucleotide_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Nucleotide_Character -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Nucleotide_Character">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -205,7 +205,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_TU -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -218,7 +218,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Tree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Tree -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Tree">
         <rdfs:range rdf:resource="#Tree"/>
@@ -235,7 +235,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#belongs_to_Tree_as_Root -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Tree_as_Root -->
 
     <owl:ObjectProperty rdf:about="#belongs_to_Tree_as_Root">
         <rdfs:domain rdf:resource="#Node"/>
@@ -246,7 +246,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#connects_to -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#connects_to -->
 
     <owl:ObjectProperty rdf:about="#connects_to">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -255,13 +255,13 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#exclude -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude -->
 
     <owl:ObjectProperty rdf:about="#exclude"/>
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#exclude_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude_Node -->
 
     <owl:ObjectProperty rdf:about="#exclude_Node">
         <rdfs:range rdf:resource="#Node"/>
@@ -270,7 +270,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#exclude_Subtree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude_Subtree -->
 
     <owl:ObjectProperty rdf:about="#exclude_Subtree">
         <rdfs:range rdf:resource="#Subtree"/>
@@ -279,7 +279,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has -->
 
     <owl:ObjectProperty rdf:about="#has">
         <dc:description
@@ -288,7 +288,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Amino_Acid_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Amino_Acid_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -307,7 +307,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Amino_Acid_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Amino_Acid_State -->
 
     <owl:ObjectProperty rdf:about="#has_Amino_Acid_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -326,7 +326,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Ancestor -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Ancestor -->
 
     <owl:ObjectProperty rdf:about="#has_Ancestor">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -340,7 +340,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Annotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Annotation -->
 
     <owl:ObjectProperty rdf:about="#has_Annotation">
         <rdfs:range rdf:resource="#CDAOAnnotation"/>
@@ -351,7 +351,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Categorical_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Categorical_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Categorical_Datum">
         <rdfs:subPropertyOf rdf:resource="#has_Datum"/>
@@ -359,7 +359,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Change_Component -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Change_Component -->
 
     <owl:ObjectProperty rdf:about="#has_Change_Component">
         <dc:description rdf:datatype="&xsd;string"
@@ -370,7 +370,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Character -->
 
     <owl:ObjectProperty rdf:about="#has_Character">
         <dc:description rdf:datatype="&xsd;string"
@@ -382,7 +382,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Child -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Child -->
 
     <owl:ObjectProperty rdf:about="#has_Child">
         <dc:description
@@ -399,7 +399,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Child_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Child_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Child_Node">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -412,7 +412,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Compound_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Compound_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -431,7 +431,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Compound_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Compound_State -->
 
     <owl:ObjectProperty rdf:about="#has_Compound_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -450,7 +450,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Continuous_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -469,7 +469,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Continuous_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_State -->
 
     <owl:ObjectProperty rdf:about="#has_Continuous_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -481,7 +481,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Coordinate -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Coordinate -->
 
     <owl:ObjectProperty rdf:about="#has_Coordinate">
         <rdfs:domain rdf:resource="#CharacterStateDatum"/>
@@ -491,7 +491,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Coordinate_System -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Coordinate_System -->
 
     <owl:ObjectProperty rdf:about="#has_Coordinate_System">
         <dc:description rdf:datatype="&xsd;string"
@@ -502,7 +502,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -521,7 +521,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Descendant -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendant -->
 
     <owl:ObjectProperty rdf:about="#has_Descendant">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -534,7 +534,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Descendants -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendants -->
 
     <owl:ObjectProperty rdf:about="#has_Descendants">
         <rdfs:domain rdf:resource="#CommonAncestralNode"/>
@@ -544,7 +544,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Element -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Element -->
 
     <owl:ObjectProperty rdf:about="#has_Element">
         <rdfs:domain rdf:resource="#SetOfThings"/>
@@ -553,7 +553,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_External_Reference -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_External_Reference -->
 
     <owl:ObjectProperty rdf:about="#has_External_Reference">
         <rdfs:comment rdf:datatype="&rdfs;Literal"
@@ -564,7 +564,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_First_Coordinate_Item -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_First_Coordinate_Item -->
 
     <owl:ObjectProperty rdf:about="#has_First_Coordinate_Item">
         <dc:description rdf:datatype="&xsd;string"
@@ -583,7 +583,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Hereditary_Change -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Hereditary_Change -->
 
     <owl:ObjectProperty rdf:about="#has_Hereditary_Change">
         <rdfs:domain rdf:resource="#Edge"/>
@@ -593,7 +593,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Left_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Left_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -605,7 +605,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Left_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_State -->
 
     <owl:ObjectProperty rdf:about="#has_Left_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -617,7 +617,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Lineage_node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Lineage_node -->
 
     <owl:ObjectProperty rdf:about="#has_Lineage_node">
         <rdfs:domain rdf:resource="#Lineage"/>
@@ -627,7 +627,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Molecular_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Molecular_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Molecular_Datum">
         <rdfs:range rdf:resource="#MolecularStateDatum"/>
@@ -644,7 +644,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Node">
         <dc:description
@@ -656,7 +656,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Nucleotide_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Nucleotide_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_Datum">
         <dc:description rdf:datatype="&xsd;string"
@@ -675,7 +675,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Nucleotide_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Nucleotide_State -->
 
     <owl:ObjectProperty rdf:about="#has_Nucleotide_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -694,7 +694,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Parent -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Parent -->
 
     <owl:ObjectProperty rdf:about="#has_Parent">
         <dc:description
@@ -710,7 +710,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Parent_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Parent_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Parent_Node">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -723,7 +723,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_RNA_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_RNA_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_RNA_Datum">
         <rdfs:subPropertyOf rdf:resource="#has_Molecular_Datum"/>
@@ -731,7 +731,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Remaining_Coordinate_List -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Remaining_Coordinate_List -->
 
     <owl:ObjectProperty rdf:about="#has_Remaining_Coordinate_List">
         <dc:description rdf:datatype="&xsd;string"
@@ -743,7 +743,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Right_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_Node -->
 
     <owl:ObjectProperty rdf:about="#has_Right_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -755,7 +755,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Right_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State -->
 
     <owl:ObjectProperty rdf:about="#has_Right_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -767,7 +767,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Root -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Root -->
 
     <owl:ObjectProperty rdf:about="#has_Root">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -780,7 +780,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Standard_Datum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Standard_Datum -->
 
     <owl:ObjectProperty rdf:about="#has_Standard_Datum">
         <rdfs:range rdf:resource="#StandardStateDatum"/>
@@ -797,7 +797,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_State -->
 
     <owl:ObjectProperty rdf:about="#has_State">
         <dc:description rdf:datatype="&xsd;string"
@@ -809,7 +809,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_TU -->
 
     <owl:ObjectProperty rdf:about="#has_TU">
         <dc:description rdf:datatype="&xsd;string"
@@ -821,7 +821,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Type -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Type -->
 
     <owl:ObjectProperty rdf:about="#has_Type">
         <rdfs:subPropertyOf rdf:resource="#has"/>
@@ -829,7 +829,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#hereditary_change_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditary_change_of -->
 
     <owl:ObjectProperty rdf:about="#hereditary_change_of">
         <dc:description rdf:datatype="&xsd;string"
@@ -839,7 +839,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#homologous_to -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#homologous_to -->
 
     <owl:ObjectProperty rdf:about="#homologous_to">
         <dc:description rdf:datatype="&xsd;string"
@@ -850,7 +850,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#is_annotation_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#is_annotation_of -->
 
     <owl:ObjectProperty rdf:about="#is_annotation_of">
         <rdfs:domain rdf:resource="#CDAOAnnotation"/>
@@ -859,7 +859,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#nca_node_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#nca_node_of -->
 
     <owl:ObjectProperty rdf:about="#nca_node_of">
         <rdfs:domain rdf:resource="#Node"/>
@@ -868,7 +868,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#part_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#part_of -->
 
     <owl:ObjectProperty rdf:about="#part_of">
         <owl:inverseOf rdf:resource="#has"/>
@@ -876,13 +876,13 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#precedes -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes"/>
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#reconciliation_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#reconciliation_of -->
 
     <owl:ObjectProperty rdf:about="#reconciliation_of">
         <rdfs:domain rdf:resource="#ReconcileTree"/>
@@ -891,7 +891,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#represented_by_Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#represented_by_Node -->
 
     <owl:ObjectProperty rdf:about="#represented_by_Node">
         <dc:description rdf:datatype="&xsd;string"
@@ -903,7 +903,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#represents_TU -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#represents_TU -->
 
     <owl:ObjectProperty rdf:about="#represents_TU">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -915,7 +915,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#subtree_of -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#subtree_of -->
 
     <owl:ObjectProperty rdf:about="#subtree_of">
         <dc:description
@@ -937,7 +937,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Float_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Float_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Float_Value">
         <rdfs:subPropertyOf rdf:resource="#has_Value"/>
@@ -946,7 +946,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Int_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Int_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Int_Value">
         <rdfs:subPropertyOf rdf:resource="#has_Value"/>
@@ -955,7 +955,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Point_Coordinate_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Point_Coordinate_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Point_Coordinate_Value">
         <rdfs:domain rdf:resource="#CoordinatePoint"/>
@@ -964,7 +964,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Precision -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Precision -->
 
     <owl:DatatypeProperty rdf:about="#has_Precision">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -972,7 +972,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Range_End_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Range_End_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Range_End_Value">
         <rdfs:domain rdf:resource="#CoordinateRange"/>
@@ -981,7 +981,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Range_Start_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Range_Start_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Range_Start_Value">
         <rdfs:domain rdf:resource="#CoordinateRange"/>
@@ -990,7 +990,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Support_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Support_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Support_Value">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -998,7 +998,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Uncertainty_Factor -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Uncertainty_Factor -->
 
     <owl:DatatypeProperty rdf:about="#has_Uncertainty_Factor">
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -1006,7 +1006,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#has_Value -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Value -->
 
     <owl:DatatypeProperty rdf:about="#has_Value">
         <rdfs:range rdf:resource="&xsd;anySimpleType"/>
@@ -1086,7 +1086,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#AlignmentProcedure -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AlignmentProcedure -->
 
     <owl:Class rdf:about="#AlignmentProcedure">
         <rdfs:subClassOf rdf:resource="#CharacterStateDataMatrixAnnotation"/>
@@ -1094,7 +1094,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidue -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidue -->
 
     <owl:Class rdf:about="#AminoAcidResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -1104,7 +1104,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidueCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidueCharacter -->
 
     <owl:Class rdf:about="#AminoAcidResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -1124,7 +1124,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#AminoAcidResidueStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidueStateDatum -->
 
     <owl:Class rdf:about="#AminoAcidResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -1132,7 +1132,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#AncestralNode -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AncestralNode -->
 
     <owl:Class rdf:about="#AncestralNode">
         <rdfs:subClassOf rdf:resource="#Node"/>
@@ -1154,7 +1154,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#BifurcatingTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#BifurcatingTree -->
 
     <owl:Class rdf:about="#BifurcatingTree">
         <owl:equivalentClass rdf:resource="#FullyResolvedTree"/>
@@ -1163,7 +1163,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Bifurcation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Bifurcation -->
 
     <owl:Class rdf:about="#Bifurcation">
         <owl:equivalentClass rdf:resource="#Dichotomy"/>
@@ -1180,7 +1180,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Branch -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Branch -->
 
     <owl:Class rdf:about="#Branch">
         <owl:equivalentClass rdf:resource="#Edge"/>
@@ -1190,7 +1190,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CDAOAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CDAOAnnotation -->
 
     <owl:Class rdf:about="#CDAOAnnotation">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1202,7 +1202,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Categorical -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Categorical -->
 
     <owl:Class rdf:about="#Categorical">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1210,7 +1210,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CategoricalCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CategoricalCharacter -->
 
     <owl:Class rdf:about="#CategoricalCharacter">
         <rdfs:subClassOf rdf:resource="#Character"/>
@@ -1218,7 +1218,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CategoricalStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CategoricalStateDatum -->
 
     <owl:Class rdf:about="#CategoricalStateDatum">
         <rdfs:subClassOf rdf:resource="#CharacterStateDatum"/>
@@ -1226,7 +1226,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Character -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character -->
 
     <owl:Class rdf:about="#Character">
         <rdfs:subClassOf>
@@ -1241,7 +1241,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDataMatrix -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrix -->
 
     <owl:Class rdf:about="#CharacterStateDataMatrix">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1269,7 +1269,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDataMatrixAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrixAnnotation -->
 
     <owl:Class rdf:about="#CharacterStateDataMatrixAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1279,7 +1279,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDatum -->
 
     <owl:Class rdf:about="#CharacterStateDatum">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1303,7 +1303,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CharacterStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain -->
 
     <owl:Class rdf:about="#CharacterStateDomain">
         <dc:description
@@ -1312,7 +1312,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Clade -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Clade -->
 
     <owl:Class rdf:about="#Clade">
         <owl:equivalentClass rdf:resource="#HolophyleticGroup"/>
@@ -1321,7 +1321,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CommonAncestralNode -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CommonAncestralNode -->
 
     <owl:Class rdf:about="#CommonAncestralNode">
         <rdfs:subClassOf rdf:resource="#AncestralNode"/>
@@ -1336,7 +1336,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Compound -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Compound -->
 
     <owl:Class rdf:about="#Compound">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -1344,7 +1344,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CompoundCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundCharacter -->
 
     <owl:Class rdf:about="#CompoundCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -1372,7 +1372,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CompoundStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundStateDatum -->
 
     <owl:Class rdf:about="#CompoundStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -1380,7 +1380,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Continuous -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Continuous -->
 
     <owl:Class rdf:about="#Continuous">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -1396,7 +1396,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharBayesianLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharBayesianLengthType -->
 
     <owl:Class rdf:about="#ContinuousCharBayesianLengthType">
         <rdfs:subClassOf rdf:resource="#ContinuousCharacterLengthType"/>
@@ -1404,7 +1404,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharDistanceLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharDistanceLengthType -->
 
     <owl:Class rdf:about="#ContinuousCharDistanceLengthType">
         <rdfs:subClassOf rdf:resource="#ContinuousCharacterLengthType"/>
@@ -1412,7 +1412,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharLikelihoodLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharLikelihoodLengthType -->
 
     <owl:Class rdf:about="#ContinuousCharLikelihoodLengthType">
         <rdfs:subClassOf rdf:resource="#ContinuousCharacterLengthType"/>
@@ -1420,7 +1420,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharParsimonyLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharParsimonyLengthType -->
 
     <owl:Class rdf:about="#ContinuousCharParsimonyLengthType">
         <rdfs:subClassOf rdf:resource="#ContinuousCharacterLengthType"/>
@@ -1428,7 +1428,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharacter -->
 
     <owl:Class rdf:about="#ContinuousCharacter">
         <rdfs:subClassOf rdf:resource="#Character"/>
@@ -1448,7 +1448,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousCharacterLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharacterLengthType -->
 
     <owl:Class rdf:about="#ContinuousCharacterLengthType">
         <rdfs:subClassOf rdf:resource="#EdgeLengthType"/>
@@ -1456,7 +1456,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ContinuousStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum -->
 
     <owl:Class rdf:about="#ContinuousStateDatum">
         <rdfs:subClassOf rdf:resource="#CharacterStateDatum"/>
@@ -1464,7 +1464,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateList -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateList -->
 
     <owl:Class rdf:about="#CoordinateList">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1472,7 +1472,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinatePoint -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinatePoint -->
 
     <owl:Class rdf:about="#CoordinatePoint">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1480,7 +1480,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateRange -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateRange -->
 
     <owl:Class rdf:about="#CoordinateRange">
         <rdfs:subClassOf rdf:resource="#DatumCoordinate"/>
@@ -1488,7 +1488,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#CoordinateSystem -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateSystem -->
 
     <owl:Class rdf:about="#CoordinateSystem">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1498,7 +1498,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DataMatrixFormat -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DataMatrixFormat -->
 
     <owl:Class rdf:about="#DataMatrixFormat">
         <rdfs:subClassOf rdf:resource="#CharacterStateDataMatrixAnnotation"/>
@@ -1506,7 +1506,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DatumCoordinate -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DatumCoordinate -->
 
     <owl:Class rdf:about="#DatumCoordinate">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1525,7 +1525,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidue -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidue -->
 
     <owl:Class rdf:about="#DesoxiRibonucleotideResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -1533,7 +1533,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidueCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidueCharacter -->
 
     <owl:Class rdf:about="#DesoxiRibonucleotideResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -1553,7 +1553,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DesoxiRibonucleotideResidueStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidueStateDatum -->
 
     <owl:Class rdf:about="#DesoxiRibonucleotideResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -1561,7 +1561,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Dichotomy -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Dichotomy -->
 
     <owl:Class rdf:about="#Dichotomy">
         <rdfs:subClassOf rdf:resource="#AncestralNode"/>
@@ -1570,7 +1570,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DirectedEdge -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DirectedEdge -->
 
     <owl:Class rdf:about="#DirectedEdge">
         <owl:equivalentClass>
@@ -1596,7 +1596,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DiscreteCharBayesianLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharBayesianLengthType -->
 
     <owl:Class rdf:about="#DiscreteCharBayesianLengthType">
         <rdfs:subClassOf rdf:resource="#DiscreteCharacterLengthType"/>
@@ -1604,7 +1604,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DiscreteCharDistanceLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharDistanceLengthType -->
 
     <owl:Class rdf:about="#DiscreteCharDistanceLengthType">
         <rdfs:subClassOf rdf:resource="#DiscreteCharacterLengthType"/>
@@ -1612,7 +1612,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DiscreteCharLikelihoodLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharLikelihoodLengthType -->
 
     <owl:Class rdf:about="#DiscreteCharLikelihoodLengthType">
         <rdfs:subClassOf rdf:resource="#DiscreteCharacterLengthType"/>
@@ -1620,7 +1620,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DiscreteCharParsimonyLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharParsimonyLengthType -->
 
     <owl:Class rdf:about="#DiscreteCharParsimonyLengthType">
         <rdfs:subClassOf rdf:resource="#DiscreteCharacterLengthType"/>
@@ -1628,7 +1628,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#DiscreteCharacterLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharacterLengthType -->
 
     <owl:Class rdf:about="#DiscreteCharacterLengthType">
         <rdfs:subClassOf rdf:resource="#EdgeLengthType"/>
@@ -1636,7 +1636,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Edge -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Edge -->
 
     <owl:Class rdf:about="#Edge">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1659,7 +1659,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeAnnotation -->
 
     <owl:Class rdf:about="#EdgeAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1667,7 +1667,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeLength -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeLength -->
 
     <owl:Class rdf:about="#EdgeLength">
         <rdfs:subClassOf rdf:resource="#EdgeAnnotation"/>
@@ -1691,7 +1691,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#EdgeLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeLengthType -->
 
     <owl:Class rdf:about="#EdgeLengthType">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1699,7 +1699,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#FASTADataMatrix -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FASTADataMatrix -->
 
     <owl:Class rdf:about="#FASTADataMatrix">
         <rdfs:subClassOf rdf:resource="#DataMatrixFormat"/>
@@ -1707,7 +1707,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#FullyResolvedRootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedRootedTree -->
 
     <owl:Class rdf:about="#FullyResolvedRootedTree">
         <rdfs:subClassOf rdf:resource="#BifurcatingTree"/>
@@ -1730,7 +1730,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#FullyResolvedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedTree -->
 
     <owl:Class rdf:about="#FullyResolvedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -1738,7 +1738,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#FullyResolvedUnrootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedUnrootedTree -->
 
     <owl:Class rdf:about="#FullyResolvedUnrootedTree">
         <rdfs:subClassOf rdf:resource="#BifurcatingTree"/>
@@ -1747,7 +1747,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#GalledTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GalledTree -->
 
     <owl:Class rdf:about="#GalledTree">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -1755,7 +1755,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#GammaDistribution -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GammaDistribution -->
 
     <owl:Class rdf:about="#GammaDistribution">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1763,7 +1763,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#GapCost -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GapCost -->
 
     <owl:Class rdf:about="#GapCost">
         <rdfs:subClassOf rdf:resource="#ModelDescription"/>
@@ -1771,7 +1771,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#GenBankDataMatrix -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GenBankDataMatrix -->
 
     <owl:Class rdf:about="#GenBankDataMatrix">
         <rdfs:subClassOf rdf:resource="#DataMatrixFormat"/>
@@ -1779,7 +1779,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Generic_State -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Generic_State -->
 
     <owl:Class rdf:about="#Generic_State">
         <owl:equivalentClass>
@@ -1800,7 +1800,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#GrafenLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GrafenLengthType -->
 
     <owl:Class rdf:about="#GrafenLengthType">
         <rdfs:subClassOf rdf:resource="#EdgeLengthType"/>
@@ -1808,7 +1808,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#HolophyleticGroup -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#HolophyleticGroup -->
 
     <owl:Class rdf:about="#HolophyleticGroup">
         <rdfs:subClassOf rdf:resource="#MonophyleticGroup"/>
@@ -1817,7 +1817,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#JukesKantor -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#JukesKantor -->
 
     <owl:Class rdf:about="#JukesKantor">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1825,7 +1825,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Kimura2Parameters -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Kimura2Parameters -->
 
     <owl:Class rdf:about="#Kimura2Parameters">
         <rdfs:subClassOf rdf:resource="#SubstitutionModel"/>
@@ -1833,7 +1833,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Lineage -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Lineage -->
 
     <owl:Class rdf:about="#Lineage">
         <rdfs:subClassOf rdf:resource="#RootedTree"/>
@@ -1847,7 +1847,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#MRCANode -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MRCANode -->
 
     <owl:Class rdf:about="#MRCANode">
         <rdfs:subClassOf rdf:resource="#CommonAncestralNode"/>
@@ -1862,7 +1862,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ModelDescription -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ModelDescription -->
 
     <owl:Class rdf:about="#ModelDescription">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -1874,7 +1874,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Molecular -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Molecular -->
 
     <owl:Class rdf:about="#Molecular">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -1882,7 +1882,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#MolecularCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MolecularCharacter -->
 
     <owl:Class rdf:about="#MolecularCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -1890,7 +1890,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#MolecularStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MolecularStateDatum -->
 
     <owl:Class rdf:about="#MolecularStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -1898,7 +1898,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#MonophyleticGroup -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MonophyleticGroup -->
 
     <owl:Class rdf:about="#MonophyleticGroup">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -1907,7 +1907,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#NEXUSTreeBlock -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NEXUSTreeBlock -->
 
     <owl:Class rdf:about="#NEXUSTreeBlock">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -1915,7 +1915,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Network -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Network -->
 
     <owl:Class rdf:about="#Network">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1936,7 +1936,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#NewickTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NewickTree -->
 
     <owl:Class rdf:about="#NewickTree">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -1944,7 +1944,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#NexusDataBlock -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NexusDataBlock -->
 
     <owl:Class rdf:about="#NexusDataBlock">
         <rdfs:subClassOf rdf:resource="#DataMatrixFormat"/>
@@ -1952,7 +1952,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Node -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node -->
 
     <owl:Class rdf:about="#Node">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1974,7 +1974,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#PHYLIPDataMatrix -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PHYLIPDataMatrix -->
 
     <owl:Class rdf:about="#PHYLIPDataMatrix">
         <rdfs:subClassOf rdf:resource="#DataMatrixFormat"/>
@@ -1982,7 +1982,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#PHYLIPTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PHYLIPTree -->
 
     <owl:Class rdf:about="#PHYLIPTree">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -1990,7 +1990,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ParaphyleticGroup -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ParaphyleticGroup -->
 
     <owl:Class rdf:about="#ParaphyleticGroup">
         <rdfs:subClassOf rdf:resource="#MonophyleticGroup"/>
@@ -2004,7 +2004,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Phylo4Tree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Phylo4Tree -->
 
     <owl:Class rdf:about="#Phylo4Tree">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -2012,7 +2012,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#PhyloTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PhyloTree -->
 
     <owl:Class rdf:about="#PhyloTree">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -2020,7 +2020,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#PolymorphicStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PolymorphicStateDomain -->
 
     <owl:Class rdf:about="#PolymorphicStateDomain">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -2034,7 +2034,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#PolyphyleticGroup -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PolyphyleticGroup -->
 
     <owl:Class rdf:about="#PolyphyleticGroup">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -2048,7 +2048,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Polytomy -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Polytomy -->
 
     <owl:Class rdf:about="#Polytomy">
         <owl:equivalentClass>
@@ -2068,7 +2068,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ReconcileTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ReconcileTree -->
 
     <owl:Class rdf:about="#ReconcileTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2083,7 +2083,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#ReticulateEvolution -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ReticulateEvolution -->
 
     <owl:Class rdf:about="#ReticulateEvolution">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -2091,7 +2091,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidue -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidue -->
 
     <owl:Class rdf:about="#RibonucleotideResidue">
         <rdfs:subClassOf rdf:resource="#Molecular"/>
@@ -2099,7 +2099,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidueCharacter -->
 
     <owl:Class rdf:about="#RibonucleotideResidueCharacter">
         <rdfs:subClassOf rdf:resource="#MolecularCharacter"/>
@@ -2113,7 +2113,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#RibonucleotideResidueStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidueStateDatum -->
 
     <owl:Class rdf:about="#RibonucleotideResidueStateDatum">
         <rdfs:subClassOf rdf:resource="#MolecularStateDatum"/>
@@ -2121,7 +2121,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#RootedSubtree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedSubtree -->
 
     <owl:Class rdf:about="#RootedSubtree">
         <rdfs:subClassOf rdf:resource="#RootedTree"/>
@@ -2130,7 +2130,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#RootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree -->
 
     <owl:Class rdf:about="#RootedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2165,7 +2165,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SIMMAPTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SIMMAPTree -->
 
     <owl:Class rdf:about="#SIMMAPTree">
         <rdfs:subClassOf rdf:resource="#TreeFormat"/>
@@ -2173,7 +2173,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Sequence -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Sequence -->
 
     <owl:Class rdf:about="#Sequence">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -2201,7 +2201,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfCharacters -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfCharacters -->
 
     <owl:Class rdf:about="#SetOfCharacters">
         <rdfs:subClassOf rdf:resource="#SetOfThings"/>
@@ -2209,7 +2209,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfNodes -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfNodes -->
 
     <owl:Class rdf:about="#SetOfNodes">
         <rdfs:subClassOf rdf:resource="#SetOfThings"/>
@@ -2223,7 +2223,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SetOfThings -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfThings -->
 
     <owl:Class rdf:about="#SetOfThings">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -2246,7 +2246,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SpeciesTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SpeciesTree -->
 
     <owl:Class rdf:about="#SpeciesTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2254,7 +2254,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Standard -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Standard -->
 
     <owl:Class rdf:about="#Standard">
         <rdfs:subClassOf rdf:resource="#Categorical"/>
@@ -2262,7 +2262,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#StandardCharacter -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StandardCharacter -->
 
     <owl:Class rdf:about="#StandardCharacter">
         <rdfs:subClassOf rdf:resource="#CategoricalCharacter"/>
@@ -2270,7 +2270,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#StandardStateDatum -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StandardStateDatum -->
 
     <owl:Class rdf:about="#StandardStateDatum">
         <rdfs:subClassOf rdf:resource="#CategoricalStateDatum"/>
@@ -2278,7 +2278,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#StarTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StarTree -->
 
     <owl:Class rdf:about="#StarTree">
         <rdfs:subClassOf rdf:resource="#RootedTree"/>
@@ -2292,7 +2292,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#SubstitutionModel -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SubstitutionModel -->
 
     <owl:Class rdf:about="#SubstitutionModel">
         <rdfs:subClassOf rdf:resource="#ModelDescription"/>
@@ -2300,7 +2300,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Subtree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Subtree -->
 
     <owl:Class rdf:about="#Subtree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2314,7 +2314,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TU -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TU -->
 
     <owl:Class rdf:about="#TU">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -2324,7 +2324,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TUAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TUAnnotation -->
 
     <owl:Class rdf:about="#TUAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -2332,7 +2332,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TaxonomicLink -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TaxonomicLink -->
 
     <owl:Class rdf:about="#TaxonomicLink">
         <rdfs:subClassOf rdf:resource="#TUAnnotation"/>
@@ -2342,7 +2342,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TerminalNode -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TerminalNode -->
 
     <owl:Class rdf:about="#TerminalNode">
         <owl:equivalentClass>
@@ -2362,7 +2362,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TimeCalibratedLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TimeCalibratedLengthType -->
 
     <owl:Class rdf:about="#TimeCalibratedLengthType">
         <rdfs:subClassOf rdf:resource="#EdgeLengthType"/>
@@ -2370,7 +2370,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TimeProportionalLengthType -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TimeProportionalLengthType -->
 
     <owl:Class rdf:about="#TimeProportionalLengthType">
         <rdfs:subClassOf rdf:resource="#EdgeLengthType"/>
@@ -2378,7 +2378,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#Tree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Tree -->
 
     <owl:Class rdf:about="#Tree">
         <rdfs:subClassOf rdf:resource="#Network"/>
@@ -2386,7 +2386,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TreeAnnotation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeAnnotation -->
 
     <owl:Class rdf:about="#TreeAnnotation">
         <rdfs:subClassOf rdf:resource="#CDAOAnnotation"/>
@@ -2400,7 +2400,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TreeFormat -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeFormat -->
 
     <owl:Class rdf:about="#TreeFormat">
         <rdfs:subClassOf rdf:resource="#TreeAnnotation"/>
@@ -2408,7 +2408,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#TreeProcedure -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeProcedure -->
 
     <owl:Class rdf:about="#TreeProcedure">
         <owl:equivalentClass rdf:resource="&ontology;phylogenetic_algorithm"/>
@@ -2417,7 +2417,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UncertainStateDomain -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UncertainStateDomain -->
 
     <owl:Class rdf:about="#UncertainStateDomain">
         <rdfs:subClassOf rdf:resource="#CharacterStateDomain"/>
@@ -2431,7 +2431,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UnresolvedRootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedRootedTree -->
 
     <owl:Class rdf:about="#UnresolvedRootedTree">
         <rdfs:subClassOf rdf:resource="#RootedTree"/>
@@ -2440,7 +2440,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UnresolvedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedTree -->
 
     <owl:Class rdf:about="#UnresolvedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2448,7 +2448,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UnresolvedUnrootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedUnrootedTree -->
 
     <owl:Class rdf:about="#UnresolvedUnrootedTree">
         <rdfs:subClassOf rdf:resource="#UnresolvedTree"/>
@@ -2457,7 +2457,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UnrootedSubtree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnrootedSubtree -->
 
     <owl:Class rdf:about="#UnrootedSubtree">
         <rdfs:subClassOf rdf:resource="#Subtree"/>
@@ -2465,7 +2465,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#UnrootedTree -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnrootedTree -->
 
     <owl:Class rdf:about="#UnrootedTree">
         <rdfs:subClassOf rdf:resource="#Tree"/>
@@ -2473,7 +2473,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#anageneticChange -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#anageneticChange -->
 
     <owl:Class rdf:about="#anageneticChange">
         <owl:equivalentClass rdf:resource="#evolutionaryTransition"/>
@@ -2482,7 +2482,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#cladogenesis -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#cladogenesis -->
 
     <owl:Class rdf:about="#cladogenesis">
         <owl:equivalentClass rdf:resource="#speciation"/>
@@ -2491,7 +2491,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#cladogeneticChange -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#cladogeneticChange -->
 
     <owl:Class rdf:about="#cladogeneticChange">
         <rdfs:subClassOf rdf:resource="#hereditaryChange"/>
@@ -2499,7 +2499,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#evolutionaryTransition -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#evolutionaryTransition -->
 
     <owl:Class rdf:about="#evolutionaryTransition">
         <rdfs:subClassOf rdf:resource="#hereditaryChange"/>
@@ -2528,7 +2528,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#geneDuplication -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#geneDuplication -->
 
     <owl:Class rdf:about="#geneDuplication">
         <rdfs:subClassOf rdf:resource="#cladogeneticChange"/>
@@ -2536,7 +2536,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#geneticEvent -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#geneticEvent -->
 
     <owl:Class rdf:about="#geneticEvent">
         <rdfs:subClassOf rdf:resource="#originationEvent"/>
@@ -2544,7 +2544,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#hereditaryChange -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryChange -->
 
     <owl:Class rdf:about="#hereditaryChange">
         <rdfs:subClassOf>
@@ -2572,7 +2572,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#hereditaryPersistance -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryPersistance -->
 
     <owl:Class rdf:about="#hereditaryPersistance">
         <rdfs:subClassOf>
@@ -2585,7 +2585,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#molecularRecombination -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#molecularRecombination -->
 
     <owl:Class rdf:about="#molecularRecombination">
         <rdfs:subClassOf rdf:resource="#recombination"/>
@@ -2593,7 +2593,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#originationEvent -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#originationEvent -->
 
     <owl:Class rdf:about="#originationEvent">
         <rdfs:subClassOf>
@@ -2606,7 +2606,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#recombination -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#recombination -->
 
     <owl:Class rdf:about="#recombination">
         <rdfs:subClassOf rdf:resource="#geneticEvent"/>
@@ -2614,7 +2614,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#speciation -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#speciation -->
 
     <owl:Class rdf:about="#speciation">
         <rdfs:subClassOf rdf:resource="#cladogeneticChange"/>
@@ -2666,7 +2666,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#absent -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#absent -->
 
     <owl:Thing rdf:about="#absent">
         <rdf:type rdf:resource="#Generic_State"/>
@@ -2674,7 +2674,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#dA -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dA -->
 
     <owl:Thing rdf:about="#dA">
         <rdf:type rdf:resource="#DesoxiRibonucleotideResidue"/>
@@ -2682,7 +2682,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#dC -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dC -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dC">
         <rdf:type rdf:resource="&owl;Thing"/>
@@ -2690,7 +2690,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#dG -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dG -->
 
     <owl:Thing rdf:about="#dG">
         <rdf:type rdf:resource="#DesoxiRibonucleotideResidue"/>
@@ -2698,7 +2698,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#dT -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dT -->
 
     <DesoxiRibonucleotideResidue rdf:about="#dT">
         <rdf:type rdf:resource="&owl;Thing"/>
@@ -2706,7 +2706,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#gap -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#gap -->
 
     <owl:Thing rdf:about="#gap">
         <rdf:type rdf:resource="#Generic_State"/>
@@ -2714,7 +2714,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#rU -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#rU -->
 
     <owl:Thing rdf:about="#rU">
         <rdf:type rdf:resource="#RibonucleotideResidueStateDatum"/>
@@ -2722,7 +2722,7 @@
     
 
 
-    <!-- http://www.evolutionaryontology.org/cdao.owl#unknown -->
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#unknown -->
 
     <owl:Thing rdf:about="#unknown">
         <rdf:type rdf:resource="#Generic_State"/>

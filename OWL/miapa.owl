@@ -149,6 +149,10 @@
     <owl:DatatypeProperty rdf:about="#DataProperty1212155659771835000">
         <rdfs:label
             >has_param_float_value</rdfs:label>
+        <rdfs:comment
+            >An earlier version using &quot;float&quot; was incompatible with translation to OBO (http://www.berkeleybop.org/obo-conv.cgi) and parsing by OBOEdit.  The parser complained that xsd:float was not a valid type.  </rdfs:comment>
+        <dc:description
+            >The parameter has a value expressed as a decimal (aka floating point) number.</dc:description>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
         <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
@@ -160,6 +164,8 @@
     <owl:DatatypeProperty rdf:about="#DataProperty1212155671920203000">
         <rdfs:label
             >has_param_text_value</rdfs:label>
+        <dc:description
+            >The parameter has a value as text.</dc:description>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -171,6 +177,10 @@
     <owl:DatatypeProperty rdf:about="#DataProperty1212155680769028000">
         <rdfs:label
             >has_param_integer_value</rdfs:label>
+        <rdfs:comment
+            >An earlier version using &quot;int&quot; was incompatible with translation to OBO (http://www.berkeleybop.org/obo-conv.cgi) and parsing by OBOEdit.  The parser complained that xsd:int was not a valid type.  </rdfs:comment>
+        <dc:description
+            >The parameter has an integer value. </dc:description>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
@@ -182,6 +192,8 @@
     <owl:DatatypeProperty rdf:about="#DataProperty1212155716257725000">
         <rdfs:label
             >has_param_boolean_value</rdfs:label>
+        <dc:description
+            >The parameter has a boolean (true-or-false) value.</dc:description>
         <rdfs:subPropertyOf rdf:resource="#DataProperty1212155616353529000"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
@@ -192,8 +204,11 @@
 
     <owl:DatatypeProperty rdf:about="#DataProperty1212418061103998000">
         <rdfs:label>has_location</rdfs:label>
+        <dc:description
+            >The resource is locatable on the internet at the given URI. </dc:description>
+        <rdfs:comment
+            >This needs a range, but in the translated version, OBO-Edit does not recognize AnyURI as a valid xsd type.  So, I have left the range unspecified. </rdfs:comment>
         <rdfs:domain rdf:resource="#Class1212417995316263000"/>
-        <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -841,7 +856,7 @@
         <rdfs:label>Implementation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
-            >The concrete means by which an abstract method is implemented.  </dc:description>
+            >The concrete means by which an abstract method is implemented.</dc:description>
     </owl:Class>
     
 
@@ -881,7 +896,7 @@
         <rdfs:label>Resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <dc:description
-            >An electronic source available on the internet. </dc:description>
+            >An electronic source available on the internet.</dc:description>
     </owl:Class>
     
 
@@ -891,6 +906,8 @@
     <owl:Class rdf:about="#Class1212423781061057000">
         <rdfs:label>Edit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Class1212171869832068000"/>
+        <dc:description
+            >A partial or incremental modification to an artefact, not changing its type or its format.</dc:description>
     </owl:Class>
     
 
@@ -940,6 +957,8 @@
             >Minimal Information for a Phylogenetic Analysis (MIAPA)</dc:title>
         <dc:type
             >Formal ontology expressed in the OWL-DL dialect.</dc:type>
+        <owl:versionInfo
+            >$Id$</owl:versionInfo>
         <dc:creator>Arlin Stoltzfus</dc:creator>
         <dc:language>OWL</dc:language>
         <dc:date>May 30, 2008</dc:date>
@@ -950,8 +969,6 @@
         <dc:format>RDF-XML</dc:format>
         <dc:contributor
             >The MIAPA Consortium.</dc:contributor>
-        <owl:versionInfo
-            >$Id$</owl:versionInfo>
         <dc:subject
             >Reports of phylogenetic analysis and related evolutionary studies.</dc:subject>
         <dc:coverage

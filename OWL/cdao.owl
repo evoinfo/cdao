@@ -3,7 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY mao "http://purl.org/obo/owl/mao.obo#" >
+    <!ENTITY mao "http://purl.org/obo/obo-all/mao/mao.owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY ontology "http://www.mygrid.org.uk/ontology#" >
@@ -24,9 +24,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ontology="http://www.mygrid.org.uk/ontology#"
-     xmlns:mao="http://purl.org/obo/owl/mao.obo#">
+     xmlns:mao="http://purl.org/obo/obo-all/mao/mao.owl#">
     <owl:Ontology rdf:about="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl">
-        <owl:imports rdf:resource="http://purl.org/obo/owl/mao.obo"/>
+        <owl:imports rdf:resource="http://purl.org/obo/obo-all/mao/mao.owl"/>
         <owl:imports rdf:resource="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl"/>
         <owl:imports rdf:resource="http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl"/>
     </owl:Ontology>
@@ -1000,7 +1000,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000000 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000000 -->
 
     <owl:Class rdf:about="&mao;MAO_0000000">
         <rdfs:subClassOf>
@@ -1013,7 +1013,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000037 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000037 -->
 
     <owl:Class rdf:about="&mao;MAO_0000037">
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Sequence"/>
@@ -1021,7 +1021,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000084 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000084 -->
 
     <owl:Class rdf:about="&mao;MAO_0000084">
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
@@ -1029,7 +1029,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000120 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000120 -->
 
     <owl:Class rdf:about="&mao;MAO_0000120">
         <owl:equivalentClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidueStateDatum"/>
@@ -1037,7 +1037,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000121 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000121 -->
 
     <owl:Class rdf:about="&mao;MAO_0000121">
         <owl:equivalentClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidueStateDatum"/>
@@ -1045,7 +1045,7 @@
     
 
 
-    <!-- http://purl.org/obo/owl/mao.obo#MAO_0000126 -->
+    <!-- http://purl.org/obo/obo-all/mao/mao.owl#MAO_0000126 -->
 
     <owl:Class rdf:about="&mao;MAO_0000126">
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#geneticEvent"/>

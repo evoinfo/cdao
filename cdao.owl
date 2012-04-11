@@ -3,12 +3,12 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY mao "http://purl.org/obo/obo-all/mao/mao.owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY ontology "http://www.mygrid.org.uk/ontology#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY mao "http://purl.org/obo/obo-all/mao/mao.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY amino-acid "http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl#" >
 ]>
@@ -25,7 +25,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ontology="http://www.mygrid.org.uk/ontology#"
      xmlns:mao="http://purl.org/obo/obo-all/mao/mao.owl#">
-    <owl:Ontology rdf:about="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cdao.owl">
+        <dc:title xml:lang="en">Comparative Data Analysis Ontology</dc:title>
+        <dc:rights rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.org/obo/obo-all/mao/mao.owl"/>
         <owl:imports rdf:resource="http://www.co-ode.org/ontologies/amino-acid/2005/10/11/amino-acid.owl"/>
         <owl:imports rdf:resource="http://www.cs.nmsu.edu/~epontell/Ontologies/phylogenetic_methods.owl"/>
@@ -1112,15 +1115,15 @@
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#part_of"/>
-                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendant"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendant"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#part_of"/>
+                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1235,14 +1238,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_TU"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TU"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrixAnnotation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrixAnnotation"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_TU"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TU"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix</dc:description>
@@ -1338,14 +1341,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Character"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum"/>
-                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundStateDatum"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Character"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.</dc:description>
@@ -1414,14 +1417,14 @@
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum"/>
-                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_Datum"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_Datum"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum"/>
+                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1618,15 +1621,15 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Annotation"/>
-                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeAnnotation"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Node"/>
+                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Node"/>
-                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Annotation"/>
+                <owl:someValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeAnnotation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &#39;branch&#39;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &#39;split&#39; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</dc:description>
@@ -2099,15 +2102,15 @@
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Tree"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#subtree_of"/>
-                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Root"/>
+                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Root"/>
-                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#subtree_of"/>
+                <owl:allValuesFrom rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2467,8 +2470,8 @@
         <rdfs:subClassOf rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryChange"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State"/>
-                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditary_change_of"/>
+                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2481,8 +2484,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditary_change_of"/>
-                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State"/>
+                <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2511,14 +2514,14 @@
     <owl:Class rdf:about="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryChange">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_State"/>
                 <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_State"/>
+                <owl:onProperty rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State"/>
                 <owl:onClass rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
@@ -2593,8 +2596,8 @@
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing">
-        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
-        <owl:versionInfo rdf:datatype="&xsd;string">$Id$</owl:versionInfo>
+        <dc:date rdf:datatype="&xsd;string">$Date: 2011/04/15 12:36:54 $</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Id: cdao.owl,v 1.36 2011/04/15 12:36:54 astoltzfus Exp $</owl:versionInfo>
         <dc:coverage rdf:datatype="&xsd;string">Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
         <dc:rights rdf:datatype="&xsd;string">GNU General Public License (GPL)</dc:rights>
         <dc:title rdf:datatype="&xsd;string">The Character Data Analysis Ontology</dc:title>
@@ -2719,5 +2722,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.2.2.1782) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 

@@ -6,8 +6,8 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY phylotastic_sadi "http://informatics.nescent.org/phylotastic_sadi.owl#" >
     <!ENTITY cdao "http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#" >
+    <!ENTITY phylotastic_sadi "http://cdao.svn.sourceforge.net/svnroot/cdao/trunk/ontology/phylotastic/phylotastic_sadi.owl#" >
 ]>
 
 
@@ -15,11 +15,11 @@
      xml:base="http://informatics.nescent.org/phylotastic_sadi.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
-     xmlns:phylotastic_sadi="http://informatics.nescent.org/phylotastic_sadi.owl#"
+     xmlns:phylotastic_sadi="http://cdao.svn.sourceforge.net/svnroot/cdao/trunk/ontology/phylotastic/phylotastic_sadi.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://informatics.nescent.org/phylotastic_sadi.owl">
+    <owl:Ontology rdf:about="http://cdao.svn.sourceforge.net/svnroot/cdao/trunk/ontology/phylotastic/phylotastic_sadi.owl">
         <owl:imports rdf:resource="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl"/>
     </owl:Ontology>
     
@@ -53,7 +53,7 @@
     
 
 
-    <!-- http://informatics.nescent.org/phylotastic_sadi.owl#TipCollection -->
+    <!-- http://cdao.svn.sourceforge.net/svnroot/cdao/trunk/ontology/phylotastic/phylotastic_sadi.owl#TipCollection -->
 
     <owl:Class rdf:about="&phylotastic_sadi;TipCollection">
         <owl:equivalentClass>

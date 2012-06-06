@@ -1,0 +1,3788 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cdao "http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="&obo;cdao/cdao-deprecated-mappings.owl">
+        <dc:title rdf:datatype="&xsd;string">Mappings from CDAO 1.0 to current version.</dc:title>
+        <dc:rights rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <imports rdf:resource="&obo;cdao.owl"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <AnnotationProperty rdf:about="&obo;IAO_0100001"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000142 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000142">
+        <equivalentProperty rdf:resource="&cdao;has_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000143 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000143">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Edge_as_Child"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000144 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000144">
+        <equivalentProperty rdf:resource="&cdao;has_Ancestor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000145 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000145">
+        <equivalentProperty rdf:resource="&cdao;has_Nucleotide_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000146 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000146">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Edge"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000147 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000147">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Character_State_Data_Matrix"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000148 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000148">
+        <equivalentProperty rdf:resource="&cdao;has_Root"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000149 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000149">
+        <equivalentProperty rdf:resource="&cdao;has_Child"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000150 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000150">
+        <equivalentProperty rdf:resource="&cdao;has_First_Coordinate_Item"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000151 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000151">
+        <equivalentProperty rdf:resource="&cdao;has_Coordinate"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000152 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000152">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Continuous_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000153 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000153">
+        <equivalentProperty rdf:resource="&cdao;has_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000154 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000154">
+        <equivalentProperty rdf:resource="&cdao;has_Standard_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000155 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000155">
+        <equivalentProperty rdf:resource="&cdao;subtree_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000156 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000156">
+        <equivalentProperty rdf:resource="&cdao;has_Amino_Acid_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000157 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000157">
+        <equivalentProperty rdf:resource="&cdao;is_annotation_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000158 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000158">
+        <equivalentProperty rdf:resource="&cdao;has_RNA_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000159 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000159">
+        <equivalentProperty rdf:resource="&cdao;has_Left_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000160 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000160">
+        <equivalentProperty rdf:resource="&cdao;precedes"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000161 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000161">
+        <equivalentProperty rdf:resource="&cdao;exclude"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000162 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000162">
+        <equivalentProperty rdf:resource="&cdao;has_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000163 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000163">
+        <equivalentProperty rdf:resource="&cdao;nca_node_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000164 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000164">
+        <equivalentProperty rdf:resource="&cdao;has_External_Reference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000165 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000165">
+        <equivalentProperty rdf:resource="&cdao;has_Coordinate_System"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000166 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000166">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Nucleotide_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000167 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000167">
+        <equivalentProperty rdf:resource="&cdao;connects_to"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000168 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000168">
+        <equivalentProperty rdf:resource="&cdao;has_Amino_Acid_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000169 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000169">
+        <equivalentProperty rdf:resource="&cdao;hereditary_change_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000170 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000170">
+        <equivalentProperty rdf:resource="&cdao;has_Compound_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000171 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000171">
+        <equivalentProperty rdf:resource="&cdao;has_Descendants"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000172 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000172">
+        <equivalentProperty rdf:resource="&cdao;reconciliation_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000173 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000173">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Amino_Acid_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000174 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000174">
+        <equivalentProperty rdf:resource="&cdao;has_Descendant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000175 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000175">
+        <equivalentProperty rdf:resource="&cdao;has_Continuous_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000176 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000176">
+        <equivalentProperty rdf:resource="&cdao;has_Type"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000177 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000177">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Edge_as_Parent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000178 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000178">
+        <equivalentProperty rdf:resource="&cdao;has"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000179 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000179">
+        <equivalentProperty rdf:resource="&cdao;has_Parent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000180 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000180">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Compound_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000181 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000181">
+        <equivalentProperty rdf:resource="&cdao;homologous_to"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000182 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000182">
+        <equivalentProperty rdf:resource="&cdao;has_Change_Component"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000183 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000183">
+        <equivalentProperty rdf:resource="&cdao;has_Categorical_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000184 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000184">
+        <equivalentProperty rdf:resource="&cdao;has_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000185 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000185">
+        <equivalentProperty rdf:resource="&cdao;has_Left_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000186 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000186">
+        <equivalentProperty rdf:resource="&cdao;has_Right_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000187 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000187">
+        <equivalentProperty rdf:resource="&cdao;represents_TU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000188 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000188">
+        <equivalentProperty rdf:resource="&cdao;exclude_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000189 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000189">
+        <equivalentProperty rdf:resource="&cdao;has_Compound_State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000190 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000190">
+        <equivalentProperty rdf:resource="&cdao;belongs_to"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000191 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000191">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_TU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000192 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000192">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Network"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000193 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000193">
+        <equivalentProperty rdf:resource="&cdao;has_Annotation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000194 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000194">
+        <equivalentProperty rdf:resource="&cdao;part_of"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000195 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000195">
+        <equivalentProperty rdf:resource="&cdao;has_Nucleotide_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000196 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000196">
+        <equivalentProperty rdf:resource="&cdao;represented_by_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000197 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000197">
+        <equivalentProperty rdf:resource="&cdao;has_Remaining_Coordinate_List"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000198 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000198">
+        <equivalentProperty rdf:resource="&cdao;has_Element"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000199 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000199">
+        <equivalentProperty rdf:resource="&cdao;exclude_Subtree"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000200 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000200">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Tree"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000201 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000201">
+        <equivalentProperty rdf:resource="&cdao;has_Parent_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000202 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000202">
+        <equivalentProperty rdf:resource="&cdao;has_Lineage_node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000203 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000203">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Tree_as_Root"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000204 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000204">
+        <equivalentProperty rdf:resource="&cdao;has_Hereditary_Change"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000205 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000205">
+        <equivalentProperty rdf:resource="&cdao;belongs_to_Character"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000206 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000206">
+        <equivalentProperty rdf:resource="&cdao;has_Molecular_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000207 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000207">
+        <equivalentProperty rdf:resource="&cdao;has_Continuous_Datum"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000208 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000208">
+        <equivalentProperty rdf:resource="&cdao;has_TU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000209 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000209">
+        <equivalentProperty rdf:resource="&cdao;has_Child_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000210 -->
+
+    <ObjectProperty rdf:about="&obo;CDAO_0000210">
+        <equivalentProperty rdf:resource="&cdao;has_Right_Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000190"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Amino_Acid_Character -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Amino_Acid_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000173"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Character -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000205"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Character_State_Data_Matrix -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Character_State_Data_Matrix">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000147"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Compound_Character -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Compound_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000180"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Continuous_Character -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Continuous_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000152"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Edge">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000146"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge_as_Child -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Edge_as_Child">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000143"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Edge_as_Parent -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Edge_as_Parent">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000177"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Network -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Network">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000192"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Nucleotide_Character -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Nucleotide_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000166"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_TU -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_TU">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000191"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Tree -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Tree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000200"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#belongs_to_Tree_as_Root -->
+
+    <ObjectProperty rdf:about="&cdao;belongs_to_Tree_as_Root">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000203"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#connects_to -->
+
+    <ObjectProperty rdf:about="&cdao;connects_to">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000167"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude -->
+
+    <ObjectProperty rdf:about="&cdao;exclude">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000161"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude_Node -->
+
+    <ObjectProperty rdf:about="&cdao;exclude_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000188"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#exclude_Subtree -->
+
+    <ObjectProperty rdf:about="&cdao;exclude_Subtree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000199"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has -->
+
+    <ObjectProperty rdf:about="&cdao;has">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000178"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Amino_Acid_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Amino_Acid_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000168"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Amino_Acid_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Amino_Acid_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000156"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Ancestor -->
+
+    <ObjectProperty rdf:about="&cdao;has_Ancestor">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000144"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Annotation -->
+
+    <ObjectProperty rdf:about="&cdao;has_Annotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000193"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Categorical_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Categorical_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000183"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Change_Component -->
+
+    <ObjectProperty rdf:about="&cdao;has_Change_Component">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000182"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Character -->
+
+    <ObjectProperty rdf:about="&cdao;has_Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000142"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Child -->
+
+    <ObjectProperty rdf:about="&cdao;has_Child">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000149"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Child_Node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Child_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000209"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Compound_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Compound_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000170"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Compound_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Compound_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000189"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Continuous_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000207"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Continuous_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Continuous_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000175"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Coordinate -->
+
+    <ObjectProperty rdf:about="&cdao;has_Coordinate">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000151"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Coordinate_System -->
+
+    <ObjectProperty rdf:about="&cdao;has_Coordinate_System">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000165"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000153"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendant -->
+
+    <ObjectProperty rdf:about="&cdao;has_Descendant">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000174"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Descendants -->
+
+    <ObjectProperty rdf:about="&cdao;has_Descendants">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000171"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Element -->
+
+    <ObjectProperty rdf:about="&cdao;has_Element">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000198"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_External_Reference -->
+
+    <ObjectProperty rdf:about="&cdao;has_External_Reference">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000164"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_First_Coordinate_Item -->
+
+    <ObjectProperty rdf:about="&cdao;has_First_Coordinate_Item">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000150"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Hereditary_Change -->
+
+    <ObjectProperty rdf:about="&cdao;has_Hereditary_Change">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000204"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_Node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Left_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000185"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Left_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Left_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000159"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Lineage_node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Lineage_node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000202"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Molecular_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Molecular_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000206"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000162"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Nucleotide_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Nucleotide_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000195"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Nucleotide_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Nucleotide_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000145"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Parent -->
+
+    <ObjectProperty rdf:about="&cdao;has_Parent">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000179"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Parent_Node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Parent_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000201"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_RNA_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_RNA_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000158"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Remaining_Coordinate_List -->
+
+    <ObjectProperty rdf:about="&cdao;has_Remaining_Coordinate_List">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000197"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_Node -->
+
+    <ObjectProperty rdf:about="&cdao;has_Right_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000210"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Right_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_Right_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000186"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Root -->
+
+    <ObjectProperty rdf:about="&cdao;has_Root">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000148"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Standard_Datum -->
+
+    <ObjectProperty rdf:about="&cdao;has_Standard_Datum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000154"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_State -->
+
+    <ObjectProperty rdf:about="&cdao;has_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000184"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_TU -->
+
+    <ObjectProperty rdf:about="&cdao;has_TU">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000208"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Type -->
+
+    <ObjectProperty rdf:about="&cdao;has_Type">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000176"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditary_change_of -->
+
+    <ObjectProperty rdf:about="&cdao;hereditary_change_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000169"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#homologous_to -->
+
+    <ObjectProperty rdf:about="&cdao;homologous_to">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000181"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#is_annotation_of -->
+
+    <ObjectProperty rdf:about="&cdao;is_annotation_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000157"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#nca_node_of -->
+
+    <ObjectProperty rdf:about="&cdao;nca_node_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000163"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#part_of -->
+
+    <ObjectProperty rdf:about="&cdao;part_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000194"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#precedes -->
+
+    <ObjectProperty rdf:about="&cdao;precedes">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000160"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#reconciliation_of -->
+
+    <ObjectProperty rdf:about="&cdao;reconciliation_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000172"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#represented_by_Node -->
+
+    <ObjectProperty rdf:about="&cdao;represented_by_Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000196"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#represents_TU -->
+
+    <ObjectProperty rdf:about="&cdao;represents_TU">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000187"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#subtree_of -->
+
+    <ObjectProperty rdf:about="&cdao;subtree_of">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000155"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000211 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000211">
+        <equivalentProperty rdf:resource="&cdao;has_Precision"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000212 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000212">
+        <equivalentProperty rdf:resource="&cdao;has_Point_Coordinate_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000213 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000213">
+        <equivalentProperty rdf:resource="&cdao;has_Int_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000214 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000214">
+        <equivalentProperty rdf:resource="&cdao;has_Support_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000215 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000215">
+        <equivalentProperty rdf:resource="&cdao;has_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000216 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000216">
+        <equivalentProperty rdf:resource="&cdao;has_Uncertainty_Factor"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000217 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000217">
+        <equivalentProperty rdf:resource="&cdao;has_Range_End_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000218 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000218">
+        <equivalentProperty rdf:resource="&cdao;has_Float_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000219 -->
+
+    <DatatypeProperty rdf:about="&obo;CDAO_0000219">
+        <equivalentProperty rdf:resource="&cdao;has_Range_Start_Value"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Float_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Float_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000218"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Int_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Int_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000213"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Point_Coordinate_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Point_Coordinate_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000212"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Precision -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Precision">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000211"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Range_End_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Range_End_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000217"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Range_Start_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Range_Start_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000219"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Support_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Support_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000214"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Uncertainty_Factor -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Uncertainty_Factor">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000216"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#has_Value -->
+
+    <DatatypeProperty rdf:about="&cdao;has_Value">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000215"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000002 -->
+
+    <Class rdf:about="&obo;CDAO_0000002">
+        <equivalentClass rdf:resource="&cdao;DesoxiRibonucleotideResidueStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000003 -->
+
+    <Class rdf:about="&obo;CDAO_0000003">
+        <equivalentClass rdf:resource="&cdao;CoordinatePoint"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000004 -->
+
+    <Class rdf:about="&obo;CDAO_0000004">
+        <equivalentClass rdf:resource="&cdao;Lineage"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000005 -->
+
+    <Class rdf:about="&obo;CDAO_0000005">
+        <equivalentClass rdf:resource="&cdao;Phylo4Tree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000006 -->
+
+    <Class rdf:about="&obo;CDAO_0000006">
+        <equivalentClass rdf:resource="&cdao;Network"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000007 -->
+
+    <Class rdf:about="&obo;CDAO_0000007">
+        <equivalentClass rdf:resource="&cdao;ModelDescription"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000008 -->
+
+    <Class rdf:about="&obo;CDAO_0000008">
+        <equivalentClass rdf:resource="&cdao;StandardStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000009 -->
+
+    <Class rdf:about="&obo;CDAO_0000009">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharacterLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000010 -->
+
+    <Class rdf:about="&obo;CDAO_0000010">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharBayesianLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000011 -->
+
+    <Class rdf:about="&obo;CDAO_0000011">
+        <equivalentClass rdf:resource="&cdao;NEXUSTreeBlock"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000012 -->
+
+    <Class rdf:about="&obo;CDAO_0000012">
+        <equivalentClass rdf:resource="&cdao;RootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000013 -->
+
+    <Class rdf:about="&obo;CDAO_0000013">
+        <equivalentClass rdf:resource="&cdao;Kimura2Parameters"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000014 -->
+
+    <Class rdf:about="&obo;CDAO_0000014">
+        <equivalentClass rdf:resource="&cdao;TreeProcedure"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000015 -->
+
+    <Class rdf:about="&obo;CDAO_0000015">
+        <equivalentClass rdf:resource="&cdao;Generic_State"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000016 -->
+
+    <Class rdf:about="&obo;CDAO_0000016">
+        <equivalentClass rdf:resource="&cdao;UnrootedSubtree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000017 -->
+
+    <Class rdf:about="&obo;CDAO_0000017">
+        <equivalentClass rdf:resource="&cdao;UnresolvedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000018 -->
+
+    <Class rdf:about="&obo;CDAO_0000018">
+        <equivalentClass rdf:resource="&cdao;BifurcatingTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000019 -->
+
+    <Class rdf:about="&obo;CDAO_0000019">
+        <equivalentClass rdf:resource="&cdao;ContinuousStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000020 -->
+
+    <Class rdf:about="&obo;CDAO_0000020">
+        <equivalentClass rdf:resource="&cdao;SubstitutionModel"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000021 -->
+
+    <Class rdf:about="&obo;CDAO_0000021">
+        <equivalentClass rdf:resource="&cdao;JukesKantor"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000022 -->
+
+    <Class rdf:about="&obo;CDAO_0000022">
+        <equivalentClass rdf:resource="&cdao;DatumCoordinate"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000023 -->
+
+    <Class rdf:about="&obo;CDAO_0000023">
+        <equivalentClass rdf:resource="&cdao;UnresolvedRootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000024 -->
+
+    <Class rdf:about="&obo;CDAO_0000024">
+        <equivalentClass rdf:resource="&cdao;Branch"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000025 -->
+
+    <Class rdf:about="&obo;CDAO_0000025">
+        <equivalentClass rdf:resource="&cdao;CharacterStateDataMatrixAnnotation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000026 -->
+
+    <Class rdf:about="&obo;CDAO_0000026">
+        <equivalentClass rdf:resource="&cdao;AncestralNode"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000027 -->
+
+    <Class rdf:about="&obo;CDAO_0000027">
+        <equivalentClass rdf:resource="&cdao;UnresolvedUnrootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000029 -->
+
+    <Class rdf:about="&obo;CDAO_0000029">
+        <equivalentClass rdf:resource="&cdao;UncertainStateDomain"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000030 -->
+
+    <Class rdf:about="&obo;CDAO_0000030">
+        <equivalentClass rdf:resource="&cdao;ReconcileTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000031 -->
+
+    <Class rdf:about="&obo;CDAO_0000031">
+        <equivalentClass rdf:resource="&cdao;Continuous"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000032 -->
+
+    <Class rdf:about="&obo;CDAO_0000032">
+        <equivalentClass rdf:resource="&cdao;AlignmentProcedure"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000033 -->
+
+    <Class rdf:about="&obo;CDAO_0000033">
+        <equivalentClass rdf:resource="&cdao;Dichotomy"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000034 -->
+
+    <Class rdf:about="&obo;CDAO_0000034">
+        <equivalentClass rdf:resource="&cdao;Molecular"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000035 -->
+
+    <Class rdf:about="&obo;CDAO_0000035">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharParsimonyLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000039 -->
+
+    <Class rdf:about="&obo;CDAO_0000039">
+        <equivalentClass rdf:resource="&cdao;Categorical"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000040 -->
+
+    <Class rdf:about="&obo;CDAO_0000040">
+        <equivalentClass rdf:resource="&cdao;CDAOAnnotation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000041 -->
+
+    <Class rdf:about="&obo;CDAO_0000041">
+        <equivalentClass rdf:resource="&cdao;originationEvent"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000042 -->
+
+    <Class rdf:about="&obo;CDAO_0000042">
+        <equivalentClass rdf:resource="&cdao;Polytomy"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000043 -->
+
+    <Class rdf:about="&obo;CDAO_0000043">
+        <equivalentClass rdf:resource="&cdao;PolymorphicStateDomain"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000044 -->
+
+    <Class rdf:about="&obo;CDAO_0000044">
+        <equivalentClass rdf:resource="&cdao;TreeAnnotation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000045 -->
+
+    <Class rdf:about="&obo;CDAO_0000045">
+        <equivalentClass rdf:resource="&cdao;Standard"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000046 -->
+
+    <Class rdf:about="&obo;CDAO_0000046">
+        <equivalentClass rdf:resource="&cdao;EdgeLength"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000047 -->
+
+    <Class rdf:about="&obo;CDAO_0000047">
+        <equivalentClass rdf:resource="&cdao;RibonucleotideResidue"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000048 -->
+
+    <Class rdf:about="&obo;CDAO_0000048">
+        <equivalentClass rdf:resource="&cdao;Clade"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000049 -->
+
+    <Class rdf:about="&obo;CDAO_0000049">
+        <equivalentClass rdf:resource="&cdao;DiscreteCharParsimonyLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000050 -->
+
+    <Class rdf:about="&obo;CDAO_0000050">
+        <equivalentClass rdf:resource="&cdao;MolecularStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000051 -->
+
+    <Class rdf:about="&obo;CDAO_0000051">
+        <equivalentClass rdf:resource="&cdao;PolyphyleticGroup"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000052 -->
+
+    <Class rdf:about="&obo;CDAO_0000052">
+        <equivalentClass rdf:resource="&cdao;NexusDataBlock"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000053 -->
+
+    <Class rdf:about="&obo;CDAO_0000053">
+        <equivalentClass rdf:resource="&cdao;BranchingNode"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000055 -->
+
+    <Class rdf:about="&obo;CDAO_0000055">
+        <equivalentClass rdf:resource="&cdao;Compound"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000056 -->
+
+    <Class rdf:about="&obo;CDAO_0000056">
+        <equivalentClass rdf:resource="&cdao;CharacterStateDataMatrix"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000057 -->
+
+    <Class rdf:about="&obo;CDAO_0000057">
+        <equivalentClass rdf:resource="&cdao;RibonucleotideResidueStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000058 -->
+
+    <Class rdf:about="&obo;CDAO_0000058">
+        <equivalentClass rdf:resource="&cdao;TimeCalibratedLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000059 -->
+
+    <Class rdf:about="&obo;CDAO_0000059">
+        <equivalentClass rdf:resource="&cdao;SetOfNodes"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000060 -->
+
+    <Class rdf:about="&obo;CDAO_0000060">
+        <equivalentClass rdf:resource="&cdao;MRCANode"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000061 -->
+
+    <Class rdf:about="&obo;CDAO_0000061">
+        <equivalentClass rdf:resource="&cdao;FASTADataMatrix"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000062 -->
+
+    <Class rdf:about="&obo;CDAO_0000062">
+        <equivalentClass rdf:resource="&cdao;evolutionaryTransition"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000063 -->
+
+    <Class rdf:about="&obo;CDAO_0000063">
+        <equivalentClass rdf:resource="&cdao;EdgeLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000064 -->
+
+    <Class rdf:about="&obo;CDAO_0000064">
+        <equivalentClass rdf:resource="&cdao;cladogeneticChange"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000065 -->
+
+    <Class rdf:about="&obo;CDAO_0000065">
+        <equivalentClass rdf:resource="&cdao;anageneticChange"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000066 -->
+
+    <Class rdf:about="&obo;CDAO_0000066">
+        <equivalentClass rdf:resource="&cdao;TUAnnotation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000067 -->
+
+    <Class rdf:about="&obo;CDAO_0000067">
+        <equivalentClass rdf:resource="&cdao;PhyloTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000068 -->
+
+    <Class rdf:about="&obo;CDAO_0000068">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000069 -->
+
+    <Class rdf:about="&obo;CDAO_0000069">
+        <equivalentClass rdf:resource="&cdao;PHYLIPTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000070 -->
+
+    <Class rdf:about="&obo;CDAO_0000070">
+        <equivalentClass rdf:resource="&cdao;Subtree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000071 -->
+
+    <Class rdf:about="&obo;CDAO_0000071">
+        <equivalentClass rdf:resource="&cdao;Character"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000072 -->
+
+    <Class rdf:about="&obo;CDAO_0000072">
+        <equivalentClass rdf:resource="&cdao;GalledTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000073 -->
+
+    <Class rdf:about="&obo;CDAO_0000073">
+        <equivalentClass rdf:resource="&cdao;SpeciesTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000074 -->
+
+    <Class rdf:about="&obo;CDAO_0000074">
+        <equivalentClass rdf:resource="&cdao;TreeFormat"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000075 -->
+
+    <Class rdf:about="&obo;CDAO_0000075">
+        <equivalentClass rdf:resource="&cdao;StandardCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000076 -->
+
+    <Class rdf:about="&obo;CDAO_0000076">
+        <equivalentClass rdf:resource="&cdao;AminoAcidResidue"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000077 -->
+
+    <Class rdf:about="&obo;CDAO_0000077">
+        <equivalentClass rdf:resource="&cdao;geneDuplication"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000078 -->
+
+    <Class rdf:about="&obo;CDAO_0000078">
+        <equivalentClass rdf:resource="&cdao;CompoundCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000079 -->
+
+    <Class rdf:about="&obo;CDAO_0000079">
+        <equivalentClass rdf:resource="&cdao;SIMMAPTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000080 -->
+
+    <Class rdf:about="&obo;CDAO_0000080">
+        <equivalentClass rdf:resource="&cdao;CommonAncestralNode"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000081 -->
+
+    <Class rdf:about="&obo;CDAO_0000081">
+        <equivalentClass rdf:resource="&cdao;NewickTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000082 -->
+
+    <Class rdf:about="&obo;CDAO_0000082">
+        <equivalentClass rdf:resource="&cdao;TimeProportionalLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000083 -->
+
+    <Class rdf:about="&obo;CDAO_0000083">
+        <equivalentClass rdf:resource="&cdao;DiscreteCharDistanceLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000084 -->
+
+    <Class rdf:about="&obo;CDAO_0000084">
+        <equivalentClass rdf:resource="&cdao;StarTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000085 -->
+
+    <Class rdf:about="&obo;CDAO_0000085">
+        <equivalentClass rdf:resource="&cdao;FullyResolvedUnrootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000086 -->
+
+    <Class rdf:about="&obo;CDAO_0000086">
+        <equivalentClass rdf:resource="&cdao;ParaphyleticGroup"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000087 -->
+
+    <Class rdf:about="&obo;CDAO_0000087">
+        <equivalentClass rdf:resource="&cdao;geneticEvent"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000088 -->
+
+    <Class rdf:about="&obo;CDAO_0000088">
+        <equivalentClass rdf:resource="&cdao;UnrootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000089 -->
+
+    <Class rdf:about="&obo;CDAO_0000089">
+        <equivalentClass rdf:resource="&cdao;CategoricalStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000090 -->
+
+    <Class rdf:about="&obo;CDAO_0000090">
+        <equivalentClass rdf:resource="&cdao;DiscreteCharLikelihoodLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000091 -->
+
+    <Class rdf:about="&obo;CDAO_0000091">
+        <equivalentClass rdf:resource="&cdao;CharacterStateDomain"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000092 -->
+
+    <Class rdf:about="&obo;CDAO_0000092">
+        <equivalentClass rdf:resource="&cdao;CoordinateList"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000093 -->
+
+    <Class rdf:about="&obo;CDAO_0000093">
+        <equivalentClass rdf:resource="&cdao;GammaDistribution"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000094 -->
+
+    <Class rdf:about="&obo;CDAO_0000094">
+        <equivalentClass rdf:resource="&cdao;DesoxiRibonucleotideResidueCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000095 -->
+
+    <Class rdf:about="&obo;CDAO_0000095">
+        <equivalentClass rdf:resource="&cdao;CoordinateRange"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000096 -->
+
+    <Class rdf:about="&obo;CDAO_0000096">
+        <equivalentClass rdf:resource="&cdao;ReticulateEvolution"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000097 -->
+
+    <Class rdf:about="&obo;CDAO_0000097">
+        <equivalentClass rdf:resource="&cdao;hereditaryChange"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000098 -->
+
+    <Class rdf:about="&obo;CDAO_0000098">
+        <equivalentClass rdf:resource="&cdao;CharacterStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000099 -->
+
+    <Class rdf:about="&obo;CDAO_0000099">
+        <equivalentClass rdf:resource="&cdao;Edge"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000100 -->
+
+    <Class rdf:about="&obo;CDAO_0000100">
+        <equivalentClass rdf:resource="&cdao;DiscreteCharacterLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000101 -->
+
+    <Class rdf:about="&obo;CDAO_0000101">
+        <equivalentClass rdf:resource="&cdao;EdgeAnnotation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000102 -->
+
+    <Class rdf:about="&obo;CDAO_0000102">
+        <equivalentClass rdf:resource="&cdao;FullyResolvedRootedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000103 -->
+
+    <Class rdf:about="&obo;CDAO_0000103">
+        <equivalentClass rdf:resource="&cdao;GrafenLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000104 -->
+
+    <Class rdf:about="&obo;CDAO_0000104">
+        <equivalentClass rdf:resource="&cdao;CoordinateSystem"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000105 -->
+
+    <Class rdf:about="&obo;CDAO_0000105">
+        <equivalentClass rdf:resource="&cdao;GenBankDataMatrix"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000107 -->
+
+    <Class rdf:about="&obo;CDAO_0000107">
+        <equivalentClass rdf:resource="&cdao;DataMatrixFormat"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000108 -->
+
+    <Class rdf:about="&obo;CDAO_0000108">
+        <equivalentClass rdf:resource="&cdao;TerminalNode"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000109 -->
+
+    <Class rdf:about="&obo;CDAO_0000109">
+        <equivalentClass rdf:resource="&cdao;RibonucleotideResidueCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000110 -->
+
+    <Class rdf:about="&obo;CDAO_0000110">
+        <equivalentClass rdf:resource="&cdao;Tree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000111 -->
+
+    <Class rdf:about="&obo;CDAO_0000111">
+        <equivalentClass rdf:resource="&cdao;CategoricalCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000112 -->
+
+    <Class rdf:about="&obo;CDAO_0000112">
+        <equivalentClass rdf:resource="&cdao;AminoAcidResidueStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000113 -->
+
+    <Class rdf:about="&obo;CDAO_0000113">
+        <equivalentClass rdf:resource="&cdao;PHYLIPDataMatrix"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000114 -->
+
+    <Class rdf:about="&obo;CDAO_0000114">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharLikelihoodLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000115 -->
+
+    <Class rdf:about="&obo;CDAO_0000115">
+        <equivalentClass rdf:resource="&cdao;MolecularCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000116 -->
+
+    <Class rdf:about="&obo;CDAO_0000116">
+        <equivalentClass rdf:resource="&cdao;hereditaryPersistance"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000117 -->
+
+    <Class rdf:about="&obo;CDAO_0000117">
+        <equivalentClass rdf:resource="&cdao;SetOfCharacters"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000118 -->
+
+    <Class rdf:about="&obo;CDAO_0000118">
+        <equivalentClass rdf:resource="&cdao;SetOfThings"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000120 -->
+
+    <Class rdf:about="&obo;CDAO_0000120">
+        <equivalentClass rdf:resource="&cdao;Sequence"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000121 -->
+
+    <Class rdf:about="&obo;CDAO_0000121">
+        <equivalentClass rdf:resource="&cdao;speciation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000122 -->
+
+    <Class rdf:about="&obo;CDAO_0000122">
+        <equivalentClass rdf:resource="&cdao;cladogenesis"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000124 -->
+
+    <Class rdf:about="&obo;CDAO_0000124">
+        <equivalentClass rdf:resource="&cdao;Bifurcation"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000125 -->
+
+    <Class rdf:about="&obo;CDAO_0000125">
+        <equivalentClass rdf:resource="&cdao;DiscreteCharBayesianLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000126 -->
+
+    <Class rdf:about="&obo;CDAO_0000126">
+        <equivalentClass rdf:resource="&cdao;TaxonomicLink"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000127 -->
+
+    <Class rdf:about="&obo;CDAO_0000127">
+        <equivalentClass rdf:resource="&cdao;MonophyleticGroup"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000128 -->
+
+    <Class rdf:about="&obo;CDAO_0000128">
+        <equivalentClass rdf:resource="&cdao;molecularRecombination"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000129 -->
+
+    <Class rdf:about="&obo;CDAO_0000129">
+        <equivalentClass rdf:resource="&cdao;HolophyleticGroup"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000130 -->
+
+    <Class rdf:about="&obo;CDAO_0000130">
+        <equivalentClass rdf:resource="&cdao;FullyResolvedTree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000131 -->
+
+    <Class rdf:about="&obo;CDAO_0000131">
+        <equivalentClass rdf:resource="&cdao;AminoAcidResidueCharacter"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000132 -->
+
+    <Class rdf:about="&obo;CDAO_0000132">
+        <equivalentClass rdf:resource="&cdao;recombination"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000133 -->
+
+    <Class rdf:about="&obo;CDAO_0000133">
+        <equivalentClass rdf:resource="&cdao;DesoxiRibonucleotideResidue"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000134 -->
+
+    <Class rdf:about="&obo;CDAO_0000134">
+        <equivalentClass rdf:resource="&cdao;RootedSubtree"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000136 -->
+
+    <Class rdf:about="&obo;CDAO_0000136">
+        <equivalentClass rdf:resource="&cdao;CompoundStateDatum"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000137 -->
+
+    <Class rdf:about="&obo;CDAO_0000137">
+        <equivalentClass rdf:resource="&cdao;GapCost"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000138 -->
+
+    <Class rdf:about="&obo;CDAO_0000138">
+        <equivalentClass rdf:resource="&cdao;TU"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000139 -->
+
+    <Class rdf:about="&obo;CDAO_0000139">
+        <equivalentClass rdf:resource="&cdao;DirectedEdge"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000140 -->
+
+    <Class rdf:about="&obo;CDAO_0000140">
+        <equivalentClass rdf:resource="&cdao;Node"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000141 -->
+
+    <Class rdf:about="&obo;CDAO_0000141">
+        <equivalentClass rdf:resource="&cdao;ContinuousCharDistanceLengthType"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AlignmentProcedure -->
+
+    <Class rdf:about="&cdao;AlignmentProcedure">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000032"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidue -->
+
+    <Class rdf:about="&cdao;AminoAcidResidue">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000076"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidueCharacter -->
+
+    <Class rdf:about="&cdao;AminoAcidResidueCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000131"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AminoAcidResidueStateDatum -->
+
+    <Class rdf:about="&cdao;AminoAcidResidueStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000112"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#AncestralNode -->
+
+    <Class rdf:about="&cdao;AncestralNode">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000026"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#BifurcatingTree -->
+
+    <Class rdf:about="&cdao;BifurcatingTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000018"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Bifurcation -->
+
+    <Class rdf:about="&cdao;Bifurcation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000124"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Branch -->
+
+    <Class rdf:about="&cdao;Branch">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000024"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#BranchingNode -->
+
+    <Class rdf:about="&cdao;BranchingNode">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000053"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CDAOAnnotation -->
+
+    <Class rdf:about="&cdao;CDAOAnnotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000040"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Categorical -->
+
+    <Class rdf:about="&cdao;Categorical">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000039"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CategoricalCharacter -->
+
+    <Class rdf:about="&cdao;CategoricalCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000111"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CategoricalStateDatum -->
+
+    <Class rdf:about="&cdao;CategoricalStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000089"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Character -->
+
+    <Class rdf:about="&cdao;Character">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000071"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrix -->
+
+    <Class rdf:about="&cdao;CharacterStateDataMatrix">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000056"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDataMatrixAnnotation -->
+
+    <Class rdf:about="&cdao;CharacterStateDataMatrixAnnotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000025"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDatum -->
+
+    <Class rdf:about="&cdao;CharacterStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000098"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CharacterStateDomain -->
+
+    <Class rdf:about="&cdao;CharacterStateDomain">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000091"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Clade -->
+
+    <Class rdf:about="&cdao;Clade">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000048"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CommonAncestralNode -->
+
+    <Class rdf:about="&cdao;CommonAncestralNode">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000080"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Compound -->
+
+    <Class rdf:about="&cdao;Compound">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000055"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundCharacter -->
+
+    <Class rdf:about="&cdao;CompoundCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000078"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CompoundStateDatum -->
+
+    <Class rdf:about="&cdao;CompoundStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000136"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Continuous -->
+
+    <Class rdf:about="&cdao;Continuous">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000031"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharBayesianLengthType -->
+
+    <Class rdf:about="&cdao;ContinuousCharBayesianLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000010"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharDistanceLengthType -->
+
+    <Class rdf:about="&cdao;ContinuousCharDistanceLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000141"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharLikelihoodLengthType -->
+
+    <Class rdf:about="&cdao;ContinuousCharLikelihoodLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000114"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharParsimonyLengthType -->
+
+    <Class rdf:about="&cdao;ContinuousCharParsimonyLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000035"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharacter -->
+
+    <Class rdf:about="&cdao;ContinuousCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000068"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousCharacterLengthType -->
+
+    <Class rdf:about="&cdao;ContinuousCharacterLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000009"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ContinuousStateDatum -->
+
+    <Class rdf:about="&cdao;ContinuousStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000019"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateList -->
+
+    <Class rdf:about="&cdao;CoordinateList">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000092"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinatePoint -->
+
+    <Class rdf:about="&cdao;CoordinatePoint">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000003"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateRange -->
+
+    <Class rdf:about="&cdao;CoordinateRange">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000095"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#CoordinateSystem -->
+
+    <Class rdf:about="&cdao;CoordinateSystem">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000104"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DataMatrixFormat -->
+
+    <Class rdf:about="&cdao;DataMatrixFormat">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000107"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DatumCoordinate -->
+
+    <Class rdf:about="&cdao;DatumCoordinate">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000022"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidue -->
+
+    <Class rdf:about="&cdao;DesoxiRibonucleotideResidue">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000133"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidueCharacter -->
+
+    <Class rdf:about="&cdao;DesoxiRibonucleotideResidueCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000094"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DesoxiRibonucleotideResidueStateDatum -->
+
+    <Class rdf:about="&cdao;DesoxiRibonucleotideResidueStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000002"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Dichotomy -->
+
+    <Class rdf:about="&cdao;Dichotomy">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000033"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DirectedEdge -->
+
+    <Class rdf:about="&cdao;DirectedEdge">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000139"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharBayesianLengthType -->
+
+    <Class rdf:about="&cdao;DiscreteCharBayesianLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000125"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharDistanceLengthType -->
+
+    <Class rdf:about="&cdao;DiscreteCharDistanceLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000083"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharLikelihoodLengthType -->
+
+    <Class rdf:about="&cdao;DiscreteCharLikelihoodLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000090"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharParsimonyLengthType -->
+
+    <Class rdf:about="&cdao;DiscreteCharParsimonyLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000049"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#DiscreteCharacterLengthType -->
+
+    <Class rdf:about="&cdao;DiscreteCharacterLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000100"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Edge -->
+
+    <Class rdf:about="&cdao;Edge">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000099"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeAnnotation -->
+
+    <Class rdf:about="&cdao;EdgeAnnotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000101"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeLength -->
+
+    <Class rdf:about="&cdao;EdgeLength">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000046"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#EdgeLengthType -->
+
+    <Class rdf:about="&cdao;EdgeLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000063"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FASTADataMatrix -->
+
+    <Class rdf:about="&cdao;FASTADataMatrix">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000061"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedRootedTree -->
+
+    <Class rdf:about="&cdao;FullyResolvedRootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000102"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedTree -->
+
+    <Class rdf:about="&cdao;FullyResolvedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000130"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#FullyResolvedUnrootedTree -->
+
+    <Class rdf:about="&cdao;FullyResolvedUnrootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000085"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GalledTree -->
+
+    <Class rdf:about="&cdao;GalledTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000072"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GammaDistribution -->
+
+    <Class rdf:about="&cdao;GammaDistribution">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000093"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GapCost -->
+
+    <Class rdf:about="&cdao;GapCost">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000137"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GenBankDataMatrix -->
+
+    <Class rdf:about="&cdao;GenBankDataMatrix">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000105"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Generic_State -->
+
+    <Class rdf:about="&cdao;Generic_State">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000015"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#GrafenLengthType -->
+
+    <Class rdf:about="&cdao;GrafenLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000103"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#HolophyleticGroup -->
+
+    <Class rdf:about="&cdao;HolophyleticGroup">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000129"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#JukesKantor -->
+
+    <Class rdf:about="&cdao;JukesKantor">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000021"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Kimura2Parameters -->
+
+    <Class rdf:about="&cdao;Kimura2Parameters">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000013"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Lineage -->
+
+    <Class rdf:about="&cdao;Lineage">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000004"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MRCANode -->
+
+    <Class rdf:about="&cdao;MRCANode">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000060"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ModelDescription -->
+
+    <Class rdf:about="&cdao;ModelDescription">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000007"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Molecular -->
+
+    <Class rdf:about="&cdao;Molecular">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000034"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MolecularCharacter -->
+
+    <Class rdf:about="&cdao;MolecularCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000115"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MolecularStateDatum -->
+
+    <Class rdf:about="&cdao;MolecularStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000050"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#MonophyleticGroup -->
+
+    <Class rdf:about="&cdao;MonophyleticGroup">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000127"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NEXUSTreeBlock -->
+
+    <Class rdf:about="&cdao;NEXUSTreeBlock">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000011"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Network -->
+
+    <Class rdf:about="&cdao;Network">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000006"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NewickTree -->
+
+    <Class rdf:about="&cdao;NewickTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000081"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#NexusDataBlock -->
+
+    <Class rdf:about="&cdao;NexusDataBlock">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000052"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Node -->
+
+    <Class rdf:about="&cdao;Node">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000140"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PHYLIPDataMatrix -->
+
+    <Class rdf:about="&cdao;PHYLIPDataMatrix">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000113"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PHYLIPTree -->
+
+    <Class rdf:about="&cdao;PHYLIPTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000069"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ParaphyleticGroup -->
+
+    <Class rdf:about="&cdao;ParaphyleticGroup">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000086"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Phylo4Tree -->
+
+    <Class rdf:about="&cdao;Phylo4Tree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000005"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PhyloTree -->
+
+    <Class rdf:about="&cdao;PhyloTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000067"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PolymorphicStateDomain -->
+
+    <Class rdf:about="&cdao;PolymorphicStateDomain">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000043"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#PolyphyleticGroup -->
+
+    <Class rdf:about="&cdao;PolyphyleticGroup">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000051"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Polytomy -->
+
+    <Class rdf:about="&cdao;Polytomy">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000042"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ReconcileTree -->
+
+    <Class rdf:about="&cdao;ReconcileTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000030"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#ReticulateEvolution -->
+
+    <Class rdf:about="&cdao;ReticulateEvolution">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000096"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidue -->
+
+    <Class rdf:about="&cdao;RibonucleotideResidue">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000047"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidueCharacter -->
+
+    <Class rdf:about="&cdao;RibonucleotideResidueCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000109"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RibonucleotideResidueStateDatum -->
+
+    <Class rdf:about="&cdao;RibonucleotideResidueStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000057"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedSubtree -->
+
+    <Class rdf:about="&cdao;RootedSubtree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000134"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#RootedTree -->
+
+    <Class rdf:about="&cdao;RootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000012"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SIMMAPTree -->
+
+    <Class rdf:about="&cdao;SIMMAPTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000079"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Sequence -->
+
+    <Class rdf:about="&cdao;Sequence">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000120"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfCharacters -->
+
+    <Class rdf:about="&cdao;SetOfCharacters">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000117"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfNodes -->
+
+    <Class rdf:about="&cdao;SetOfNodes">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000059"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SetOfThings -->
+
+    <Class rdf:about="&cdao;SetOfThings">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000118"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SpeciesTree -->
+
+    <Class rdf:about="&cdao;SpeciesTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000073"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Standard -->
+
+    <Class rdf:about="&cdao;Standard">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000045"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StandardCharacter -->
+
+    <Class rdf:about="&cdao;StandardCharacter">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000075"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StandardStateDatum -->
+
+    <Class rdf:about="&cdao;StandardStateDatum">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000008"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#StarTree -->
+
+    <Class rdf:about="&cdao;StarTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000084"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#SubstitutionModel -->
+
+    <Class rdf:about="&cdao;SubstitutionModel">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000020"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Subtree -->
+
+    <Class rdf:about="&cdao;Subtree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000070"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TU -->
+
+    <Class rdf:about="&cdao;TU">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000138"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TUAnnotation -->
+
+    <Class rdf:about="&cdao;TUAnnotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000066"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TaxonomicLink -->
+
+    <Class rdf:about="&cdao;TaxonomicLink">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000126"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TerminalNode -->
+
+    <Class rdf:about="&cdao;TerminalNode">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000108"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TimeCalibratedLengthType -->
+
+    <Class rdf:about="&cdao;TimeCalibratedLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000058"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TimeProportionalLengthType -->
+
+    <Class rdf:about="&cdao;TimeProportionalLengthType">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000082"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#Tree -->
+
+    <Class rdf:about="&cdao;Tree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000110"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeAnnotation -->
+
+    <Class rdf:about="&cdao;TreeAnnotation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000044"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeFormat -->
+
+    <Class rdf:about="&cdao;TreeFormat">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000074"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#TreeProcedure -->
+
+    <Class rdf:about="&cdao;TreeProcedure">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000014"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UncertainStateDomain -->
+
+    <Class rdf:about="&cdao;UncertainStateDomain">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000029"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedRootedTree -->
+
+    <Class rdf:about="&cdao;UnresolvedRootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000023"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedTree -->
+
+    <Class rdf:about="&cdao;UnresolvedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000017"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnresolvedUnrootedTree -->
+
+    <Class rdf:about="&cdao;UnresolvedUnrootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000027"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnrootedSubtree -->
+
+    <Class rdf:about="&cdao;UnrootedSubtree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000016"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#UnrootedTree -->
+
+    <Class rdf:about="&cdao;UnrootedTree">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000088"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#anageneticChange -->
+
+    <Class rdf:about="&cdao;anageneticChange">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000065"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#cladogenesis -->
+
+    <Class rdf:about="&cdao;cladogenesis">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000122"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#cladogeneticChange -->
+
+    <Class rdf:about="&cdao;cladogeneticChange">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000064"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#evolutionaryTransition -->
+
+    <Class rdf:about="&cdao;evolutionaryTransition">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000062"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#geneDuplication -->
+
+    <Class rdf:about="&cdao;geneDuplication">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000077"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#geneticEvent -->
+
+    <Class rdf:about="&cdao;geneticEvent">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000087"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryChange -->
+
+    <Class rdf:about="&cdao;hereditaryChange">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000097"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#hereditaryPersistance -->
+
+    <Class rdf:about="&cdao;hereditaryPersistance">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000116"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#molecularRecombination -->
+
+    <Class rdf:about="&cdao;molecularRecombination">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000128"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#originationEvent -->
+
+    <Class rdf:about="&cdao;originationEvent">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000041"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#recombination -->
+
+    <Class rdf:about="&cdao;recombination">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000132"/>
+    </Class>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#speciation -->
+
+    <Class rdf:about="&cdao;speciation">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000121"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000220 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000220">
+        <sameAs rdf:resource="&cdao;dA"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000221 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000221">
+        <sameAs rdf:resource="&cdao;absent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000222 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000222">
+        <sameAs rdf:resource="&cdao;unknown"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000223 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000223">
+        <sameAs rdf:resource="&cdao;gap"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000224 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000224">
+        <sameAs rdf:resource="&cdao;dG"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000225 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000225">
+        <sameAs rdf:resource="&cdao;rU"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000226 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000226">
+        <sameAs rdf:resource="&cdao;dC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000227 -->
+
+    <NamedIndividual rdf:about="&obo;CDAO_0000227">
+        <sameAs rdf:resource="&cdao;dT"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#absent -->
+
+    <NamedIndividual rdf:about="&cdao;absent">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000221"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dA -->
+
+    <NamedIndividual rdf:about="&cdao;dA">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000220"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dC -->
+
+    <NamedIndividual rdf:about="&cdao;dC">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000226"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dG -->
+
+    <NamedIndividual rdf:about="&cdao;dG">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000224"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#dT -->
+
+    <NamedIndividual rdf:about="&cdao;dT">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000227"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#gap -->
+
+    <NamedIndividual rdf:about="&cdao;gap">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000223"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#rU -->
+
+    <NamedIndividual rdf:about="&cdao;rU">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000225"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#unknown -->
+
+    <NamedIndividual rdf:about="&cdao;unknown">
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <obo:IAO_0100001 rdf:resource="&obo;CDAO_0000222"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

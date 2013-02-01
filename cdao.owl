@@ -21,12 +21,12 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="&obo;cdao.owl">
         <dc:coverage rdf:datatype="&xsd;string">Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
-        <dc:description rdf:datatype="&xsd;string">The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &#39;OTUs&#39; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &#39;character-state data model&#39;.  For a given character, such as &#39;beak length&#39;, each OTU has a state, such as &#39;short&#39; or &#39;long&#39;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
+        <dc:description rdf:datatype="&xsd;string">The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
         <dc:creator xml:lang="en">CDAO Team</dc:creator>
         <dc:title xml:lang="en">Comparative Data Analysis Ontology</dc:title>
         <dc:subject xml:lang="en">comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics</dc:subject>
         <dc:rights rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
-        <owl:versionIRI rdf:resource="&obo;cdao/2012-06-06/cdao.owl"/>
+        <owl:versionIRI rdf:resource="&obo;cdao/2013-02-01/cdao.owl"/>
         <owl:imports rdf:resource="&obo;iao/ontology-metadata.owl"/>
     </owl:Ontology>
     
@@ -52,6 +52,14 @@
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
     
 
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
     
 
@@ -317,7 +325,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;CDAO_0000159">
         <rdfs:label rdf:datatype="&xsd;string">has_Left_State</rdfs:label>
-        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &#39;left&#39; state (the state associated with the &#39;left&#39; node).</dc:description>
+        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &apos;left&apos; state (the state associated with the &apos;left&apos; node).</dc:description>
         <rdfs:range rdf:resource="&obo;CDAO_0000091"/>
         <rdfs:domain rdf:resource="&obo;CDAO_0000097"/>
         <rdfs:subPropertyOf rdf:resource="&obo;CDAO_0000182"/>
@@ -539,7 +547,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;CDAO_0000178">
         <rdfs:label rdf:datatype="&xsd;string">has</rdfs:label>
-        <dc:description>Generic &#39;has&#39; property.</dc:description>
+        <dc:description>Generic &apos;has&apos; property.</dc:description>
     </owl:ObjectProperty>
     
 
@@ -618,7 +626,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;CDAO_0000185">
         <rdfs:label rdf:datatype="&xsd;string">has_Left_Node</rdfs:label>
-        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &#39;left&#39; node (the node that has the &#39;left&#39; state).</dc:description>
+        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &apos;left&apos; node (the node that has the &apos;left&apos; state).</dc:description>
         <rdfs:domain rdf:resource="&obo;CDAO_0000097"/>
         <rdfs:range rdf:resource="&obo;CDAO_0000140"/>
         <rdfs:subPropertyOf rdf:resource="&obo;CDAO_0000182"/>
@@ -630,7 +638,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;CDAO_0000186">
         <rdfs:label rdf:datatype="&xsd;string">has_Right_State</rdfs:label>
-        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &#39;right&#39; state (the state associated with the &#39;right&#39; node).</dc:description>
+        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &apos;right&apos; state (the state associated with the &apos;right&apos; node).</dc:description>
         <rdfs:range rdf:resource="&obo;CDAO_0000091"/>
         <rdfs:domain rdf:resource="&obo;CDAO_0000097"/>
         <rdfs:subPropertyOf rdf:resource="&obo;CDAO_0000182"/>
@@ -949,7 +957,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;CDAO_0000210">
         <rdfs:label rdf:datatype="&xsd;string">has_Right_Node</rdfs:label>
-        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &#39;right&#39; node (the node that has the &#39;right&#39; state).</dc:description>
+        <dc:description rdf:datatype="&xsd;string">This property relates a transformation to a &apos;right&apos; node (the node that has the &apos;right&apos; state).</dc:description>
         <rdfs:domain rdf:resource="&obo;CDAO_0000097"/>
         <rdfs:range rdf:resource="&obo;CDAO_0000140"/>
         <rdfs:subPropertyOf rdf:resource="&obo;CDAO_0000182"/>
@@ -1182,19 +1190,6 @@
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000110"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000155"/>
-                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000148"/>
-                <owl:onClass rdf:resource="&obo;CDAO_0000140"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;CDAO_0000178"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1204,6 +1199,19 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000155"/>
+                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000148"/>
+                <owl:onClass rdf:resource="&obo;CDAO_0000140"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&obo;CDAO_0000088"/>
@@ -1244,7 +1252,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000039"/>
         <rdfs:comment>This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.</rdfs:comment>
-        <dc:description>This concept is tied to the verbally ambiguous &#39;gap&#39; concept and to the use of a gap character (often the en dash &#39;-&#39;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</dc:description>
+        <dc:description>This concept is tied to the verbally ambiguous &apos;gap&apos; concept and to the use of a gap character (often the en dash &apos;-&apos;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</dc:description>
     </owl:Class>
     
 
@@ -1337,7 +1345,7 @@
     <owl:Class rdf:about="&obo;CDAO_0000024">
         <rdfs:label rdf:datatype="&xsd;string">Branch</rdfs:label>
         <owl:equivalentClass rdf:resource="&obo;CDAO_0000099"/>
-        <dc:description>&#39;Branch&#39; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.</dc:description>
+        <dc:description>&apos;Branch&apos; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.</dc:description>
     </owl:Class>
     
 
@@ -1575,7 +1583,7 @@
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Its possible that this should not be classed as an &#39;annotation&#39; since it contains data rather than meta-data.</rdfs:comment>
+        <rdfs:comment>Its possible that this should not be classed as an &apos;annotation&apos; since it contains data rather than meta-data.</rdfs:comment>
         <dc:description>The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.</dc:description>
     </owl:Class>
     
@@ -1674,8 +1682,8 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000178"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000025"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000142"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000071"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1686,8 +1694,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000142"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000071"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000178"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000025"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix</dc:description>
@@ -1717,12 +1725,16 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000059">
         <rdfs:label rdf:datatype="&xsd;string">SetOfNodes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000118"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000198"/>
-                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000140"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000198"/>
+                        <owl:allValuesFrom rdf:resource="&obo;CDAO_0000140"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -1836,14 +1848,14 @@
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000071"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000207"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000019"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000153"/>
+                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000019"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000153"/>
-                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000019"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000207"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000019"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1951,12 +1963,6 @@
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000111"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000170"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;CDAO_0000142"/>
                 <owl:someValuesFrom rdf:resource="&obo;CDAO_0000071"/>
             </owl:Restriction>
@@ -1965,6 +1971,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;CDAO_0000153"/>
                 <owl:allValuesFrom rdf:resource="&obo;CDAO_0000136"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000170"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000136"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.</dc:description>
@@ -2231,18 +2243,18 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000193"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;CDAO_0000162"/>
                 <owl:onClass rdf:resource="&obo;CDAO_0000140"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &#39;branch&#39;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &#39;split&#39; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</dc:description>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000193"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000101"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &apos;branch&apos;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &apos;split&apos; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</dc:description>
     </owl:Class>
     
 
@@ -2437,7 +2449,17 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000117">
         <rdfs:label rdf:datatype="&xsd;string">SetOfCharacters</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000118"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000198"/>
+                        <owl:allValuesFrom rdf:resource="&obo;CDAO_0000071"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2446,21 +2468,7 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000118">
         <rdfs:label rdf:datatype="&xsd;string">SetOfThings</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000198"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;CDAO_0000071"/>
-                            <rdf:Description rdf:about="&obo;CDAO_0000117"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:description>The class is used to describe either colletions of characters or higher order grouping (e.g., groups of groups of characters). This extends the CharSet block of NEXUS.</dc:description>
+        <dc:description>The class is used to describe colletions of phylogenetic data elements. Examples include sets of trees for annotating consensus tree provenance, and sets of characters or higher order grouping (e.g., groups of groups of characters) that extends the CharSet block of NEXUS.</dc:description>
     </owl:Class>
     
 
@@ -2589,14 +2597,14 @@
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000115"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000168"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000112"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000153"/>
+                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000112"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000153"/>
-                <owl:allValuesFrom rdf:resource="&obo;CDAO_0000112"/>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000168"/>
+                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000112"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2654,7 +2662,7 @@
     <owl:Class rdf:about="&obo;CDAO_0000138">
         <rdfs:label rdf:datatype="&xsd;string">TU</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <dc:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &#39;OTU&#39; and &#39;HTU&#39;.</dc:description>
+        <dc:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &apos;OTU&apos; and &apos;HTU&apos;.</dc:description>
     </owl:Class>
     
 
@@ -2692,16 +2700,16 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000143"/>
-                <owl:onClass rdf:resource="&obo;CDAO_0000139"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000194"/>
+                <owl:onClass rdf:resource="&obo;CDAO_0000006"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000194"/>
-                <owl:onClass rdf:resource="&obo;CDAO_0000006"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&obo;CDAO_0000143"/>
+                <owl:onClass rdf:resource="&obo;CDAO_0000139"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2836,5 +2844,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
 

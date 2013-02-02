@@ -1354,7 +1354,17 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000025">
         <rdfs:label rdf:datatype="&xsd;string">CharacterStateDataMatrixAnnotation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000157"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CDAO_0000056"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <dc:description>Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.</dc:description>
     </owl:Class>
     
@@ -1546,12 +1556,16 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000044">
         <rdfs:label rdf:datatype="&xsd;string">TreeAnnotation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000040"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;CDAO_0000157"/>
-                <owl:someValuesFrom rdf:resource="&obo;CDAO_0000110"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000157"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CDAO_0000110"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -1827,7 +1841,17 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000066">
         <rdfs:label rdf:datatype="&xsd;string">TUAnnotation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000157"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CDAO_0000138"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2272,7 +2296,17 @@
 
     <owl:Class rdf:about="&obo;CDAO_0000101">
         <rdfs:label rdf:datatype="&xsd;string">EdgeAnnotation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CDAO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CDAO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;CDAO_0000157"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CDAO_0000099"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

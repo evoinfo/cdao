@@ -1306,7 +1306,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000021 -->
 
     <owl:Class rdf:about="&obo;CDAO_0000021">
-        <rdfs:label rdf:datatype="&xsd;string">JukesKantor</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">JukesCantor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;CDAO_0000020"/>
     </owl:Class>
     

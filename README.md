@@ -4,6 +4,13 @@ CDAO is an ontology for use in the evolutionary analysis of biological data.  Th
 
 CDAO includes concepts that represent phylogenetic trees, as well as the character-state data model.  The character-state data model is an entity-attribute-value model in which the entities are biological entities such as genes, proteins, or species, typically referred to as OTUs (Operational Taxonomic Units), the attributes are called "Characters", and the value of an attribute for a given entity is called the "State" or "Character state", e.g., in a protein alignment, the proteins are the entities, the alignment columns are the attributes, and the values are the residues specified by row and column.
 
+## Canonical URI and Metadata 
+
+CDAO is registered with and indexed by the OBO Library. Hence the canonical URI for the unversioned (i.e. latest) ontology is http://purl.obolibrary.org/obo/cdao.owl, and the metadata record rendered for human consumption and exploration is at http://www.obofoundry.org/ontology/cdao.html.
+
+The metadata record for processing by the OBO toolchain and that defines the metadata, URI redirections, etc is here:
+https://github.com/OBOFoundry/purl.obolibrary.org/blob/master/config/cdao.yml
+
 ## History
 
 CDAO was originally developed by the [Evolutionary Informatics working group] of the National Evolutionary Synthesis Center ([NESCent]).  The original developers included Brandon Chisham, Francisco Prosdocimi, Julie Thompson, Enrico Pontelli, and Arlin Stoltzfus.

@@ -1,0 +1,47 @@
+# This will be ignored on GH pages, but can serve as an archival record for
+# the redirects (which are the only directives in here) that were originally
+# in place at http://evolutionaryontology.org.
+
+# htaccess file for cdao.sourceforge.net 
+
+
+# we may need this if this vhost only processes www
+#Options +FollowSymlinks
+#RewriteEngine on
+#rewritecond %{http_host} ^domain.com [nc]
+#rewriterule ^(.*)$ http://www.domain.com/$1 [r=301,nc] 
+
+################
+# Handle requests for Evolution Ontology site 
+# 
+# with permission of Adam Goldstein (agoldstein@iona.edu)
+# 
+Redirect /eo http://shiftingbalance.org/eo
+
+################
+# Handle requests for CDAO version 1 
+#   ==> [www.]evolutionaryontology.org/cdao/1.0/cdao.owl 
+#   ==> [www.]evolutionaryontology.org/cdao.owl 
+# 
+Redirect /cdao/1.0/cdao.owl http://purl.obolibrary.org/obo/cdao/1.0/cdao.owl
+
+################
+# Handle requests for the development version of CDAO
+#   ==> [www.]evolutionaryontology.org/cdao/dev/cdao.owl 
+#
+Redirect /cdao/dev/cdao.owl http://purl.obolibrary.org/obo/cdao.owl
+
+################
+# Set mime types 
+# 
+#<Directory "*OWL">
+#	AddType application/rdf+xml .owl
+#</Directory>
+       
+################
+# Handle external requests for CDAO web pages
+#  ==> cdao.evolutionaryontology.org has to be handled via a different vhost, right? 
+#  ==> [www.]evolutionaryontology.org/cdao should go to the mediawiki home page
+#
+RedirectMatch ^/cdao(.*)$ https://github.com/evoinfo/cdao/wiki/$1
+

@@ -11,7 +11,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cdao.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cdao/2013-02-01/cdao.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cdao/2019-06-26/cdao.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
         <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
         <dc:creator xml:lang="en">CDAO Team</dc:creator>

@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cdao.owl">
@@ -16,9 +17,9 @@
         <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
         <dc:creator xml:lang="en">CDAO Team</dc:creator>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
-        <dc:rights rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
         <dc:subject xml:lang="en">comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics</dc:subject>
         <dc:title xml:lang="en">Comparative Data Analysis Ontology</dc:title>
+        <terms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
     </owl:Ontology>
     
 

@@ -579,7 +579,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000178 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000178">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
         <dc:description>Generic &apos;has&apos; property.</dc:description>
         <rdfs:label>has</rdfs:label>
     </owl:ObjectProperty>
@@ -779,7 +779,8 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000194 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000194">
-        <rdfs:label>part_of</rdfs:label>
+        <rdfs:label>obsolete part_of</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1413,7 +1414,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2763,7 +2764,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
             </owl:Restriction>
         </rdfs:subClassOf>

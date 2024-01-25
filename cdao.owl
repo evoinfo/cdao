@@ -14,11 +14,11 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cdao.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cdao/2022-11-30/cdao.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
-        <dc:coverage>Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
-        <dc:creator xml:lang="en">CDAO Team</dc:creator>
-        <dc:description>The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
-        <dc:subject xml:lang="en">comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics</dc:subject>
-        <dc:title xml:lang="en">Comparative Data Analysis Ontology</dc:title>
+        <terms:coverage>Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</terms:coverage>
+        <terms:creator xml:lang="en">CDAO Team</terms:creator>
+        <terms:description>The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</terms:description>
+        <terms:subject xml:lang="en">comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics</terms:subject>
+        <terms:title xml:lang="en">Comparative Data Analysis Ontology</terms:title>
         <terms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
     </owl:Ontology>
     
@@ -112,7 +112,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <dc:description>This property associates a character data matrix with a character (a column) represented in the matrix.</dc:description>
+        <terms:description>This property associates a character data matrix with a character (a column) represented in the matrix.</terms:description>
         <rdfs:label>has_Character</rdfs:label>
     </owl:ObjectProperty>
     
@@ -125,7 +125,7 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000209"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
-        <dc:description>The property links a Node to the Edge it belongs to in the child position.</dc:description>
+        <terms:description>The property links a Node to the Edge it belongs to in the child position.</terms:description>
         <rdfs:label>belongs_to_Edge_as_Child</rdfs:label>
     </owl:ObjectProperty>
     
@@ -139,7 +139,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>The property links a node to any of the other nodes that are its ancestors in a rooted tree.</dc:description>
+        <terms:description>The property links a node to any of the other nodes that are its ancestors in a rooted tree.</terms:description>
         <rdfs:label>has_Ancestor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -158,7 +158,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description>This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.</dc:description>
+        <terms:description>This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.</terms:description>
         <rdfs:label>has_Nucleotide_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -170,7 +170,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
-        <dc:description>The property links a Node to one of the edges that are incident on such node.</dc:description>
+        <terms:description>The property links a Node to one of the edges that are incident on such node.</terms:description>
         <rdfs:label>belongs_to_Edge</rdfs:label>
     </owl:ObjectProperty>
     
@@ -202,7 +202,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>The property links a rooted tree to the specific node that represents the unique root of the tree.</dc:description>
+        <terms:description>The property links a rooted tree to the specific node that represents the unique root of the tree.</terms:description>
         <rdfs:label>has_Root</rdfs:label>
     </owl:ObjectProperty>
     
@@ -219,7 +219,7 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000177"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000209"/>
         </owl:propertyChainAxiom>
-        <dc:description>The property links a node to a node that is an immediate descendant in the tree.</dc:description>
+        <terms:description>The property links a node to a node that is an immediate descendant in the tree.</terms:description>
         <rdfs:label>has_Child</rdfs:label>
     </owl:ObjectProperty>
     
@@ -238,7 +238,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description>The property that relates a coordinate list to the first item in the list.</dc:description>
+        <terms:description>The property that relates a coordinate list to the first item in the list.</terms:description>
         <rdfs:label>has_First_Coordinate_Item</rdfs:label>
     </owl:ObjectProperty>
     
@@ -280,7 +280,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <dc:description>This property relates a character to a state datum for the character.</dc:description>
+        <terms:description>This property relates a character to a state datum for the character.</terms:description>
         <rdfs:label>has_Datum</rdfs:label>
     </owl:ObjectProperty>
     
@@ -309,7 +309,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000155">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <dc:description>This property links two networks where the latter is a substructure of the former</dc:description>
+        <terms:description>This property links two networks where the latter is a substructure of the former</terms:description>
         <rdfs:label>subtree_of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -328,7 +328,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description>This property associates a amino acid character-state instance with a state value from the domain of amino acid states.</dc:description>
+        <terms:description>This property associates a amino acid character-state instance with a state value from the domain of amino acid states.</terms:description>
         <rdfs:label>has_Amino_Acid_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -359,7 +359,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description>This property relates a transformation to a &apos;left&apos; state (the state associated with the &apos;left&apos; node).</dc:description>
+        <terms:description>This property relates a transformation to a &apos;left&apos; state (the state associated with the &apos;left&apos; node).</terms:description>
         <rdfs:label>has_Left_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -387,7 +387,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>Property that associates to each Edge the Nodes it connects.</dc:description>
+        <terms:description>Property that associates to each Edge the Nodes it connects.</terms:description>
         <rdfs:label>has_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -418,7 +418,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000165">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000104"/>
-        <dc:description>This property links a coordinate to the coordinate system it references.</dc:description>
+        <terms:description>This property links a coordinate to the coordinate system it references.</terms:description>
         <rdfs:label>has_Coordinate_System</rdfs:label>
     </owl:ObjectProperty>
     
@@ -459,7 +459,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000112"/>
-        <dc:description>This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
+        <terms:description>This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</terms:description>
         <rdfs:label>has_Amino_Acid_Datum</rdfs:label>
     </owl:ObjectProperty>
     
@@ -469,7 +469,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000169">
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <dc:description>This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</dc:description>
+        <terms:description>This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</terms:description>
         <rdfs:label>hereditary_change_of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -488,7 +488,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000136"/>
-        <dc:description>This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.</dc:description>
+        <terms:description>This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.</terms:description>
         <rdfs:label>has_Compound_Datum</rdfs:label>
     </owl:ObjectProperty>
     
@@ -534,7 +534,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>A property that links a node to any of its descendants in a rooted tree.</dc:description>
+        <terms:description>A property that links a node to any of its descendants in a rooted tree.</terms:description>
         <rdfs:label>has_Descendant</rdfs:label>
     </owl:ObjectProperty>
     
@@ -546,7 +546,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000184"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000031"/>
-        <dc:description>This property associates a character-state instance with a state value on a continuous numeric scale.</dc:description>
+        <terms:description>This property associates a character-state instance with a state value on a continuous numeric scale.</terms:description>
         <rdfs:label>has_Continuous_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -568,7 +568,7 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000201"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
-        <dc:description>The property links a Node to one of the Edges where the node appears in the parent position (i.e., closer to the root).</dc:description>
+        <terms:description>The property links a Node to one of the Edges where the node appears in the parent position (i.e., closer to the root).</terms:description>
         <rdfs:label>belongs_to_Edge_as_Parent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -578,7 +578,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000178">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
-        <dc:description>Generic &apos;has&apos; property.</dc:description>
+        <terms:description>Generic &apos;has&apos; property.</terms:description>
         <rdfs:label>has</rdfs:label>
     </owl:ObjectProperty>
     
@@ -594,7 +594,7 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000143"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000201"/>
         </owl:propertyChainAxiom>
-        <dc:description>The property that links a node to its unique parent in a rooted tree.</dc:description>
+        <terms:description>The property that links a node to its unique parent in a rooted tree.</terms:description>
         <rdfs:label>has_Parent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -616,7 +616,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000181">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <dc:description>This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</dc:description>
+        <terms:description>This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</terms:description>
         <rdfs:label>homologous_to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -627,7 +627,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000182">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
-        <dc:description>This property relates a transformation to the components that compose it.</dc:description>
+        <terms:description>This property relates a transformation to the components that compose it.</terms:description>
         <rdfs:label>has_Change_Component</rdfs:label>
     </owl:ObjectProperty>
     
@@ -648,7 +648,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description>This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.</dc:description>
+        <terms:description>This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.</terms:description>
         <rdfs:label>has_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -660,7 +660,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>This property relates a transformation to a &apos;left&apos; node (the node that has the &apos;left&apos; state).</dc:description>
+        <terms:description>This property relates a transformation to a &apos;left&apos; node (the node that has the &apos;left&apos; state).</terms:description>
         <rdfs:label>has_Left_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -672,7 +672,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description>This property relates a transformation to a &apos;right&apos; state (the state associated with the &apos;right&apos; node).</dc:description>
+        <terms:description>This property relates a transformation to a &apos;right&apos; state (the state associated with the &apos;right&apos; node).</terms:description>
         <rdfs:label>has_Right_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -685,7 +685,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description>This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).</dc:description>
+        <terms:description>This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).</terms:description>
         <rdfs:label>represents_TU</rdfs:label>
     </owl:ObjectProperty>
     
@@ -714,7 +714,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description>This property associates a compound character-state instance with its compound state value.</dc:description>
+        <terms:description>This property associates a compound character-state instance with its compound state value.</terms:description>
         <rdfs:label>has_Compound_State</rdfs:label>
     </owl:ObjectProperty>
     
@@ -724,7 +724,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000190">
         <owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
-        <dc:description>Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of.</dc:description>
+        <terms:description>Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of.</terms:description>
         <rdfs:label>belongs_to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -737,7 +737,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description>This property relates a character-state datum to its TU.</dc:description>
+        <terms:description>This property relates a character-state datum to its TU.</terms:description>
         <rdfs:label>belongs_to_TU</rdfs:label>
     </owl:ObjectProperty>
     
@@ -794,7 +794,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000002"/>
-        <dc:description>This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
+        <terms:description>This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</terms:description>
         <rdfs:label>has_Nucleotide_Datum</rdfs:label>
     </owl:ObjectProperty>
     
@@ -805,7 +805,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000196">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>This property relates a TU to a node that represents it in a network.</dc:description>
+        <terms:description>This property relates a TU to a node that represents it in a network.</terms:description>
         <rdfs:label>represented_by_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -817,7 +817,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000092"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000092"/>
-        <dc:description>The property that relates a coordinate list to the item in the list beyond the first item.</dc:description>
+        <terms:description>The property that relates a coordinate list to the item in the list beyond the first item.</terms:description>
         <rdfs:label>has_Remaining_Coordinate_List</rdfs:label>
     </owl:ObjectProperty>
     
@@ -868,7 +868,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>Associates to a Directed Edge the Node that is in the parent position in the edge (i.e., the node touched by the edge and closer to the root of the tree)</dc:description>
+        <terms:description>Associates to a Directed Edge the Node that is in the parent position in the edge (i.e., the node touched by the edge and closer to the root of the tree)</terms:description>
         <rdfs:label>has_Parent_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -950,7 +950,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
-        <dc:description>This property relates a continuous character to a state datum for the character.</dc:description>
+        <terms:description>This property relates a continuous character to a state datum for the character.</terms:description>
         <rdfs:label>has_Continuous_Datum</rdfs:label>
     </owl:ObjectProperty>
     
@@ -962,7 +962,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description>This property associates a character data matrix with a TU (a row) represented in the matrix.</dc:description>
+        <terms:description>This property associates a character data matrix with a TU (a row) represented in the matrix.</terms:description>
         <rdfs:label>has_TU</rdfs:label>
     </owl:ObjectProperty>
     
@@ -975,7 +975,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>The property associates to a Directed Edge the Node that is in the child position in the edge, i.e., the node touched by the edge and closer to the leaves of the tree.</dc:description>
+        <terms:description>The property associates to a Directed Edge the Node that is in the child position in the edge, i.e., the node touched by the edge and closer to the leaves of the tree.</terms:description>
         <rdfs:label>has_Child_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -987,7 +987,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description>This property relates a transformation to a &apos;right&apos; node (the node that has the &apos;right&apos; state).</dc:description>
+        <terms:description>This property relates a transformation to a &apos;right&apos; node (the node that has the &apos;right&apos; state).</terms:description>
         <rdfs:label>has_Right_Node</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1167,7 +1167,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000040"/>
-        <dc:description>Description of a model of transformations.</dc:description>
+        <terms:description>Description of a model of transformations.</terms:description>
         <rdfs:comment>This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.</rdfs:comment>
         <rdfs:label>ModelDescription</rdfs:label>
     </owl:Class>
@@ -1277,7 +1277,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000039"/>
-        <dc:description>This concept is tied to the verbally ambiguous &apos;gap&apos; concept and to the use of a gap character (often the en dash &apos;-&apos;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</dc:description>
+        <terms:description>This concept is tied to the verbally ambiguous &apos;gap&apos; concept and to the use of a gap character (often the en dash &apos;-&apos;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</terms:description>
         <rdfs:comment>This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.</rdfs:comment>
         <rdfs:label>Generic_State</rdfs:label>
     </owl:Class>
@@ -1349,7 +1349,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000104"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A positional coordinate giving the source of a character state, used for molecular sequences.</dc:description>
+        <terms:description>A positional coordinate giving the source of a character state, used for molecular sequences.</terms:description>
         <rdfs:comment>drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on</rdfs:comment>
         <rdfs:label>DatumCoordinate</rdfs:label>
     </owl:Class>
@@ -1370,7 +1370,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000024">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
-        <dc:description>&apos;Branch&apos; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.</dc:description>
+        <terms:description>&apos;Branch&apos; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.</terms:description>
         <rdfs:label>Branch</rdfs:label>
     </owl:Class>
     
@@ -1390,7 +1390,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <dc:description>Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.</dc:description>
+        <terms:description>Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.</terms:description>
         <rdfs:label>CharacterStateDataMatrixAnnotation</rdfs:label>
     </owl:Class>
     
@@ -1468,7 +1468,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision).</dc:description>
+        <terms:description>This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision).</terms:description>
         <rdfs:label>Continuous</rdfs:label>
     </owl:Class>
     
@@ -1524,7 +1524,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000040">
-        <dc:description>The base class of annotations in CDAO.</dc:description>
+        <terms:description>The base class of annotations in CDAO.</terms:description>
         <rdfs:comment>Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>
         <rdfs:label>CDAOAnnotation</rdfs:label>
     </owl:Class>
@@ -1620,7 +1620,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.</dc:description>
+        <terms:description>The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.</terms:description>
         <rdfs:comment>Its possible that this should not be classed as an &apos;annotation&apos; since it contains data rather than meta-data.</rdfs:comment>
         <rdfs:label>EdgeLength</rdfs:label>
     </owl:Class>
@@ -1734,7 +1734,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix</dc:description>
+        <terms:description>A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix</terms:description>
         <rdfs:label>CharacterStateDataMatrix</rdfs:label>
     </owl:Class>
     
@@ -1987,7 +1987,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000076">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000034"/>
-        <dc:description>This class will be declared equivalent ot the amino acid class description imported</dc:description>
+        <terms:description>This class will be declared equivalent ot the amino acid class description imported</terms:description>
         <rdfs:label>AminoAcidResidue</rdfs:label>
     </owl:Class>
     
@@ -2024,7 +2024,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000136"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.</dc:description>
+        <terms:description>A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.</terms:description>
         <rdfs:label>CompoundCharacter</rdfs:label>
     </owl:Class>
     
@@ -2166,7 +2166,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000091 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000091">
-        <dc:description>The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.</dc:description>
+        <terms:description>The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.</terms:description>
         <rdfs:label>CharacterStateDomain</rdfs:label>
     </owl:Class>
     
@@ -2275,7 +2275,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid.</dc:description>
+        <terms:description>The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid.</terms:description>
         <rdfs:label>CharacterStateDatum</rdfs:label>
     </owl:Class>
     
@@ -2297,7 +2297,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &apos;branch&apos;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &apos;split&apos; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</dc:description>
+        <terms:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &apos;branch&apos;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &apos;split&apos; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</terms:description>
         <rdfs:label>Edge</rdfs:label>
     </owl:Class>
     
@@ -2367,7 +2367,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000104">
-        <dc:description>A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system.</dc:description>
+        <terms:description>A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system.</terms:description>
         <rdfs:label>CoordinateSystem</rdfs:label>
     </owl:Class>
     
@@ -2520,7 +2520,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000118">
-        <dc:description>The class is used to describe colletions of phylogenetic data elements. Examples include sets of trees for annotating consensus tree provenance, and sets of characters or higher order grouping (e.g., groups of groups of characters) that extends the CharSet block of NEXUS.</dc:description>
+        <terms:description>The class is used to describe colletions of phylogenetic data elements. Examples include sets of trees for annotating consensus tree provenance, and sets of characters or higher order grouping (e.g., groups of groups of characters) that extends the CharSet block of NEXUS.</terms:description>
         <rdfs:label>SetOfThings</rdfs:label>
     </owl:Class>
     
@@ -2547,7 +2547,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A set of ordered states, typically the residues in a macromolecular sequence.</dc:description>
+        <terms:description>A set of ordered states, typically the residues in a macromolecular sequence.</terms:description>
         <rdfs:label>Sequence</rdfs:label>
     </owl:Class>
     
@@ -2600,7 +2600,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000126">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000066"/>
-        <dc:description>Link to an externally defined taxonomic hierarchy.</dc:description>
+        <terms:description>Link to an externally defined taxonomic hierarchy.</terms:description>
         <rdfs:label>TaxonomicLink</rdfs:label>
     </owl:Class>
     
@@ -2712,7 +2712,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000138 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000138">
-        <dc:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &apos;OTU&apos; and &apos;HTU&apos;.</dc:description>
+        <terms:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &apos;OTU&apos; and &apos;HTU&apos;.</terms:description>
         <rdfs:label>TU</rdfs:label>
     </owl:Class>
     
@@ -2738,7 +2738,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <dc:description>A directed edge. Rooted trees have directed edges. The direction is specified by way of the parent and child relationships of nodes that the edge connects.</dc:description>
+        <terms:description>A directed edge. Rooted trees have directed edges. The direction is specified by way of the parent and child relationships of nodes that the edge connects.</terms:description>
         <rdfs:label>DirectedEdge</rdfs:label>
     </owl:Class>
     

@@ -339,7 +339,6 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000157">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000193"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000040"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>is_annotation_of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -408,7 +407,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000164">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Associates a TU to some external taxonomy reference.</rdfs:comment>
         <rdfs:label>has_External_Reference</rdfs:label>
     </owl:ObjectProperty>
@@ -726,8 +724,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000190">
         <owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of.</dc:description>
         <rdfs:label>belongs_to</rdfs:label>
     </owl:ObjectProperty>
@@ -1149,7 +1145,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000006">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
@@ -1347,7 +1342,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000022">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000165"/>
@@ -1530,7 +1524,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000040">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>The base class of annotations in CDAO.</dc:description>
         <rdfs:comment>Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>
         <rdfs:label>CDAOAnnotation</rdfs:label>
@@ -1723,7 +1716,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000056 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000056">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000142"/>
@@ -1844,7 +1836,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000063 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000063">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>EdgeLengthType</rdfs:label>
     </owl:Class>
     
@@ -2270,7 +2261,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000098 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000098">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000191"/>
@@ -2294,7 +2284,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000099 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000099">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000193"/>
@@ -2378,7 +2367,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000104">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system.</dc:description>
         <rdfs:label>CoordinateSystem</rdfs:label>
     </owl:Class>
@@ -2541,7 +2529,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000120 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000120">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
@@ -2725,7 +2712,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000138 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000138">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &apos;OTU&apos; and &apos;HTU&apos;.</dc:description>
         <rdfs:label>TU</rdfs:label>
     </owl:Class>
@@ -2761,7 +2747,6 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000140 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000140">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
@@ -2802,81 +2787,73 @@
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000220 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000220">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000220">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
         <rdfs:label>dA</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000221 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000221">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000221">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
         <rdfs:label>absent</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000222 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000222">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000222">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
         <rdfs:label>unknown</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000223 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000223">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000223">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
         <rdfs:label>gap</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000224 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000224">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000224">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
         <rdfs:label>dG</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000225 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000225">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000225">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000057"/>
         <rdfs:label>rU</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000226 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000226">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000226">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
         <rdfs:label>dC</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CDAO_0000227 -->
 
-    <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000227">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CDAO_0000227">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
         <rdfs:label>dT</rdfs:label>
-    </owl:Thing>
+    </owl:NamedIndividual>
     
 
 

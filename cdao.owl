@@ -14,9 +14,9 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cdao.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cdao/2022-11-30/cdao.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
-        <dc:coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
+        <dc:coverage>Comparison of two or more biological entities of the same class when the similarities and differences of the entities are treated explicitly as the product of an evolutionary process of descent with modification.</dc:coverage>
         <dc:creator xml:lang="en">CDAO Team</dc:creator>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
+        <dc:description>The Comparative Data Analysis Ontology (CDAO) provides a framework for understanding data in the context of evolutionary-comparative analysis.  This comparative approach is used commonly in bioinformatics and other areas of biology to draw inferences from a comparison of differently evolved versions of something, such as differently evolved versions of a protein.  In this kind of analysis, the things-to-be-compared typically are classes called &apos;OTUs&apos; (Operational Taxonomic Units).  The OTUs can represent biological species, but also may be drawn from higher or lower in a biological hierarchy, anywhere from molecules to communities.  The features to be compared among OTUs are rendered in an entity-attribute-value model sometimes referred to as the &apos;character-state data model&apos;.  For a given character, such as &apos;beak length&apos;, each OTU has a state, such as &apos;short&apos; or &apos;long&apos;.  The differences between states are understood to emerge by a historical process of evolutionary transitions in state, represented by a model (or rules) of transitions along with a phylogenetic tree.  CDAO provides the framework for representing OTUs, trees, transformations, and characters.  The representation of characters and transformations may depend on imported ontologies for a specific type of character.</dc:description>
         <dc:subject xml:lang="en">comparative analysis; comparative data analysis; evolutionary comparative analysis; evolution;  phylogeny; phylogenetics</dc:subject>
         <dc:title xml:lang="en">Comparative Data Analysis Ontology</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
@@ -112,8 +112,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a character data matrix with a character (a column) represented in the matrix.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Character</rdfs:label>
+        <dc:description>This property associates a character data matrix with a character (a column) represented in the matrix.</dc:description>
+        <rdfs:label>has_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -126,7 +126,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <dc:description>The property links a Node to the Edge it belongs to in the child position.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Edge_as_Child</rdfs:label>
+        <rdfs:label>belongs_to_Edge_as_Child</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -140,7 +140,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>The property links a node to any of the other nodes that are its ancestors in a rooted tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Ancestor</rdfs:label>
+        <rdfs:label>has_Ancestor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -158,8 +158,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Nucleotide_State</rdfs:label>
+        <dc:description>This property associates a nucleotide character-state instance with a state value from the domain of nucleotide states.</dc:description>
+        <rdfs:label>has_Nucleotide_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -171,7 +171,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
         <dc:description>The property links a Node to one of the edges that are incident on such node.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Edge</rdfs:label>
+        <rdfs:label>belongs_to_Edge</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -189,7 +189,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000056"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Character_State_Data_Matrix</rdfs:label>
+        <rdfs:label>belongs_to_Character_State_Data_Matrix</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -203,7 +203,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>The property links a rooted tree to the specific node that represents the unique root of the tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Root</rdfs:label>
+        <rdfs:label>has_Root</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -220,7 +220,7 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000209"/>
         </owl:propertyChainAxiom>
         <dc:description>The property links a node to a node that is an immediate descendant in the tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Child</rdfs:label>
+        <rdfs:label>has_Child</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -238,8 +238,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The property that relates a coordinate list to the first item in the list.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_First_Coordinate_Item</rdfs:label>
+        <dc:description>The property that relates a coordinate list to the first item in the list.</dc:description>
+        <rdfs:label>has_First_Coordinate_Item</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -250,7 +250,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Coordinate</rdfs:label>
+        <rdfs:label>has_Coordinate</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -262,7 +262,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000068"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Continuous_Character</rdfs:label>
+        <rdfs:label>belongs_to_Continuous_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -280,8 +280,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a character to a state datum for the character.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Datum</rdfs:label>
+        <dc:description>This property relates a character to a state datum for the character.</dc:description>
+        <rdfs:label>has_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -299,7 +299,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000008"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Standard_Datum</rdfs:label>
+        <rdfs:label>has_Standard_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -310,7 +310,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
         <dc:description>This property links two networks where the latter is a substructure of the former</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subtree_of</rdfs:label>
+        <rdfs:label>subtree_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,8 +328,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a amino acid character-state instance with a state value from the domain of amino acid states.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Amino_Acid_State</rdfs:label>
+        <dc:description>This property associates a amino acid character-state instance with a state value from the domain of amino acid states.</dc:description>
+        <rdfs:label>has_Amino_Acid_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -340,7 +340,7 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000193"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000040"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_annotation_of</rdfs:label>
+        <rdfs:label>is_annotation_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -349,7 +349,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000158">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000206"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_RNA_Datum</rdfs:label>
+        <rdfs:label>has_RNA_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -360,8 +360,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a transformation to a &apos;left&apos; state (the state associated with the &apos;left&apos; node).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Left_State</rdfs:label>
+        <dc:description>This property relates a transformation to a &apos;left&apos; state (the state associated with the &apos;left&apos; node).</dc:description>
+        <rdfs:label>has_Left_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -369,7 +369,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000160 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000160">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precedes</rdfs:label>
+        <rdfs:label>precedes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -377,7 +377,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000161 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000161">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exclude</rdfs:label>
+        <rdfs:label>exclude</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -389,7 +389,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>Property that associates to each Edge the Nodes it connects.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Node</rdfs:label>
+        <rdfs:label>has_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -399,7 +399,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000163">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000059"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nca_node_of</rdfs:label>
+        <rdfs:label>nca_node_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -410,7 +410,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Associates a TU to some external taxonomy reference.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_External_Reference</rdfs:label>
+        <rdfs:label>has_External_Reference</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -420,8 +420,8 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000165">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000104"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property links a coordinate to the coordinate system it references.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Coordinate_System</rdfs:label>
+        <dc:description>This property links a coordinate to the coordinate system it references.</dc:description>
+        <rdfs:label>has_Coordinate_System</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -433,7 +433,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000094"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Nucleotide_Character</rdfs:label>
+        <rdfs:label>belongs_to_Nucleotide_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -443,7 +443,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000167">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000167"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connects_to</rdfs:label>
+        <rdfs:label>connects_to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -461,8 +461,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000112"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Amino_Acid_Datum</rdfs:label>
+        <dc:description>This property relates an amino acid character (a column in a protein sequence alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
+        <rdfs:label>has_Amino_Acid_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -471,8 +471,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000169">
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hereditary_change_of</rdfs:label>
+        <dc:description>This property relates a type of evolutionary change (an Edge_Transformation) to the character that undergoes the change.  The change is a transformation_of the affected character.</dc:description>
+        <rdfs:label>hereditary_change_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -490,8 +490,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000136"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Compound_Datum</rdfs:label>
+        <dc:description>This property relates a compound character (a character with some states that are subdividable) to a state datum for the character.</dc:description>
+        <rdfs:label>has_Compound_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -502,7 +502,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000080"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000059"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Descendants</rdfs:label>
+        <rdfs:label>has_Descendants</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -512,7 +512,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000172">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000030"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reconciliation_of</rdfs:label>
+        <rdfs:label>reconciliation_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -524,7 +524,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000112"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000131"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Amino_Acid_Character</rdfs:label>
+        <rdfs:label>belongs_to_Amino_Acid_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -537,7 +537,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>A property that links a node to any of its descendants in a rooted tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Descendant</rdfs:label>
+        <rdfs:label>has_Descendant</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -548,8 +548,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000184"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000031"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a character-state instance with a state value on a continuous numeric scale.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Continuous_State</rdfs:label>
+        <dc:description>This property associates a character-state instance with a state value on a continuous numeric scale.</dc:description>
+        <rdfs:label>has_Continuous_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -558,7 +558,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000176">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Type</rdfs:label>
+        <rdfs:label>has_Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -571,7 +571,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <dc:description>The property links a Node to one of the Edges where the node appears in the parent position (i.e., closer to the root).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Edge_as_Parent</rdfs:label>
+        <rdfs:label>belongs_to_Edge_as_Parent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -581,7 +581,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000178">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000194"/>
         <dc:description>Generic &apos;has&apos; property.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has</rdfs:label>
+        <rdfs:label>has</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -597,7 +597,7 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CDAO_0000201"/>
         </owl:propertyChainAxiom>
         <dc:description>The property that links a node to its unique parent in a rooted tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Parent</rdfs:label>
+        <rdfs:label>has_Parent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -608,7 +608,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000205"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000136"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000078"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Compound_Character</rdfs:label>
+        <rdfs:label>belongs_to_Compound_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -618,8 +618,8 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000181">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homologous_to</rdfs:label>
+        <dc:description>This propery relates different instances of the same character, including the case when the states of the character differ (e.g., large_beak of beak_size_character of TU A is homologous_to small_beak of beak_size_character of TU B).</dc:description>
+        <rdfs:label>homologous_to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -629,8 +629,8 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000182">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a transformation to the components that compose it.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Change_Component</rdfs:label>
+        <dc:description>This property relates a transformation to the components that compose it.</dc:description>
+        <rdfs:label>has_Change_Component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -639,7 +639,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000183">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000153"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Categorical_Datum</rdfs:label>
+        <rdfs:label>has_Categorical_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -650,8 +650,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_State</rdfs:label>
+        <dc:description>This property associates a character-state instance with its state value, e.g., a state value expressed in terms of an imported domain ontology.</dc:description>
+        <rdfs:label>has_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -662,8 +662,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a transformation to a &apos;left&apos; node (the node that has the &apos;left&apos; state).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Left_Node</rdfs:label>
+        <dc:description>This property relates a transformation to a &apos;left&apos; node (the node that has the &apos;left&apos; state).</dc:description>
+        <rdfs:label>has_Left_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -674,8 +674,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a transformation to a &apos;right&apos; state (the state associated with the &apos;right&apos; node).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Right_State</rdfs:label>
+        <dc:description>This property relates a transformation to a &apos;right&apos; state (the state associated with the &apos;right&apos; node).</dc:description>
+        <rdfs:label>has_Right_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -687,8 +687,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">represents_TU</rdfs:label>
+        <dc:description>This property relates a TU or taxonomic unit (typically associated with character data) to a phylogenetic history (Tree).</dc:description>
+        <rdfs:label>represents_TU</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -698,7 +698,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000188">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000161"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exclude_Node</rdfs:label>
+        <rdfs:label>exclude_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -716,8 +716,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a compound character-state instance with its compound state value.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Compound_State</rdfs:label>
+        <dc:description>This property associates a compound character-state instance with its compound state value.</dc:description>
+        <rdfs:label>has_Compound_State</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -729,7 +729,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>Generic property that links a concept to another concept it is a constituent of. The property is a synonym of part_of.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to</rdfs:label>
+        <rdfs:label>belongs_to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -741,8 +741,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a character-state datum to its TU.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_TU</rdfs:label>
+        <dc:description>This property relates a character-state datum to its TU.</dc:description>
+        <rdfs:label>belongs_to_TU</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -760,7 +760,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Network</rdfs:label>
+        <rdfs:label>belongs_to_Network</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -771,7 +771,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000040"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Annotation</rdfs:label>
+        <rdfs:label>has_Annotation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -779,7 +779,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000194 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000194">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
+        <rdfs:label>part_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -797,8 +797,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000002"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Nucleotide_Datum</rdfs:label>
+        <dc:description>This property relates a nucleotide character (a column in a nucleotide alignment) to a state datum for the character (an individual cell in the alignment column).</dc:description>
+        <rdfs:label>has_Nucleotide_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -808,8 +808,8 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000196">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a TU to a node that represents it in a network.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">represented_by_Node</rdfs:label>
+        <dc:description>This property relates a TU to a node that represents it in a network.</dc:description>
+        <rdfs:label>represented_by_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -820,8 +820,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000092"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000092"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The property that relates a coordinate list to the item in the list beyond the first item.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Remaining_Coordinate_List</rdfs:label>
+        <dc:description>The property that relates a coordinate list to the item in the list beyond the first item.</dc:description>
+        <rdfs:label>has_Remaining_Coordinate_List</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -831,7 +831,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000198">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000118"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Element</rdfs:label>
+        <rdfs:label>has_Element</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -841,7 +841,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000199">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000161"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000070"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exclude_Subtree</rdfs:label>
+        <rdfs:label>exclude_Subtree</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -859,7 +859,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Tree</rdfs:label>
+        <rdfs:label>belongs_to_Tree</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -872,7 +872,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>Associates to a Directed Edge the Node that is in the parent position in the edge (i.e., the node touched by the edge and closer to the root of the tree)</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Parent_Node</rdfs:label>
+        <rdfs:label>has_Parent_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -883,7 +883,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000004"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Lineage_node</rdfs:label>
+        <rdfs:label>has_Lineage_node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -894,7 +894,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000190"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Tree_as_Root</rdfs:label>
+        <rdfs:label>belongs_to_Tree_as_Root</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -905,7 +905,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Hereditary_Change</rdfs:label>
+        <rdfs:label>has_Hereditary_Change</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -917,7 +917,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs_to_Character</rdfs:label>
+        <rdfs:label>belongs_to_Character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -935,7 +935,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000050"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Molecular_Datum</rdfs:label>
+        <rdfs:label>has_Molecular_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -953,8 +953,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a continuous character to a state datum for the character.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Continuous_Datum</rdfs:label>
+        <dc:description>This property relates a continuous character to a state datum for the character.</dc:description>
+        <rdfs:label>has_Continuous_Datum</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -965,8 +965,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property associates a character data matrix with a TU (a row) represented in the matrix.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_TU</rdfs:label>
+        <dc:description>This property associates a character data matrix with a TU (a row) represented in the matrix.</dc:description>
+        <rdfs:label>has_TU</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -979,7 +979,7 @@
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
         <dc:description>The property associates to a Directed Edge the Node that is in the child position in the edge, i.e., the node touched by the edge and closer to the leaves of the tree.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Child_Node</rdfs:label>
+        <rdfs:label>has_Child_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -990,8 +990,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000182"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property relates a transformation to a &apos;right&apos; node (the node that has the &apos;right&apos; state).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Right_Node</rdfs:label>
+        <dc:description>This property relates a transformation to a &apos;right&apos; node (the node that has the &apos;right&apos; state).</dc:description>
+        <rdfs:label>has_Right_Node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1011,7 +1011,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000211">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Precision</rdfs:label>
+        <rdfs:label>has_Precision</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1021,7 +1021,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000212">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000003"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Point_Coordinate_Value</rdfs:label>
+        <rdfs:label>has_Point_Coordinate_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1031,7 +1031,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000213">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000215"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Int_Value</rdfs:label>
+        <rdfs:label>has_Int_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1040,7 +1040,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000214">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Support_Value</rdfs:label>
+        <rdfs:label>has_Support_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1048,7 +1048,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000215 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000215">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Value</rdfs:label>
+        <rdfs:label>has_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1057,7 +1057,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000216">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Uncertainty_Factor</rdfs:label>
+        <rdfs:label>has_Uncertainty_Factor</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1067,7 +1067,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000217">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000095"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Range_End_Value</rdfs:label>
+        <rdfs:label>has_Range_End_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1077,7 +1077,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000218">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000215"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Float_Value</rdfs:label>
+        <rdfs:label>has_Float_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1087,7 +1087,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000219">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000095"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_Range_Start_Value</rdfs:label>
+        <rdfs:label>has_Range_Start_Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1107,7 +1107,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000050"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesoxiRibonucleotideResidueStateDatum</rdfs:label>
+        <rdfs:label>DesoxiRibonucleotideResidueStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -1116,7 +1116,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoordinatePoint</rdfs:label>
+        <rdfs:label>CoordinatePoint</rdfs:label>
     </owl:Class>
     
 
@@ -1131,7 +1131,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lineage</rdfs:label>
+        <rdfs:label>Lineage</rdfs:label>
     </owl:Class>
     
 
@@ -1140,7 +1140,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylo4Tree</rdfs:label>
+        <rdfs:label>Phylo4Tree</rdfs:label>
     </owl:Class>
     
 
@@ -1162,7 +1162,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network</rdfs:label>
+        <rdfs:label>Network</rdfs:label>
     </owl:Class>
     
 
@@ -1173,7 +1173,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000040"/>
         <dc:description>Description of a model of transformations.</dc:description>
         <rdfs:comment>This is a non-computible description of a model, not the fully specified mathematical model, which typically relates the probability of a transformation to various parameters.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ModelDescription</rdfs:label>
+        <rdfs:label>ModelDescription</rdfs:label>
     </owl:Class>
     
 
@@ -1182,7 +1182,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000089"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StandardStateDatum</rdfs:label>
+        <rdfs:label>StandardStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -1191,7 +1191,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000063"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharacterLengthType</rdfs:label>
+        <rdfs:label>ContinuousCharacterLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1200,7 +1200,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000009"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharBayesianLengthType</rdfs:label>
+        <rdfs:label>ContinuousCharBayesianLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1209,7 +1209,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEXUSTreeBlock</rdfs:label>
+        <rdfs:label>NEXUSTreeBlock</rdfs:label>
     </owl:Class>
     
 
@@ -1245,7 +1245,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000088"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RootedTree</rdfs:label>
+        <rdfs:label>RootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -1254,7 +1254,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000020"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kimura2Parameters</rdfs:label>
+        <rdfs:label>Kimura2Parameters</rdfs:label>
     </owl:Class>
     
 
@@ -1263,7 +1263,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000044"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TreeProcedure</rdfs:label>
+        <rdfs:label>TreeProcedure</rdfs:label>
     </owl:Class>
     
 
@@ -1283,7 +1283,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000039"/>
         <dc:description>This concept is tied to the verbally ambiguous &apos;gap&apos; concept and to the use of a gap character (often the en dash &apos;-&apos;) in text representations of sequence alignments. In general, this represents the absence of any positively diagnosed Character-State. As such, the gap may be interpreted as an additional Character-State, as the absence of the Character, or as an unknown value.  In some cases it is helpful to separate these.</dc:description>
         <rdfs:comment>This class should be renamed.  These are not generic states but non-concrete states including gap, unknown and missing.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic_State</rdfs:label>
+        <rdfs:label>Generic_State</rdfs:label>
     </owl:Class>
     
 
@@ -1292,7 +1292,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000070"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnrootedSubtree</rdfs:label>
+        <rdfs:label>UnrootedSubtree</rdfs:label>
     </owl:Class>
     
 
@@ -1301,7 +1301,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnresolvedTree</rdfs:label>
+        <rdfs:label>UnresolvedTree</rdfs:label>
     </owl:Class>
     
 
@@ -1311,7 +1311,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000018">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000130"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BifurcatingTree</rdfs:label>
+        <rdfs:label>BifurcatingTree</rdfs:label>
     </owl:Class>
     
 
@@ -1320,7 +1320,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousStateDatum</rdfs:label>
+        <rdfs:label>ContinuousStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -1329,7 +1329,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000007"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SubstitutionModel</rdfs:label>
+        <rdfs:label>SubstitutionModel</rdfs:label>
     </owl:Class>
     
 
@@ -1338,7 +1338,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000021">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000020"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JukesCantor</rdfs:label>
+        <rdfs:label>JukesCantor</rdfs:label>
     </owl:Class>
     
 
@@ -1356,7 +1356,7 @@
         </rdfs:subClassOf>
         <dc:description>A positional coordinate giving the source of a character state, used for molecular sequences.</dc:description>
         <rdfs:comment>drawing from seqloc categories from NCBI at http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/SEQLOC.HTML#_Seq-loc:_Locations_on</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DatumCoordinate</rdfs:label>
+        <rdfs:label>DatumCoordinate</rdfs:label>
     </owl:Class>
     
 
@@ -1366,7 +1366,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000017"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnresolvedRootedTree</rdfs:label>
+        <rdfs:label>UnresolvedRootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -1376,7 +1376,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000024">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000099"/>
         <dc:description>&apos;Branch&apos; is the domain-specific synonym for an edge of a (Phylogenetic) Tree or Network.  Branches may have properties such as length and degree of support.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branch</rdfs:label>
+        <rdfs:label>Branch</rdfs:label>
     </owl:Class>
     
 
@@ -1396,7 +1396,7 @@
             </owl:Class>
         </rdfs:subClassOf>
         <dc:description>Meta-information associated with a character matrix, such as, for the case of a sequence alignment, the method of alignment.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CharacterStateDataMatrixAnnotation</rdfs:label>
+        <rdfs:label>CharacterStateDataMatrixAnnotation</rdfs:label>
     </owl:Class>
     
 
@@ -1417,7 +1417,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AncestralNode</rdfs:label>
+        <rdfs:label>AncestralNode</rdfs:label>
     </owl:Class>
     
 
@@ -1427,7 +1427,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000017"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000088"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnresolvedUnrootedTree</rdfs:label>
+        <rdfs:label>UnresolvedUnrootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -1442,7 +1442,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UncertainStateDomain</rdfs:label>
+        <rdfs:label>UncertainStateDomain</rdfs:label>
     </owl:Class>
     
 
@@ -1458,7 +1458,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReconcileTree</rdfs:label>
+        <rdfs:label>ReconcileTree</rdfs:label>
     </owl:Class>
     
 
@@ -1474,7 +1474,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>This class describes a continuous value. The link to the actual float value is through the property has_Value. It could have also other properties attached (e.g., has_Precision).</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continuous</rdfs:label>
+        <rdfs:label>Continuous</rdfs:label>
     </owl:Class>
     
 
@@ -1483,7 +1483,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000032">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000025"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlignmentProcedure</rdfs:label>
+        <rdfs:label>AlignmentProcedure</rdfs:label>
     </owl:Class>
     
 
@@ -1494,7 +1494,7 @@
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000124"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000026"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000042"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dichotomy</rdfs:label>
+        <rdfs:label>Dichotomy</rdfs:label>
     </owl:Class>
     
 
@@ -1503,7 +1503,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000039"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular</rdfs:label>
+        <rdfs:label>Molecular</rdfs:label>
     </owl:Class>
     
 
@@ -1512,7 +1512,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000035">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000009"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharParsimonyLengthType</rdfs:label>
+        <rdfs:label>ContinuousCharParsimonyLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1521,7 +1521,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000039">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical</rdfs:label>
+        <rdfs:label>Categorical</rdfs:label>
     </owl:Class>
     
 
@@ -1532,7 +1532,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>The base class of annotations in CDAO.</dc:description>
         <rdfs:comment>Its possible that this base class should be discarded and that annotations should inherit from an imported base class if one exists.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDAOAnnotation</rdfs:label>
+        <rdfs:label>CDAOAnnotation</rdfs:label>
     </owl:Class>
     
 
@@ -1546,7 +1546,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">originationEvent</rdfs:label>
+        <rdfs:label>originationEvent</rdfs:label>
     </owl:Class>
     
 
@@ -1562,7 +1562,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000026"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000124"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polytomy</rdfs:label>
+        <rdfs:label>Polytomy</rdfs:label>
     </owl:Class>
     
 
@@ -1577,7 +1577,7 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PolymorphicStateDomain</rdfs:label>
+        <rdfs:label>PolymorphicStateDomain</rdfs:label>
     </owl:Class>
     
 
@@ -1596,7 +1596,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TreeAnnotation</rdfs:label>
+        <rdfs:label>TreeAnnotation</rdfs:label>
     </owl:Class>
     
 
@@ -1605,7 +1605,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000039"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</rdfs:label>
+        <rdfs:label>Standard</rdfs:label>
     </owl:Class>
     
 
@@ -1628,7 +1628,7 @@
         </rdfs:subClassOf>
         <dc:description>The length of an edge (branch) of a Tree or Network, typically in units of evolutionary changes in character-state per character.</dc:description>
         <rdfs:comment>Its possible that this should not be classed as an &apos;annotation&apos; since it contains data rather than meta-data.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EdgeLength</rdfs:label>
+        <rdfs:label>EdgeLength</rdfs:label>
     </owl:Class>
     
 
@@ -1637,7 +1637,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000047">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000034"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RibonucleotideResidue</rdfs:label>
+        <rdfs:label>RibonucleotideResidue</rdfs:label>
     </owl:Class>
     
 
@@ -1647,7 +1647,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000048">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000129"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clade</rdfs:label>
+        <rdfs:label>Clade</rdfs:label>
     </owl:Class>
     
 
@@ -1656,7 +1656,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000100"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiscreteCharParsimonyLengthType</rdfs:label>
+        <rdfs:label>DiscreteCharParsimonyLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1665,7 +1665,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000089"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MolecularStateDatum</rdfs:label>
+        <rdfs:label>MolecularStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -1681,7 +1681,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000127"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PolyphyleticGroup</rdfs:label>
+        <rdfs:label>PolyphyleticGroup</rdfs:label>
     </owl:Class>
     
 
@@ -1690,7 +1690,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000107"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NexusDataBlock</rdfs:label>
+        <rdfs:label>NexusDataBlock</rdfs:label>
     </owl:Class>
     
 
@@ -1705,7 +1705,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000026"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BranchingNode</rdfs:label>
+        <rdfs:label>BranchingNode</rdfs:label>
     </owl:Class>
     
 
@@ -1714,7 +1714,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000055">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000039"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compound</rdfs:label>
+        <rdfs:label>Compound</rdfs:label>
     </owl:Class>
     
 
@@ -1742,7 +1742,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A matrix of character-state data, typically containing observed data, though in some cases the states in the matrix might be simulated or hypothetical. Synonyms: character Data matrix, character-state matrix</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CharacterStateDataMatrix</rdfs:label>
+        <rdfs:label>CharacterStateDataMatrix</rdfs:label>
     </owl:Class>
     
 
@@ -1751,7 +1751,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000050"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RibonucleotideResidueStateDatum</rdfs:label>
+        <rdfs:label>RibonucleotideResidueStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -1760,7 +1760,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000063"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeCalibratedLengthType</rdfs:label>
+        <rdfs:label>TimeCalibratedLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1779,7 +1779,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetOfNodes</rdfs:label>
+        <rdfs:label>SetOfNodes</rdfs:label>
     </owl:Class>
     
 
@@ -1795,7 +1795,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000118"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MRCANode</rdfs:label>
+        <rdfs:label>MRCANode</rdfs:label>
     </owl:Class>
     
 
@@ -1804,7 +1804,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000107"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FASTADataMatrix</rdfs:label>
+        <rdfs:label>FASTADataMatrix</rdfs:label>
     </owl:Class>
     
 
@@ -1835,7 +1835,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evolutionaryTransition</rdfs:label>
+        <rdfs:label>evolutionaryTransition</rdfs:label>
     </owl:Class>
     
 
@@ -1844,7 +1844,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000063">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EdgeLengthType</rdfs:label>
+        <rdfs:label>EdgeLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -1853,7 +1853,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000064">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cladogeneticChange</rdfs:label>
+        <rdfs:label>cladogeneticChange</rdfs:label>
     </owl:Class>
     
 
@@ -1862,7 +1862,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000065">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anageneticChange</rdfs:label>
+        <rdfs:label>anageneticChange</rdfs:label>
     </owl:Class>
     
 
@@ -1881,7 +1881,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUAnnotation</rdfs:label>
+        <rdfs:label>TUAnnotation</rdfs:label>
     </owl:Class>
     
 
@@ -1890,7 +1890,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhyloTree</rdfs:label>
+        <rdfs:label>PhyloTree</rdfs:label>
     </owl:Class>
     
 
@@ -1911,7 +1911,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000019"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharacter</rdfs:label>
+        <rdfs:label>ContinuousCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -1920,7 +1920,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000069">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHYLIPTree</rdfs:label>
+        <rdfs:label>PHYLIPTree</rdfs:label>
     </owl:Class>
     
 
@@ -1935,7 +1935,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtree</rdfs:label>
+        <rdfs:label>Subtree</rdfs:label>
     </owl:Class>
     
 
@@ -1949,8 +1949,8 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traits shown to be relevant for phylogenetic classification</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character</rdfs:label>
+        <rdfs:comment>Traits shown to be relevant for phylogenetic classification</rdfs:comment>
+        <rdfs:label>Character</rdfs:label>
     </owl:Class>
     
 
@@ -1959,7 +1959,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GalledTree</rdfs:label>
+        <rdfs:label>GalledTree</rdfs:label>
     </owl:Class>
     
 
@@ -1968,7 +1968,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000073">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpeciesTree</rdfs:label>
+        <rdfs:label>SpeciesTree</rdfs:label>
     </owl:Class>
     
 
@@ -1977,7 +1977,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000044"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TreeFormat</rdfs:label>
+        <rdfs:label>TreeFormat</rdfs:label>
     </owl:Class>
     
 
@@ -1986,7 +1986,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000111"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StandardCharacter</rdfs:label>
+        <rdfs:label>StandardCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -1996,7 +1996,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000076">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000034"/>
         <dc:description>This class will be declared equivalent ot the amino acid class description imported</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AminoAcidResidue</rdfs:label>
+        <rdfs:label>AminoAcidResidue</rdfs:label>
     </owl:Class>
     
 
@@ -2005,7 +2005,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000077">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000064"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geneDuplication</rdfs:label>
+        <rdfs:label>geneDuplication</rdfs:label>
     </owl:Class>
     
 
@@ -2033,7 +2033,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A character that could be divided into separate characters but is not due to the non-independence of changes that would result, e.g., as in the case of a subsequence that is either present or absent as a block.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompoundCharacter</rdfs:label>
+        <rdfs:label>CompoundCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2042,7 +2042,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIMMAPTree</rdfs:label>
+        <rdfs:label>SIMMAPTree</rdfs:label>
     </owl:Class>
     
 
@@ -2062,7 +2062,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CommonAncestralNode</rdfs:label>
+        <rdfs:label>CommonAncestralNode</rdfs:label>
     </owl:Class>
     
 
@@ -2071,7 +2071,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000081">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000074"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewickTree</rdfs:label>
+        <rdfs:label>NewickTree</rdfs:label>
     </owl:Class>
     
 
@@ -2080,7 +2080,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000082">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000063"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeProportionalLengthType</rdfs:label>
+        <rdfs:label>TimeProportionalLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2089,7 +2089,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000083">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000100"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiscreteCharDistanceLengthType</rdfs:label>
+        <rdfs:label>DiscreteCharDistanceLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2104,7 +2104,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000108"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StarTree</rdfs:label>
+        <rdfs:label>StarTree</rdfs:label>
     </owl:Class>
     
 
@@ -2114,7 +2114,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000085">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000018"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000088"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FullyResolvedUnrootedTree</rdfs:label>
+        <rdfs:label>FullyResolvedUnrootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -2130,7 +2130,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000129"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParaphyleticGroup</rdfs:label>
+        <rdfs:label>ParaphyleticGroup</rdfs:label>
     </owl:Class>
     
 
@@ -2139,7 +2139,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000087">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000041"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geneticEvent</rdfs:label>
+        <rdfs:label>geneticEvent</rdfs:label>
     </owl:Class>
     
 
@@ -2148,7 +2148,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000088">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnrootedTree</rdfs:label>
+        <rdfs:label>UnrootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -2157,7 +2157,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000089">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000098"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CategoricalStateDatum</rdfs:label>
+        <rdfs:label>CategoricalStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -2166,7 +2166,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000090">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000100"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiscreteCharLikelihoodLengthType</rdfs:label>
+        <rdfs:label>DiscreteCharLikelihoodLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2175,7 +2175,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000091">
         <dc:description>The universe of possible states for a particular type of character, e.g., the states of an Amino_Acid character come from the Amino_Acid domain.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CharacterStateDomain</rdfs:label>
+        <rdfs:label>CharacterStateDomain</rdfs:label>
     </owl:Class>
     
 
@@ -2184,7 +2184,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000092">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoordinateList</rdfs:label>
+        <rdfs:label>CoordinateList</rdfs:label>
     </owl:Class>
     
 
@@ -2193,7 +2193,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000093">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000020"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GammaDistribution</rdfs:label>
+        <rdfs:label>GammaDistribution</rdfs:label>
     </owl:Class>
     
 
@@ -2214,7 +2214,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesoxiRibonucleotideResidueCharacter</rdfs:label>
+        <rdfs:label>DesoxiRibonucleotideResidueCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2223,7 +2223,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000095">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000022"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoordinateRange</rdfs:label>
+        <rdfs:label>CoordinateRange</rdfs:label>
     </owl:Class>
     
 
@@ -2232,7 +2232,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReticulateEvolution</rdfs:label>
+        <rdfs:label>ReticulateEvolution</rdfs:label>
     </owl:Class>
     
 
@@ -2261,7 +2261,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hereditaryChange</rdfs:label>
+        <rdfs:label>hereditaryChange</rdfs:label>
     </owl:Class>
     
 
@@ -2285,7 +2285,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The instance of a given character for a given TU.  Its state is an object property drawn from a particular character state domain, e.g., the state of an Amino_Acid_State_Datum is an object property drawn from the domain Amino_Acid.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CharacterStateDatum</rdfs:label>
+        <rdfs:label>CharacterStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -2308,7 +2308,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>An edge connecting two nodes in a (Phylogenetic) Tree or Network, also known as a &apos;branch&apos;.  Edges may have attributes such as length, degree of support, and direction.  An edge can be a surrogate for a &apos;split&apos; or bipartition, since each edge in a tree divides the terminal nodes into two sets.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edge</rdfs:label>
+        <rdfs:label>Edge</rdfs:label>
     </owl:Class>
     
 
@@ -2317,7 +2317,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000063"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiscreteCharacterLengthType</rdfs:label>
+        <rdfs:label>DiscreteCharacterLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2336,7 +2336,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EdgeAnnotation</rdfs:label>
+        <rdfs:label>EdgeAnnotation</rdfs:label>
     </owl:Class>
     
 
@@ -2360,7 +2360,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FullyResolvedRootedTree</rdfs:label>
+        <rdfs:label>FullyResolvedRootedTree</rdfs:label>
     </owl:Class>
     
 
@@ -2369,7 +2369,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000103">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000063"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GrafenLengthType</rdfs:label>
+        <rdfs:label>GrafenLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2379,7 +2379,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000104">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>A reference to an external coordinate system.  Coordinates for data must refer to some such external coordinate system.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoordinateSystem</rdfs:label>
+        <rdfs:label>CoordinateSystem</rdfs:label>
     </owl:Class>
     
 
@@ -2388,7 +2388,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000105">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000107"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBankDataMatrix</rdfs:label>
+        <rdfs:label>GenBankDataMatrix</rdfs:label>
     </owl:Class>
     
 
@@ -2397,7 +2397,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000025"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataMatrixFormat</rdfs:label>
+        <rdfs:label>DataMatrixFormat</rdfs:label>
     </owl:Class>
     
 
@@ -2421,7 +2421,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000140"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TerminalNode</rdfs:label>
+        <rdfs:label>TerminalNode</rdfs:label>
     </owl:Class>
     
 
@@ -2436,7 +2436,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000057"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RibonucleotideResidueCharacter</rdfs:label>
+        <rdfs:label>RibonucleotideResidueCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2445,7 +2445,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000110">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tree</rdfs:label>
+        <rdfs:label>Tree</rdfs:label>
     </owl:Class>
     
 
@@ -2454,7 +2454,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000111">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000071"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CategoricalCharacter</rdfs:label>
+        <rdfs:label>CategoricalCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2463,7 +2463,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000112">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000050"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AminoAcidResidueStateDatum</rdfs:label>
+        <rdfs:label>AminoAcidResidueStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -2472,7 +2472,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000113">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000107"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHYLIPDataMatrix</rdfs:label>
+        <rdfs:label>PHYLIPDataMatrix</rdfs:label>
     </owl:Class>
     
 
@@ -2481,7 +2481,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000114">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000009"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharLikelihoodLengthType</rdfs:label>
+        <rdfs:label>ContinuousCharLikelihoodLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2490,7 +2490,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000115">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000111"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MolecularCharacter</rdfs:label>
+        <rdfs:label>MolecularCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2504,7 +2504,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000097"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hereditaryPersistance</rdfs:label>
+        <rdfs:label>hereditaryPersistance</rdfs:label>
     </owl:Class>
     
 
@@ -2523,7 +2523,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetOfCharacters</rdfs:label>
+        <rdfs:label>SetOfCharacters</rdfs:label>
     </owl:Class>
     
 
@@ -2532,7 +2532,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000118">
         <dc:description>The class is used to describe colletions of phylogenetic data elements. Examples include sets of trees for annotating consensus tree provenance, and sets of characters or higher order grouping (e.g., groups of groups of characters) that extends the CharSet block of NEXUS.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetOfThings</rdfs:label>
+        <rdfs:label>SetOfThings</rdfs:label>
     </owl:Class>
     
 
@@ -2560,7 +2560,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A set of ordered states, typically the residues in a macromolecular sequence.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sequence</rdfs:label>
+        <rdfs:label>Sequence</rdfs:label>
     </owl:Class>
     
 
@@ -2570,7 +2570,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000121">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000122"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000064"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speciation</rdfs:label>
+        <rdfs:label>speciation</rdfs:label>
     </owl:Class>
     
 
@@ -2579,7 +2579,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000122">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000064"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cladogenesis</rdfs:label>
+        <rdfs:label>cladogenesis</rdfs:label>
     </owl:Class>
     
 
@@ -2594,7 +2594,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bifurcation</rdfs:label>
+        <rdfs:label>Bifurcation</rdfs:label>
     </owl:Class>
     
 
@@ -2603,7 +2603,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000100"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiscreteCharBayesianLengthType</rdfs:label>
+        <rdfs:label>DiscreteCharBayesianLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2613,7 +2613,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000126">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000066"/>
         <dc:description>Link to an externally defined taxonomic hierarchy.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaxonomicLink</rdfs:label>
+        <rdfs:label>TaxonomicLink</rdfs:label>
     </owl:Class>
     
 
@@ -2622,7 +2622,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000006"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MonophyleticGroup</rdfs:label>
+        <rdfs:label>MonophyleticGroup</rdfs:label>
     </owl:Class>
     
 
@@ -2631,7 +2631,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000128">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000132"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecularRecombination</rdfs:label>
+        <rdfs:label>molecularRecombination</rdfs:label>
     </owl:Class>
     
 
@@ -2640,7 +2640,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000129">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000127"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HolophyleticGroup</rdfs:label>
+        <rdfs:label>HolophyleticGroup</rdfs:label>
     </owl:Class>
     
 
@@ -2649,7 +2649,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000130">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000110"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FullyResolvedTree</rdfs:label>
+        <rdfs:label>FullyResolvedTree</rdfs:label>
     </owl:Class>
     
 
@@ -2670,7 +2670,7 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000112"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AminoAcidResidueCharacter</rdfs:label>
+        <rdfs:label>AminoAcidResidueCharacter</rdfs:label>
     </owl:Class>
     
 
@@ -2679,7 +2679,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000132">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000087"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recombination</rdfs:label>
+        <rdfs:label>recombination</rdfs:label>
     </owl:Class>
     
 
@@ -2688,7 +2688,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000034"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesoxiRibonucleotideResidue</rdfs:label>
+        <rdfs:label>DesoxiRibonucleotideResidue</rdfs:label>
     </owl:Class>
     
 
@@ -2698,7 +2698,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000134">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000012"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000070"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RootedSubtree</rdfs:label>
+        <rdfs:label>RootedSubtree</rdfs:label>
     </owl:Class>
     
 
@@ -2707,7 +2707,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000136">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000089"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompoundStateDatum</rdfs:label>
+        <rdfs:label>CompoundStateDatum</rdfs:label>
     </owl:Class>
     
 
@@ -2716,7 +2716,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000137">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000007"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GapCost</rdfs:label>
+        <rdfs:label>GapCost</rdfs:label>
     </owl:Class>
     
 
@@ -2726,7 +2726,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000138">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <dc:description>A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of &apos;OTU&apos; and &apos;HTU&apos;.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TU</rdfs:label>
+        <rdfs:label>TU</rdfs:label>
     </owl:Class>
     
 
@@ -2752,7 +2752,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <dc:description>A directed edge. Rooted trees have directed edges. The direction is specified by way of the parent and child relationships of nodes that the edge connects.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DirectedEdge</rdfs:label>
+        <rdfs:label>DirectedEdge</rdfs:label>
     </owl:Class>
     
 
@@ -2774,7 +2774,7 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000139"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Node</rdfs:label>
+        <rdfs:label>Node</rdfs:label>
     </owl:Class>
     
 
@@ -2783,7 +2783,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000141">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000009"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContinuousCharDistanceLengthType</rdfs:label>
+        <rdfs:label>ContinuousCharDistanceLengthType</rdfs:label>
     </owl:Class>
     
 
@@ -2804,7 +2804,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000220">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dA</rdfs:label>
+        <rdfs:label>dA</rdfs:label>
     </owl:Thing>
     
 
@@ -2814,7 +2814,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000221">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">absent</rdfs:label>
+        <rdfs:label>absent</rdfs:label>
     </owl:Thing>
     
 
@@ -2824,7 +2824,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000222">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unknown</rdfs:label>
+        <rdfs:label>unknown</rdfs:label>
     </owl:Thing>
     
 
@@ -2834,7 +2834,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000223">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000015"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gap</rdfs:label>
+        <rdfs:label>gap</rdfs:label>
     </owl:Thing>
     
 
@@ -2844,7 +2844,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000224">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dG</rdfs:label>
+        <rdfs:label>dG</rdfs:label>
     </owl:Thing>
     
 
@@ -2854,7 +2854,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000225">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000057"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rU</rdfs:label>
+        <rdfs:label>rU</rdfs:label>
     </owl:Thing>
     
 
@@ -2864,7 +2864,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000226">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dC</rdfs:label>
+        <rdfs:label>dC</rdfs:label>
     </owl:Thing>
     
 
@@ -2874,7 +2874,7 @@
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/CDAO_0000227">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000133"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dT</rdfs:label>
+        <rdfs:label>dT</rdfs:label>
     </owl:Thing>
     
 
@@ -2907,5 +2907,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
